@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    background-color: #E7FFE2;
+}
+
+nav, footer {
+    background-color: #A3FA91;
+}
+
+.logo {
+    width: 50px;
+    padding: 0% 7%;
+}
+
+#title {
+    font-size: 23px;
+    position: absolute;
+    top: 19px;
+}
+
+i {
+    margin-right: 5%;
+    margin-left: 4%;
+}
