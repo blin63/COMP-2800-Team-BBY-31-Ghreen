@@ -1,0 +1,13 @@
+.progress {
+    margin: 4em 2em;
+    border: 1px solid black;
+}
+
+.progress div {
+    width: 25%;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1.2em;
+}
