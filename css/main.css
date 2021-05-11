@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #E7FFE2;
+    background-color: #E7FFE2 !important;
 }
 
 nav, footer {
