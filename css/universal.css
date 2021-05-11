@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    background-color: #E7FFE2;
+}
+
+.navbar.fixed-top {
+    position: relative;
+    }
+
+nav, footer {
+    background-color: #A3FA91;
+}
+
+.logo {
+    width: 19%;
+    padding: 0% 1%;
+}
+
+#title {
+    font-size: 26px;
+    position: absolute;
+    bottom: 10px;
+}
+
+i {
+    margin-right: 5%;
+    margin-left: 4%;
+}
