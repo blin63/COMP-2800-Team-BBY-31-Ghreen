@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    /* I found this !important trick here @https://stackoverflow.com/questions/36525033/background-color-not-working-with-body */    
     background-color: #E7FFE2 !important;
 }
 
@@ -8,14 +9,14 @@ nav, footer {
 }
 
 .logo {
-    width: 50px;
-    padding: 0% 7%;
+    width: 18%;
+    padding: 0% 2%;
 }
 
 #title {
     font-size: 23px;
     position: absolute;
-    top: 19px;
+    bottom: 10px;
 }
 
 i {
