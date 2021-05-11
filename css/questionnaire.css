@@ -1,14 +1,14 @@
 #question-container {
-padding: 5%;
-margin-bottom: -15%;
-margin-top: 2%;
+    padding: 5%;
+    margin-bottom: -5%;
+    margin-top: 2%;
 }
 
 #question {
-background-color: #66DAE8;
-opacity: 80%;
-padding: 6%;
-border-radius: 5px;
+    background-color: #66DAE8;
+    opacity: 80%;
+    padding: 6%;
+    border-radius: 5px;
 }
 
 div button {
