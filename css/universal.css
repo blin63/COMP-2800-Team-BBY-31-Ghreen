@@ -1,9 +1,7 @@
 body {
     margin: 0;
-    /* I found this !important trick here @https://stackoverflow.com/questions/36525033/background-color-not-working-with-body */    
     background-color: #E7FFE2;
 }
-
 
 .navbar.fixed-top {
     position: relative;
