@@ -1,5 +1,5 @@
 .progress {
-    margin: 4em 2em;
+    margin: 3em 2em;
     border: 1px solid black;
 }
 
@@ -10,4 +10,9 @@
 h1 {
     text-align: center;
     margin-top: 1.2em;
+}
+
+#categories {
+    text-align: center;
+    margin-top: 2.2em;
 }
