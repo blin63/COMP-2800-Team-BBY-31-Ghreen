@@ -1,0 +1,8 @@
+<i class="fas fa-tint"></i>  //water
+<i class="fas fa-car-side"></i>   // transportation
+<i class="fas fa-utensils"></i>  //food
+<i class="fas fa-shopping-cart"></i> // shopping
+<i class="fas fa-trash-alt"></i>  //trash
+<i class="fas fa-home"></i>  //home
+<i class="fas fa-bookmark"></i> // bookmark1
+<i class="far fa-bookmark"></i> //bookmark2
