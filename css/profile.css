@@ -1,0 +1,38 @@
+#productName {
+  font-weight: bold;
+  font-size: 55px;
+}
+
+#userGreeting {
+  margin: auto;
+  text-align: center;
+  font-size: 100px;
+  font-style: italic;
+  padding: 100px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fa-edit, .fa-cog, .fa-award {
+  height: 100px;
+  width: 100px;
+}
+
+body {
+  background-color: #E7FFE2;
+}
+
+td {
+  padding: 100px;
+}
+
+i.fas, i.far {
+  color: black;
+}
+
+.fixed-bottom {
+  padding: 50px;
+}
