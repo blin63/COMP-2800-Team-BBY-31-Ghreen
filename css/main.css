@@ -9,12 +9,12 @@ nav, footer {
 }
 
 .logo {
-    width: 18%;
-    padding: 0% 2%;
+    width: 19%;
+    padding: 0% 1%;
 }
 
 #title {
-    font-size: 23px;
+    font-size: 26px;
     position: absolute;
     bottom: 10px;
 }
