@@ -1,27 +1,35 @@
 #question-container {
-padding: 3%;
+padding: 5%;
 margin-bottom: -15%;
-margin-top: 10%;
+margin-top: 2%;
 }
 
 #question {
 background-color: #66DAE8;
 opacity: 80%;
-padding: 5%;
+padding: 6%;
+border-radius: 5px;
 }
 
 div button {
     background-color: #B6FFB0;
 }
 
-.confirm {
-    background-color: #B6FFB0 !important;
+.choice {
+    color: black;
+    background-color: #C4C4C4;
+    outline: 1px solid black;
+}
 
+#confirm {
+    background-color: #B6FFB0;
+    border-radius: 5px;
+    outline: 1px solid black;
 }
 
 h1 {
     text-align: center;
-    margin-top: 4em;
+    margin-top: 4.8em;
 }
 
 h2 {
@@ -37,7 +45,7 @@ h2 {
 .fa-chevron-circle-left {
     position: absolute;
     top: 60px;
-    left: 5px;
+    left: 20px;
 }
 
 
