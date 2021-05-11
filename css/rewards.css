@@ -1,0 +1,44 @@
+#rewards {
+    margin: auto;
+    text-align: center;
+    font-style: italic;
+  }
+
+  #userGreeting {
+    margin: auto;
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+    padding: 50px;
+  }
+
+td {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.fa-apple-alt, .fa-birthday-cake, .fa-candy-cane, .fa-heart, .fa-star {
+    padding: 0px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    width: 95%;
+    margin: 10px;
+    padding: 10px;
+}
+
+tr, td {
+    background-color: #8AE9C1;
+    border: 1px solid black;
+}
+
+td i {
+    border: hidden;
+}
+
+#equip {
+    border-left: hidden;
+}
