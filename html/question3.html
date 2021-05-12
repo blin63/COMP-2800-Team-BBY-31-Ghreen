@@ -40,33 +40,32 @@
         <div id="questionContainer">
             <div id="question">
                 <h3 id="ask">What types of meals do you eat? (Select all that apply)</h3>
-                <!-- b# = button number -->
-                <div class="form-check" id="form">
-                    <input class="form-check-input" type="checkbox" value="" id="select1">
-                    <label class="form-check-label" for="defaultCheck1" id="label1">
-                      Prepackaged
-                    </label>
-                    <input class="form-check-input" type="checkbox" value="" id="select2">
-                    <label class="form-check-label" for="defaultCheck2" id="label2">
-                      Domestic Meat (On Daily Basis)
-                    </label>
-                    <input class="form-check-input" type="checkbox" value="" id="select3">
-                    <label class="form-check-label" for="defaultCheck3" id="label3">
-                      Domestic Meat (A Few times a week)
-                    </label>
-                    <input class="form-check-input" type="checkbox" value="" id="select4">
-                    <label class="form-check-label" for="defaultCheck4" id="label4">
-                      Both Fresh and Prepackaged
-                    </label>
-                    <input class="form-check-input" type="checkbox" value="" id="select5">
-                    <label class="form-check-label" for="defaultCheck5" id="label5">
-                      Vegan
-                    </label>
-                    <input class="form-check-input" type="checkbox" value="" id="select6">
-                    <label class="form-check-label" for="defaultCheck6" id="label6">
-                      Fresh Foods, Wild Meat
-                    </label>
+                <div class="row row-cols-1">
+                  <div class="col text-center py-3">
+                      <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                      <label class="btn btn-outline-dark width-fix" for="btncheck1">Prepackaged</label>
                   </div>
+                  <div class="col text-center py-3">
+                      <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                      <label class="btn btn-outline-dark width-fix" for="btncheck2">Domestic Meat (On Daily Basis)</label>
+                  </div>
+                  <div class="col text-center py-3">
+                      <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                      <label class="btn btn-outline-dark width-fix" for="btncheck3">Domestic Meat (Few times a week)</label>
+                  </div>
+                  <div class="col text-center py-3">
+                      <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+                      <label class="btn btn-outline-dark width-fix" for="btncheck4">Both Fresh and Prepackaged</label>
+                  </div>
+                  <div class="col text-center py-3">
+                      <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off">
+                      <label class="btn btn-outline-dark width-fix" for="btncheck5">Vegan</label>
+                  </div>
+                  <div class="col text-center py-3">
+                    <input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off">
+                    <label class="btn btn-outline-dark width-fix" for="btncheck6">Fresh Foods and/or Wild Meat</label>
+                </div>
+              </div>
                 <div id="confirm">
                     <button type="button" class="btn btn-success" id="con">Confirm</button>
                 </div>
