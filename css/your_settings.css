@@ -80,3 +80,23 @@ h2 {
     height: 3px;
     margin-top: 40%;
 }
+
+p, label, input {
+    margin: 16px;
+}
+
+.details p, .password p {
+    font-style: italic;
+}
+
+.confirm input {
+    /* CSS code taken from style.css
+        from templating-and-sessions
+        from LearningHub */
+    float: right;
+    font-size: 1em;
+    clear: both;
+}
+
+.logout input {
+}

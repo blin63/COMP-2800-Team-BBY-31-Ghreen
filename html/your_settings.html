@@ -42,10 +42,35 @@
 
     <div class="details">
         <p>Account Details</p>
-        
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name" />
+            <br />
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Your email" />
+            <br />
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" placeholder="Your country" />
+        </form>
     </div>
 
+    <div class="password">
+        <p>Change Password</p>
+        <label for="currentPassword">Current Password:</label>
+        <input type="text" id="currentPassword" name="currentPassword" placeholder="Current password" />
+        <br />
+        <label for="newPassword">New Password:</label>
+        <input type="text" id="newPassword" name="newPassword" placeholder="New password" />
+        <br />
+    </div>
 
+    <div class="confirm">
+        <input type="submit" value="Confirm" />
+    </div>
+
+    <div class="logout">
+        <input type="submit" value="Logout" />
+    </div>
 
     <footer class="navbar fixed-bottom">
         <div class="container py-2 fa-lg">
