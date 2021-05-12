@@ -9,14 +9,17 @@
 .wrapper::-webkit-scrollbar {
     width: 0;
 }
+/* Horizontal scroll */
+
 
 .category {
-    min-width: 372px;
+    min-width: 375px;
     height: auto;
     /* line-height: 110px; */
     text-align: center;
     background-color: #E7FFE2;
     margin-right: 2px;
+    margin-bottom: 1em;
 }
 
 /* .task {
@@ -53,7 +56,19 @@
 }
 
 .category_title {
+    font-size: 1.5em;
+    margin-top: 2em;
+    font-weight: bold;
+}
+
+.task_title {
     font-size: 1em;
     margin-top: 2em;
     font-weight: bold;
+}
+
+.des {
+    margin: 0;
+    padding: 0;
+
 }
