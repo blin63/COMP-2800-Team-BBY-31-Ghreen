@@ -3,3 +3,12 @@
     top: 194px;
     left: 270px;
 }
+
+h4 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    padding: 3%;
+}
