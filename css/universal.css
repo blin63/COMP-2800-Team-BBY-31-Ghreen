@@ -5,7 +5,7 @@ body {
 
 .navbar.fixed-top {
     position: relative;
-    }
+}
 
 nav, footer {
     background-color: #A3FA91;
@@ -26,3 +26,15 @@ i {
     margin-right: 5%;
     margin-left: 4%;
 }
+
+h1 {
+    text-align: center;
+    margin-top: 4.8em;
+}
+
+.fa-chevron-circle-left {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+}
+
