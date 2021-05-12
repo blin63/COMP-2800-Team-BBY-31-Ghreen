@@ -42,6 +42,10 @@ h2 {
     height: 110%;
 }
 
+.padding-fix {
+    padding: 2%;
+}
+
 .fa-chevron-circle-left {
     position: absolute;
     top: 60px;
