@@ -3,6 +3,10 @@ body {
     background-color: #E7FFE2;
 }
 
+a {
+    color: black;
+}
+
 .navbar.fixed-top {
     position: relative;
 }

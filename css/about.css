@@ -1,7 +1,6 @@
+
 .fa-info-circle {
-    position: absolute;
-    top: 194px;
-    left: 270px;
+    margin-left: -4%;
 }
 
 h4 {
@@ -11,4 +10,46 @@ h4 {
 p {
     text-align: center;
     padding: 3%;
+}
+
+#content {
+    padding: 3%;
+}
+
+.member {
+    float: left;
+    width: 20%;
+    margin: 2% 2%;
+}
+
+#devs {
+    text-align: center;
+    margin-bottom: 25vh;
+}
+
+#devs img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+#devs h4 {
+    line-height: 40px;
+}
+
+#members-container {
+    margin-left: 5%;
+}
+
+@media screen and (max-width: 600px) {
+    .member {
+        display: block;
+        width: 100%;
+    }
+
+    #members-container {
+        margin-left: -3%;
+    }
 }
