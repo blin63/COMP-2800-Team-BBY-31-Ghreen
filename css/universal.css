@@ -4,7 +4,7 @@ body {
 }
 
 .navbar.fixed-top {
-    /* position: relative; */
+    /* appBrand stick to the top */
     position: -webkit-sticky;
     position: sticky;
 }
