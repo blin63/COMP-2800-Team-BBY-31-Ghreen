@@ -20,28 +20,30 @@
     <link href="/css/universal.css" rel="stylesheet" />
     <link href="/css/your_settings.css" rel="stylesheet" />
 
+
     <!-- Firebase Authentication -->
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
 
 </head>
 
 <body>
-        <!-- Found this code on bootstrap, see @link = https://mdbootstrap.com/docs/standard/navigation/headers/# -->
-        <nav class="navbar fixed-top">
-            <div id="header-items">
-                <img src="/images/logo_final.png" alt="logo" class="logo">
-                <span id="title"><b>Ghreen</b></span>
-            </div>
-        </nav>
+    <!-- Found this code on bootstrap, see @link = https://mdbootstrap.com/docs/standard/navigation/headers/# -->
+    <nav class="navbar fixed-top">
+        <div id="header-items">
+            <img src="/images/logo_final.png" alt="logo" class="logo">
+            <span id="title"><b>Ghreen</b></span>
+        </div>
+    </nav>
 
-    <i class="fas fa-chevron-circle-left fa-2x"></i>
+    <a href="profile.html"><i class="fas fa-chevron-circle-left fa-2x"></i></a>
 
-    <h1><i>Hello User!</i>
-        <i class="fas fa-cog"></i></h1>
+    <h1><i>Settings</i>
+        <i class="fas fa-cog"></i>
+    </h1>
 
 
     <div class="details">
-        <p>Account Details</p>
+        <h4>Account Details</h4>
         <form>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Your name" />
@@ -55,29 +57,26 @@
     </div>
 
     <div class="password">
-        <p>Change Password</p>
-        <label for="currentPassword">Current Password:</label>
-        <input type="text" id="currentPassword" name="currentPassword" placeholder="Current password" />
+        <h4>Change Password</h4>
+            <label for="currentPassword">Password:</label>
+            <input type="text" id="currentPassword" name="currentPassword" placeholder="Current password" />
         <br />
         <label for="newPassword">New Password:</label>
         <input type="text" id="newPassword" name="newPassword" placeholder="New password" />
         <br />
     </div>
 
-    <div class="confirm">
-        <input type="submit" value="Confirm" />
-    </div>
+    <button id="confirm" class="btn" type="button">Confirm</button>
 
-    <div class="logout">
-        <input type="submit" value="Logout" />
-    </div>
+    <button id="logout" class="btn container-fluid" type="button">Logout</button>
 
+    <!-- Bottom Nav Bar -->
     <footer class="navbar fixed-bottom">
         <div class="container py-2 fa-lg">
-            <i class="fas fa-home"></i>
-            <i class="fas fa-list"></i>
-            <i class="far fa-check-circle"></i>
-            <i class="far fa-user"></i>
+            <a href="main.html"><i class="fas fa-home"></i></a>
+            <a href="category.html"><i class="fas fa-list"></i></a>
+            <a href="task_page.html"><i class="far fa-check-circle"></i></a>
+            <a href="profile.html"><i class="far fa-user"></i></a>
         </div>
     </footer>
 
