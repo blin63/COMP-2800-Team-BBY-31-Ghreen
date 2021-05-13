@@ -6,6 +6,13 @@
     display: inline-block;
 }
 
+<<<<<<< HEAD
+=======
+#options a {
+    color: black;
+}
+
+>>>>>>> profile
 .fa-info-circle {
     margin-left: -0.1em;
 }
@@ -62,7 +69,10 @@ h2 {
     position: absolute;
     top: 120px;
     left: 20px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> profile
 }
 
 #thanks-logo {
@@ -80,3 +90,11 @@ h2 {
     height: 3px;
     margin-top: 40%;
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> profile
