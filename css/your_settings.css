@@ -6,10 +6,6 @@
     display: inline-block;
 }
 
-#options a {
-    color: black;
-}
-
 .fa-info-circle {
     margin-left: -0.1em;
 }
@@ -85,40 +81,26 @@ h2 {
     margin-top: 40%;
 }
 
-#productName {
-  font-size: 55px;
+p, label, input {
+    margin: 16px;
 }
 
-#userGreeting {
-  margin: auto;
-  text-align: center;
-  font-size: 100px;
-  font-style: italic;
-  padding: 100px;
+.details p, .password p {
+    font-style: italic;
 }
 
-.center {
-  margin-left: auto;
-  margin-right: auto;
+.confirm input {
+    /* CSS code taken from style.css
+        from templating-and-sessions
+        from LearningHub */
+    float: right;
+    font-size: 1em;
+    clear: both;
+    margin-left: 100%;
 }
 
-.fa-cog, .fa-award, .fa-book-open {
-  height: 100px;
-  width: 100px;
-}
-
-body {
-  background-color: #E7FFE2;
-}
-
-td {
-  padding: 100px;
-}
-
-i.fas, i.far {
-  color: black;
-}
-
-.fixed-bottom {
-  padding: 50px;
+.logout input {
+    padding-left: 40%;
+    padding-right: 35%;
+    margin-bottom: 25%;
 }
