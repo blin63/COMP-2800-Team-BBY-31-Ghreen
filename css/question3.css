@@ -53,6 +53,12 @@
     width: 90%;
 }
 
+#confirm button {
+    background-color: #B6FFB0;
+    outline: 1px solid black;
+    color: black;
+}
+
 label {
     width: 90%;
 }
@@ -73,6 +79,3 @@ label {
     margin-top: 50%;
 }
 
-body {
-    background-color: #E7FFE2;
-}

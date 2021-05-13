@@ -1,5 +1,5 @@
 /**
-    Author: Brendan Lin
+    Author: Brendan Lin, Kevin Chang
     Ver: 1.0
 **/
 #questionContainer {
@@ -19,6 +19,19 @@
     margin-top: 30%;
     margin-bottom: 2%;
     margin-left: 5%;
+}
+
+#content {
+    text-align: center;
+    color: black;
+}
+
+#con {
+    background-color: #B6FFB0;
+    border-radius: 5px;
+    outline: 1px solid black;
+    width: 90%;
+    margin: 0 auto;
 }
 
 #category {
@@ -44,6 +57,12 @@
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 33.33% 33.33% 33.33%;
+}
+
+#buttonGroup button {
+    color: black;
+    background-color: #C4C4C4;
+    margin: 20%;
 }
 
 /** b# = button number **/
@@ -72,26 +91,23 @@
 }
 
 #confirm {
-    grid-column: 1 / span 2;
-    grid-row: 3 / span 1;
     margin: 0 auto;
     margin-top: 5%;
+    text-align: center;
+}
+
+#confirm button {
+    background-color: #B6FFB0;
+    border-radius: 5px;
+    outline: 1px solid black;
     width: 90%;
-}
 
-.button {
-    padding: 3%;
-}
-
-#con {
-    width: 100%;
-    margin: 0 auto;
 }
 
 .btn-secondary {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
     color: black;
 }
 
