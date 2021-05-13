@@ -103,3 +103,26 @@ p, label, input {
     padding-right: 35%;
     margin-bottom: 25%;
 }
+
+/* Code copied and pasted from W3Schools
+https://www.w3schools.com/css/css_link.asp
+*/
+/* unvisited link */
+a:link {
+    color: black;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: black;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: black;
+  }
+  
+  /* selected link */
+  a:active {
+    color: black;
+  }
