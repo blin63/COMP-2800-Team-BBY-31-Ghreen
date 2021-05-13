@@ -18,7 +18,7 @@
 
     <!-- Local css -->
     <link href="../css/universal_category_task.css" rel="stylesheet" />
-    <link href="../css/task.css" rel="stylesheet" />
+    <link href="../css/pList_task.css" rel="stylesheet" />
 
 
     <!-- Firebase Authentication -->
@@ -55,15 +55,39 @@
                     <p>*</p>
                 </div>
             </div>
-
-            <div id="add_icon">
+            <!-- Icons -->
+            <div id="icon_section">
                 <!--
                     <a href="../html/category.html">  add to Personalize list
                 -->
-                <img src="../images/icons/categoryIcon/plus-circle.svg" alt="">
-                <p id="add_to_list">Add to personalize list</p>
+                <div class="icons">
+                    <!-- CompleteBtn -->
+                    <a href="../html/personalizeList_template.html">
+                        <div class="iconLabel">
+                            <img src="../images/icons/categoryIcon/check-circle.svg" alt="checkCir">
+                            <p id="completeBtn">Complete</p>
+                        </div>
+                    </a>
+
+                     <!-- BookmarkBtn -->
+                    <a href="../html/personalizeList_template.html">
+                        <div class="iconLabel">
+                            <img src="../images/icons/categoryIcon/bookmark.svg" alt="bookmark">
+                            <p id="bookmarkBtn">BookMark</p>
+                        </div>
+                    </a>
+
+                    <!-- CancelBtn -->
+                    <a href="../html/personalizeList_template.html">
+                        <div class="iconLabel">
+                            <img src="../images/icons/categoryIcon/x-circle.svg" alt="xCir">
+                            <p id="cancelBtn">Cancel</p>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div class="descritionBox">  <!--descbox-->
+            <!-- descbox -->
+            <div class="descritionBox">  
                 <section class="s1">
                     <h6>Task Description:</h4>
                     <p>Go easy on the brakes and gas pedal. You can also lower impacts by reducing time spent idling, and using overdrive and cruise control.</p>
@@ -85,6 +109,9 @@
 
     </div>
     <!-- content -->
+
+
+
 
     <!-- Found this code on bootstrap, see @link = https://mdbootstrap.com/docs/standard/navigation/headers/# -->
     <!-- <nav class="navbar fixed-top">

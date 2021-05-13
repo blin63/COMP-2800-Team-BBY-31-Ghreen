@@ -15,6 +15,7 @@
 
 .category {
     min-width: 375px;
+    max-width: 375px;
     height: auto;
     /* line-height: 110px; */
     text-align: center;
@@ -77,6 +78,7 @@
 
 }
 
+/* Hide link effect*/
 a {
     color: black;
     text-decoration: none;
