@@ -96,7 +96,11 @@ p, label, input {
     float: right;
     font-size: 1em;
     clear: both;
+    margin-left: 100%;
 }
 
 .logout input {
+    padding-left: 40%;
+    padding-right: 35%;
+    margin-bottom: 25%;
 }
