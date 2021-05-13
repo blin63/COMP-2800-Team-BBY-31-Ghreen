@@ -14,6 +14,7 @@ p {
 
 #content {
     padding: 3%;
+    margin-bottom: 135vh;
 }
 
 .member {
@@ -24,7 +25,6 @@ p {
 
 #devs {
     text-align: center;
-    margin-bottom: 25vh;
 }
 
 #devs img {
@@ -40,7 +40,7 @@ p {
 }
 
 #members-container {
-    margin-left: 5%;
+    margin-left: 3%;
 }
 
 @media screen and (max-width: 600px) {
