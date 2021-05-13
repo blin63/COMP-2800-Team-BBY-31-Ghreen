@@ -35,7 +35,7 @@
 }
 
 .task_detail {
-    background-color: skyblue;
+    background-color: #BAE7EC;
     line-height: 2em;
     margin-right: 2em;
     margin-left: 2em;
@@ -46,7 +46,7 @@
 .task_detail_box {
     display: flex;
     justify-content: space-around;
-
+    font-weight: bold;
 }
 
 .category_icon {
@@ -70,5 +70,13 @@
 .des {
     margin: 0;
     padding: 0;
+    line-height: 1.2em;
+    padding-left: 1em;
+    padding-right: 1em;
 
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }
