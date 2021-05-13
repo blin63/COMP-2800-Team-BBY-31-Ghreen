@@ -1,0 +1,121 @@
+#options {
+    padding: 2% 12%;;
+}
+
+#options i {
+    display: inline-block;
+}
+
+#options a {
+    color: black;
+}
+
+.fa-info-circle {
+    margin-left: -0.1em;
+}
+
+#question-container {
+    padding: 5%;
+    margin-bottom: -5%;
+    margin-top: 2%;
+}
+
+#question {
+    background-color: #66DAE8;
+    opacity: 80%;
+    padding: 4%;
+    border-radius: 5px;
+}
+
+div button {
+    background-color: #B6FFB0;
+}
+
+.choice {
+    color: black;
+    background-color: #C4C4C4;
+    outline: 1px solid black;
+}
+
+#confirm {
+    background-color: #B6FFB0;
+    border-radius: 5px;
+    outline: 1px solid black;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 4em;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 8%;
+}
+
+.width-fix {
+    width: 100%;
+    height: 110%;
+}
+
+.padding-fix {
+    padding: 2%;
+}
+
+.fa-chevron-circle-left {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+
+}
+
+#thanks-logo {
+    padding: 4%;
+}
+
+#thanks-logo img {
+    width: 70%;
+    margin-left: 13%;
+}
+
+#bar {
+    background-color: black;
+    width: 100%;
+    height: 3px;
+    margin-top: 40%;
+}
+
+#productName {
+  font-size: 55px;
+}
+
+#userGreeting {
+  margin: auto;
+  text-align: center;
+  font-size: 100px;
+  font-style: italic;
+  padding: 100px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fa-cog, .fa-award, .fa-book-open {
+  height: 100px;
+  width: 100px;
+}
+
+body {
+  background-color: #E7FFE2;
+}
+
+td {
+  padding: 100px;
+}
+
+i.fas, i.far {
+  color: black;
+}
+

@@ -1,0 +1,58 @@
+/** 
+    Author: Brendan Lin, Kevin Chang
+    Ver: 1.0
+**/
+h4 {
+    text-align: center;
+}
+
+.fa-edit {
+    width: 5%;
+}
+
+.btn-secondary {
+    width: 80%;
+    height: 10%;
+    margin: 0 auto;
+    margin-bottom: 3%;
+    text-align: center;
+    margin-left: 10%;
+    color: black;
+    background-color: gray;
+}
+
+#question-container {
+    padding: 5%;
+    margin-bottom: -5%;
+    margin-top: 2%;
+}
+
+.question button {
+    text-align: center;
+}
+
+.choice {
+    color: black;
+    background-color: #C4C4C4;
+    outline: 1px solid black;
+}
+
+#confirm {
+    background-color: #B6FFB0;
+    border-radius: 5px;
+    outline: 1px solid black;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 3.8em;
+}
+
+.width-fix {
+    width: 100%;
+    height: 110%;
+}
+
+.padding-fix {
+    padding: 2%;
+}

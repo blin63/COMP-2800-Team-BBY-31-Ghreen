@@ -1,0 +1,136 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ghreen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+        Used link element from digitalocean
+        @author: Erin Glass
+        @see: https://www.digitalocean.com/community/tutorials/how-to-add-a-favicon-to-your-website-with-html--%3E 
+    -->
+    <link rel="shortcut icon" type="image/png" href="../images/logo_final.png" />
+    <!-- End of source -->
+
+    <!-- Bootstrap stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <!-- Our stylesheet(s) -->
+    <link href="/css/universal.css" rel="stylesheet" />
+    <link href="/css/main.css" rel="stylesheet" />
+
+    <!-- Firebase Authentication -->
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+
+</head>
+
+<body>
+    <!-- Found this code on bootstrap, see @link = https://mdbootstrap.com/docs/standard/navigation/headers/# -->
+    <nav class="navbar fixed-top">
+        <div id="header-items">
+            <img src="/images/logo_final.png" alt="logo" class="logo">
+            <span id="title"><b>Ghreen</b></span>
+        </div>
+    </nav>
+
+    <h1><i>Welcome User!</i></h1>
+
+    <div id="stats">
+        <div id="carbon-score">
+            <p>60</p>
+        </div>
+        <div id="percentage-change">
+            <p>-2%</p>
+        </div>
+    </div>
+
+    <div id="tree">
+        <svg width="318" height="317" viewBox="0 0 318 317" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="154" y="27" width="7" height="290" fill="#A56E2E"/>
+            <rect x="212.703" y="147.521" width="7" height="72.8474" transform="rotate(53.6906 212.703 147.521)" fill="#A56E2E"/>
+            <rect x="245.696" y="213.771" width="7" height="72.8474" transform="rotate(124.988 245.696 213.771)" fill="#A56E2E"/>
+            <rect x="226.858" y="111.16" width="7" height="40.6594" transform="rotate(22.956 226.858 111.16)" fill="#A56E2E"/>
+            <rect x="288.143" y="102" width="7" height="61.5913" transform="rotate(83.0832 288.143 102)" fill="#A56E2E"/>
+            <rect x="198.246" y="102" width="7" height="62.4604" transform="rotate(45.1032 198.246 102)" fill="#A56E2E"/>
+            <rect x="199.373" y="57" width="7" height="50.1759" transform="rotate(3.85434 199.373 57)" fill="#A56E2E"/>
+            <rect x="242.476" y="76" width="7" height="50.1759" transform="rotate(60.0507 242.476 76)" fill="#A56E2E"/>
+            <rect x="106" y="65.2056" width="7" height="62.4604" transform="rotate(-48.044 106 65.2056)" fill="#A56E2E"/>
+            <rect x="42.3857" y="91.2026" width="7" height="53.5489" transform="rotate(-29.4831 42.3857 91.2026)" fill="#A56E2E"/>
+            <rect x="18.1787" y="142.362" width="7" height="53.5489" transform="rotate(-91.4603 18.1787 142.362)" fill="#A56E2E"/>
+            <rect x="284.011" y="149.5" width="7" height="72.8474" transform="rotate(91.5563 284.011 149.5)" fill="#A56E2E"/>
+            <rect width="6.98211" height="72.5023" transform="matrix(-0.589326 0.807895 0.803752 0.594964 98.7256 193.521)" fill="#A56E2E"/>
+            <rect width="6.99996" height="72.3157" transform="matrix(0.0269602 0.999636 0.999626 -0.0273581 23 195.979)" fill="#A56E2E"/>
+            <rect width="6.95667" height="40.6144" transform="matrix(-0.665772 0.746156 0.742639 0.669692 130.632 143)" fill="#A56E2E"/>
+            <rect width="6.99926" height="61.1479" transform="matrix(-0.119561 0.992827 0.992616 0.121302 69.8369 134)" fill="#A56E2E"/>
+            <rect width="6.99996" height="46.7616" transform="matrix(-0.967937 0.251191 0.251576 0.967837 89.7754 152)" fill="#A56E2E"/>
+            <ellipse cx="42" cy="81.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="42" cy="81.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="42" cy="81.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="18" cy="129.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="18" cy="129.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="18" cy="129.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="24" cy="194.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="24" cy="194.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="24" cy="194.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="106" cy="51.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="106" cy="51.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="106" cy="51.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="256" cy="70.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="256" cy="70.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="256" cy="70.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="203" cy="44.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="203" cy="44.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="203" cy="44.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="126" cy="137.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="126" cy="137.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="126" cy="137.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="90" cy="165.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="90" cy="165.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="90" cy="165.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="157" cy="18.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="157" cy="18.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="157" cy="18.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="300" cy="106.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="300" cy="106.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="300" cy="106.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="295" cy="158.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="295" cy="158.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="295" cy="158.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="256" cy="217.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="256" cy="217.5" rx="18" ry="18.5" fill="#33C139"/>
+            <ellipse cx="256" cy="217.5" rx="18" ry="18.5" fill="#33C139"/>
+            </svg>            
+    </div>
+
+    <!-- Made the footer with fontawesome icons, @link = https://fontawesome.com/ -->
+    <footer class="navbar fixed-bottom">
+        <div class="container py-2 fa-lg">
+            <a href="main.html"><i class="fas fa-home"></i></a>
+            <a href="category.html"><i class="fas fa-list"></i></a>
+            <a href="personalizeList_template.html"><i class="far fa-check-circle"></i></a>
+            <a href="profile.html"><i class="far fa-user"></i></a>
+        </div>
+    </footer>
+
+    <!-- Found this code on fontawesome, see @link = https://fontawesome.com/ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/26da0e4274.js" crossorigin="anonymous"></script>
+
+    <!-- Firebase App (the core Firebase SDK) must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- Firebase products -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+    <!-- Firebase Authentication -->
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+
+    <!-- Ghreen specific firebase scripts -->
+    <script src="/js/firebase_api_ghreen.js"> </script>
+</body>
+
+</html>
