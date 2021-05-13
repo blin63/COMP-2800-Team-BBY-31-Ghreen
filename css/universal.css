@@ -3,6 +3,10 @@ body {
     background-color: #E7FFE2;
 }
 
+a {
+    color: black;
+}
+
 .navbar.fixed-top {
     position: relative;
 }
@@ -22,7 +26,7 @@ nav, footer {
     bottom: 10px;
 }
 
-i {
+footer a {
     margin-right: 5%;
     margin-left: 4%;
 }
