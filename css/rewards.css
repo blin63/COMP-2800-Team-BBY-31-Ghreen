@@ -42,3 +42,9 @@ td i {
 #equip {
     border-left: hidden;
 }
+
+.fa-chevron-circle-left {
+    position: absolute;
+    top: 120px;
+    left: 20px
+};
