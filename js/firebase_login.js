@@ -41,8 +41,8 @@ var uiConfig = {
     signInOptions: [
       firebase.auth.EmailAuthProvider.PROVIDER_ID
     ],
-    tosUrl: '<your-tos-url>',
-    privacyPolicyUrl: '<your-privacy-policy-url>'
+    tosUrl: '/main.html',
+    privacyPolicyUrl: '/main.html'
   };
 
   login.start('#firebaseui-auth-container', uiConfig);

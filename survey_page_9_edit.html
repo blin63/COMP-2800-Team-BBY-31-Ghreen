@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ghreen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+        Used link element from digitalocean
+        @author: Erin Glass
+        @see: https://www.digitalocean.com/community/tutorials/how-to-add-a-favicon-to-your-website-with-html--%3E 
+    -->
+    <link rel="shortcut icon" type="image/png" href="../images/logo_final.png" />
+    <!-- End of source -->
+
+    <!-- Bootstrap stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <!-- Our stylesheet(s) -->
+    <link href="./css/universal.css" rel="stylesheet" />
+    <link href="./css/questionnaire.css" rel="stylesheet" />
+
+    <!-- Firebase Authentication -->
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+
+</head>
+
+<body>
+
+    <a href="edit_answers.html"><i class="fas fa-chevron-circle-left fa-2x"></i></a>
+
+    <h1><i>Transportation</i></h1>
+
+    <div id="question-container">
+        <div id="question">
+            <h2>How much do you travel by public transportation per year?</h2>
+            <!-- Found this code from Carly's tech tip, see @link = https://www.notion.so/Tech-Tip-F006-How-do-I-make-nice-rows-of-buttons-08bd253aea9747a9bd77ff8cb27def9a -->
+            <div class="container">
+                <div class="row row-cols-1">
+                    <div class="col text-center py-2">
+                        <button type="button" class="btn width-fix choice">32,186.88+ km</button>
+                    </div>
+                    <div class="col text-center py-2">
+                        <button type="button" class="btn width-fix choice">24,140.16 - 32,186.88 km</button>
+                    </div>
+                    <div class="col text-center py-2">
+                        <button type="button" class="btn width-fix choice">16,093.44 - 24,140.16 km</button>
+                    </div>
+                    <div class="col text-center py-2">
+                        <button type="button" class="btn width-fix choice">1,609.34 - 16,093.44 km</button>
+                    </div>
+                    <div class="col text-center py-2">
+                        <button type="button" class="btn width-fix choice">Less than 1,609.34 km</button>
+                    </div>
+                    <div class="col text-center py-2">
+                        <button type="button" class="btn width-fix choice">Don’t take public transit</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="edit_answers.html"><button id="confirm" class="btn container-fluid mt-4" type="button">Confirm</button></a>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
+        
+    <!-- Found this code on fontawesome, see @link = https://fontawesome.com/ -->
+    <script src="https://kit.fontawesome.com/26da0e4274.js" crossorigin="anonymous"></script>
+
+    <!-- Firebase App (the core Firebase SDK) must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- Firebase products -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+    <!-- Firebase Authentication -->
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+
+    <!-- Ghreen specific firebase scripts -->
+    <script src="/js/firebase_api_ghreen.js"> </script>
+</body>
+
+</html>
