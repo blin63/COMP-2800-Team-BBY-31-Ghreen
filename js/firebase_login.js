@@ -21,7 +21,7 @@ var uiConfig = {
                         email: user.email                          //with authenticated user's ID (user.uid)
                     }).then(function () {
                         console.log("New user added to firestore");
-                        window.location.assign("/html/survey_page_0.html");       //re-direct to main.html after signup
+                        window.location.assign("survey_page_0.html");       //re-direct to main.html after signup
                     })
                     .catch(function (error) {
                         console.log("Error adding new user: " + error);
@@ -37,12 +37,12 @@ var uiConfig = {
     },
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
-    signInSuccessUrl: '/html/main.html',   
+    signInSuccessUrl: 'main.html',   
     signInOptions: [
       firebase.auth.EmailAuthProvider.PROVIDER_ID
     ],
-    tosUrl: '/main.html',
-    privacyPolicyUrl: '/main.html'
+    tosUrl: '<your-tos-url>',
+    privacyPolicyUrl: '<your-privacy-policy-url>'
   };
 
   login.start('#firebaseui-auth-container', uiConfig);
