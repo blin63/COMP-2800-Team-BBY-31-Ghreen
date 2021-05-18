@@ -113,7 +113,10 @@
                 console.log("Value = " + value);
 
                 db.collection("users").doc(user.uid).update({
-                    "Number of people": value   //from text field
+                    baseline: {
+                        'number of people': value
+                    }
+
                 })
             })
         });
