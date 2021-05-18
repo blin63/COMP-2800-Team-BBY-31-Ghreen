@@ -42,33 +42,28 @@
     </h1>
 
 
-    <div class="details">
+    <div class="details grid-container">
         <h4>Account Details</h4>
+        
+        <div class="grid-label">
         <form>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your name" />
-            <br />
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" placeholder="Your email" />
-            <br />
-            <label for="country">Country:</label>
-            <input type="text" id="country" name="country" placeholder="Your country" />
+        </div>
+        <div class="grid-input"><input type="text" id="name" name="name" placeholder="Your name" /></div>
+        <div class="grid-label"><label for="email">Email:</label></div>
+        <div class="grid-input"><input type="text" id="email" name="email" placeholder="Your email" /></div>
+        <div class="grid-label"><label for="country">Country:</label></div>
+        <div class="grid-input"><input type="text" id="country" name="country" placeholder="Your country" /></div>
+        <h4>Change Password</h4>
+        <div class="grid-label"><label for="currentPassword">Password:</label></div>
+        <div class="grid-input"><input type="text" id="currentPassword" name="currentPassword" placeholder="Current password" /></div>
+        <div class="grid-label"><label for="newPassword">New Password:</label></div>
+        <div class="grid-input"><input type="text" id="newPassword" name="newPassword" placeholder="New password" /></div>
+        <div class="grid-label"><input type="submit" value="Confirm" id="confirm" class="btn" /></div>
+        <div class="grid-input"><input type="reset" value="Reset" id="confirm" class="btn" /></div>
         </form>
     </div>
 
-    <div class="password">
-        <h4>Change Password</h4>
-            <label for="currentPassword">Password:</label>
-            <input type="text" id="currentPassword" name="currentPassword" placeholder="Current password" />
-        <br />
-        <label for="newPassword">New Password:</label>
-        <input type="text" id="newPassword" name="newPassword" placeholder="New password" />
-        <br />
-    </div>
-
-    <button id="confirm" class="btn" type="button">Confirm</button>
-
-    <button id="logout" class="btn container-fluid" type="button">Logout</button>
 
     <!-- Bottom Nav Bar -->
     <footer class="navbar fixed-bottom">

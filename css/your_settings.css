@@ -86,3 +86,18 @@ p, label, input {
 #label {
     display: inline-block;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 10px;
+    margin: 15px;
+}
+
+.grid-label {
+    grid-column: 1 / 2;
+}
+
+.grid-input {
+    grid-column: 2 / 3;
+}
