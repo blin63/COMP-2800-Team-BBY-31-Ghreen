@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+<!--
+    This file is NOT part of the main project app and is used ONLY to populate the firestore database with tasks.
+    Author: Brendan Lin
+    Ver: 1.0
+ -->
+
+<head>
+    <title>firestore_addTask</title>
+</head>
+
+<body>
+    <!-- 
+    Using Firebase Firestore documentation for implementation.
+    Author: Google
+    See: https://firebase.google.com/docs/firestore/quickstart
+    -->
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+
+    <!-- Firebase API Key -->
+    <script src="../js/firebase_api_ghreen.js"></script>
+
+    <!-- Firestore NoSQL Add Queries -->
+    <script>
+        //Must manually call function in console to populate tasks collection in firestore
+        //Done to prevent accidental redundant population in tasks collection
+
+        function addTasks() {
+            db.collection("tasks").add({
+                task: "Commute to work by bike or on foot",
+                impact: "*****",
+                difficulty: "***",
+                description: "Walking or biking to work can have a big positive impact on the environment " + 
+                    "than driving or public transportation. In fact, just by walking or biking " +
+                    "you are saving up to 12 tons of greenhouse gasses from being emitted into the atomosphere.",
+                furtherInfo: "In a study, it was found that bike travel over traveling by vehicle reduces carbon emissions "
+                    + "up to 75%. This is due to the fact that commuting by foot or by bike does not emit any greenhouse gasses"
+                    + " compared to other modes of transportation.",
+                category: "transportation"
+            });
+
+            db.collection("tasks").add({
+                task: "Try eating a plant-based only lunch",
+                impact: "*****",
+                difficulty: "****",
+                description: "Replace eating meat for lunck with any plant based foods such as: " +
+                    "legumes, nuts, seeds, beans, or tofu.",
+                furtherInfo: "One study of 55,504 people found that those who ate medium amounts of meat per day"
+                    + "(1.8-3.5 ounces (50-100 grams)) had a significantly lower carbon footprint than those"
+                    + " who ate more than 3.5 ounces (100 grams) per day. Eating more plant-based protein can dramatically"
+                    + " cut your greenhouse gas emissions. Fore refrence, a serving of meat is around 3 ounces (85 grams).",
+                category: "food"
+            });
+
+            db.collection("tasks").add({
+                task: "A grocery list of items that you absolutely need to buy",
+                impact: "***",
+                difficulty: "***",
+                description: "Create a grocery list of items that you absolutely need with the neccessary quanities you need, with nothing extra purchased",
+                furtherInfo: "By buying the grocery items that you and your family need to eat, you are helping in reducing the amount of food "
+                    + "that gets wasted every year. By reducing the amount of food wsated, it can have up to a 6-8% reduction in greenhouse gasses.",
+                category: "grocery"
+            });
+
+            db.collection("tasks").add({
+                task: "Use mobile devices only to meet your online social needs",
+                impact: "**",
+                difficulty: "*",
+                description: "Use only your mobile devices for at least one day to satisfy your online needs. Other devices like using a desktop, or TV are not permitted",
+                furtherInfo: "Mobile devices tend to use less power than the average desktop computer. Therefore, using less energy and resources needed to generate the amount "
+                    + "of energy needed to keep your desktop computers and TVs powered all day.",
+                category: "resident"
+            });
+
+            db.collection("tasks").add({
+                task: "Recycle any recyclable material that must be thrown out",
+                impact: "***",
+                difficulty: "**",
+                description: "If you have any materials that can be recycled, make sure to drop them into the recycle bin",
+                furtherInfo: "In a study, it was found that recycling any type of plastic such as fossil-fuel, corn, and surgercane plastics "
+                    + "and using only renewable types of plastics could reduce carbon emissions by up to 77%, 84%, and 86%. It was also discovered that"
+                    + " composting or burning plastics instead of recycling them could have the opposite affect in adding carbon emissions to the atmosphere instead of taking away."
+                    + " Therefore, it is important that people start recycling their platics rather than throwing them into the garbage bin or composting them.",
+                category: "recycle"
+            });
+
+            db.collection("tasks").add({
+                task: "Reduce your water usage by at least 40%",
+                impact: "****",
+                difficulty: "*****",
+                description: "For at least one day, reduce your overall water usage by at least 40%.",
+                furtherInfo: "Reducing your water usage can help preserve that finite amount of fresh water that still exists on earth. By using less water, you are "
+                    + "ensuring that less energy is used not only by your personal washing appliances such as the dishwasher or washing machine, but also by the plants "
+                    + "that are responsible for cleaning and filtering the dirty water back into fresh water, thus reducing carbon emissions.",
+                category: "water"
+            });
+
+            db.collection("tasks").add({
+                task: "Try eating frozen foods more often",
+                impact: "***",
+                difficulty: "****",
+                description: "For at least one day, try eating foods that come out of your freezer rather than your refridgerator.",
+                furtherInfo: "By using your freezer more, you are ensuring that your food stays fresh longer so that they don't have to become "
+                    + "food waste when they go bad from not being fresh anymore. This in turn can help to reduce up to 6-8% of carbon emissions"
+                    + " from being released into the atmosphere just from keeping food from going into waste.",
+                category: "food"
+            });
+
+            db.collection("tasks").add({
+                task: "For long distance travel, try using public transportation",
+                impact: "****",
+                difficulty: "***",
+                description: "If you must travel long distance, such as to another city, use public transportation rather than driving.",
+                furtherInfo: "Traveling by train over driving can reduce up to 80% of greenhouse gasses that are emitted into the atmosphere."
+                    + " Taking the train over driving may also help get you to your destination faster than driving.",
+                category: "transportation"
+            });
+
+            db.collection("tasks").add({
+                task: "Compost any food scraps or compostable gardening waste",
+                impact: "***",
+                difficulty: "**",
+                description: "Any leftover food scraps that you have or any gardening waste accumulated that must be tossed out should be sent to the compost bin.",
+                furtherInfo: "Composting any items that are compostable can help in creating a better fertilizer for your plants than ever and in addition also helps keeps uneccessary items from appearing in landfills.",
+                category: "recycle"
+            });
+
+            db.collection("tasks").add({
+                task: "Donate any old items from your household that you don't need to a local thrift shop of your choosing",
+                impact: "****",
+                difficulty: "**",
+                description: "If you have any items that you or your family do not need anymore and they are in good working order, then rather than recycling them or throwing them out, try donating them to a local thrift shop of your choosing.",
+                furtherInfo: "By donating your good condition items that you don't need anymore to thrift shops, you are keeping those items from entering the landfill and giving new life to that item to someone else. In addition, "
+                    + "you would also help in keeping less product from having to be manufactured as well. That is one less item that needs to use energy to be made from the planet's resources.",
+                category: "resident"
+            });
+
+            console.log("function called successfully");
+        }
+
+    </script>
+</body>
+
+</html>
