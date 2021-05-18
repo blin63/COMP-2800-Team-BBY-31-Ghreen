@@ -11,7 +11,19 @@ var uiConfig = {
       if (authResult.additionalUserInfo.isNewUser) {         //if new user
         db.collection("users").doc(user.uid).set({         //write to firestore
           name: user.displayName,                    //"users" collection
-          email: user.email                          //with authenticated user's ID (user.uid)
+          email: user.email,                          //with authenticated user's ID (user.uid)
+          baseline: {
+            'number of people': 0,
+            'size of home': 'none',
+            'types of meals': [],
+            'dishwasher usage': 'none',
+            'purchases': 0,
+            'garbage bags': 0,
+            'type of garbage': [],
+            'personal vehicle': 0,
+            'public transit': 0,
+            'flights': 'none'
+          }
         }).then(function () {
           console.log("New user added to firestore");
           window.location.assign("beginQuestionnaire.html");
