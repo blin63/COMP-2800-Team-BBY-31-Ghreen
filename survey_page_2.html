@@ -27,7 +27,7 @@
         integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
     <!-- Our stylesheet(s) -->
-    <link href="/css/survey_page_4.css" rel="stylesheet" />
+    <link href="/css/survey_page_2.css" rel="stylesheet" />
     <link href="/css/universal.css" rel="stylesheet" />
     <link href="/css/questionnaire.css" rel="stylesheet" />
 
@@ -45,15 +45,22 @@
                 <h2>What is the size of your home?</h2>
                 <div id="buttonGroup">
                     <!-- b# = button number -->
-                    <div class="button" id="b1"><button type="button" class="btn btn-secondary">Large</button></div>
-                    <div class="button" id="b2"><button type="button" class="btn btn-secondary">Small</button></div>
-                    <div class="button" id="b3"><button type="button" class="btn btn-secondary">Medium</button></div>
-                    <div class="button" id="b4"><button type="button" class="btn btn-secondary">Apartment</button></div>
+                    <div class="button" id="button1">
+                        <input type="radio" id="b1" class="btn" name="answer"><label for="b1">Apartment</label>
+                    </div>
+                    <div class="button" id="button2">
+                        <input type="radio" id="b2" class="btn" name="answer"><label for="b2">Small</label>
+                    </div>
+                    <div class="button" id="button3">
+                        <input type="radio" id="b3" class="btn" name="answer"><label for="b3">Medium</label>
+                    </div>
+                    <div class="button" id="button4">
+                        <input type="radio" id="b4" class="btn" name="answer"><label for="b4">Large</label>
+                    </div>
                 </div>
             </div>
         </div>
-        <a href="survey_page_3.html"><button id="confirm" class="btn container-fluid mt-4"
-                type="button">Confirm</button></a>
+        <button id="confirm" class="btn container-fluid mt-4" type="button">Confirm</button>
     </div>
 
     <!-- The link for Bootstrap 5.0, see @link = https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
@@ -79,6 +86,68 @@
 
     <!-- Ghreen specific firebase scripts -->
     <script src="/js/firebase_api_ghreen.js"> </script>
+    <script>
+
+        document.getElementById("confirm").addEventListener('click', function () {
+            console.log("confirm clicked");
+            getUserChoice();
+
+            if (value == 0) {
+                alert("Please select an option");
+                return;
+
+            } else {
+                firebase.auth().onAuthStateChanged(function (user) {
+                    console.log("Value = " + value);
+
+                    /* Found this code from the official firebase guide on how to handle promises
+                     * using return and .then =>
+                     * source: https://firebase.google.com/docs/functions/terminate-functions
+                     */
+                    return db.collection("users").doc(user.uid).update({
+                        'Q2 (Home Size)': value
+                    }).then(() => {
+                        document.location.href = 'survey_page_3.html'
+                    });
+                    /* promise end 
+                     * source: https://firebase.google.com/docs/functions/terminate-functions
+                     */
+                })
+            }
+        });
+
+        var value = 0;
+        /* getUserChoice start
+        * I modified Carly's original code which was can be found here: 
+        * source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 
+        * */
+        function getUserChoice() {
+            console.log("getUserChoice() called");
+
+            if (document.getElementById("b1").checked == true) {
+                console.log("button 1 clicked");
+                value = 2;
+            }
+
+            if (document.getElementById("b2").checked == true) {
+                console.log("button 2 clicked");
+                value = 4;
+            }
+
+            if (document.getElementById("b3").checked == true) {
+                console.log("button 3 clicked");
+                value = 7;
+            }
+
+            if (document.getElementById("b4").checked == true) {
+                console.log("button 4 clicked");
+                value = 10;
+            }
+        }
+/* getUserChoice end
+                * source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 */
+
+    </script>
 </body>
 
 </html>

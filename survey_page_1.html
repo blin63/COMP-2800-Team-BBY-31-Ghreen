@@ -1,5 +1,5 @@
 <!-- question1.html page
-     Author: Brendan Lin
+     Author: Brendan Lin (HTML), Kevin Chang (JavaScript, CSS)
      Ver: 1.0
     -->
 <!-- Bootstrap template used 
@@ -45,40 +45,29 @@
             <div id="question">
                 <!-- b# = button number -->
                 <div class="button" id="button1">
-                    <input type="radio" id="b1" class="btn btn-secondary" name="answer">
-                    <label for="b1">1</label>
+                    <input type="radio" id="b1" class="btn" name="answer"><label for="b1">1</label>
                 </div>
                 <div class="button" id="button2">
-                    <input type="radio" id="b2" class="btn btn-secondary" name="answer">
-                    <label for="b2">2</label>
+                    <input type="radio" id="b2" class="btn" name="answer"><label for="b2">2</label>
                 </div>
                 <div class="button" id="button3">
-                    <input type="radio" id="b3" class="btn btn-secondary" name="answer">
-                    <label for="b3">3</label>
+                    <input type="radio" id="b3" class="btn" name="answer"><label for="b3">3</label>
                 </div>
                 <div class="button" id="button4">
-                    <input type="radio" id="b4" class="btn btn-secondary" name="answer">
-                    <label for="b4">4</label>
+                    <input type="radio" id="b4" class="btn" name="answer"><label for="b4">4</label>
                 </div>
                 <div class="button" id="button5">
-                    <input type="radio" id="b5" class="btn btn-secondary" name="answer">
-                    <label for="b5">5</label>
+                    <input type="radio" id="b5" class="btn" name="answer"><label for="b5">5</label>
                 </div>
                 <div class="button" id="button6">
-                    <input type="radio" id="b6" class="btn btn-secondary" name="answer">
-                    <label for="b6">6</label>
+                    <input type="radio" id="b6" class="btn" name="answer"><label for="b6">6</label>
                 </div>
                 <div class="button" id="button7">
-                    <input type="radio" id="b7" class="btn btn-secondary" name="answer">
-                    <label for="b7">7+</label>
+                    <input type="radio" id="b7" class="btn" name="answer"><label for="b7">7+</label>
                 </div>
-
             </div>
         </div>
-        <!--         <a href="survey_page_2.html">
- --> <button id="confirm" class="btn container-fluid mt-4" type="button">Confirm</button>
-        <!--             </a>
- -->
+        <button id="confirm" class="btn container-fluid mt-4" type="button">Confirm</button>
     </div>
 
     <!-- The link for Bootstrap 5.0, see @link = https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
@@ -104,71 +93,7 @@
 
     <!-- Ghreen specific firebase scripts -->
     <script src="/js/firebase_api_ghreen.js"> </script>
-    <script>
-
-        document.getElementById("confirm").addEventListener('click', function () {
-            console.log("confirm() called");
-            firebase.auth().onAuthStateChanged(function (user) {
-                getUserChoice();
-                console.log("Value = " + value);
-
-                db.collection("users").doc(user.uid).update({
-                    baseline: {
-                        'number of people': value
-                    }
-
-                })
-            })
-        });
-
-        /* getUserChoice start
-        * I modified Carly's original code which was can be found here: 
-        * source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 */
-
-        var value;
-        function getUserChoice() {
-            console.log("getUserChoice() called");
-
-            if (document.getElementById("b1").checked == true) {
-                console.log("button 1 clicked");
-                value = 1;
-            }
-
-            if (document.getElementById("b2").checked == true) {
-                console.log("button 2 clicked");
-                value = 2;
-            }
-
-            if (document.getElementById("b3").checked == true) {
-                console.log("button 3 clicked");
-                value = 3;
-            }
-
-            if (document.getElementById("b4").checked == true) {
-                console.log("button 4 clicked");
-                value = 4;
-            }
-
-            if (document.getElementById("b5").checked == true) {
-                console.log("button 5 clicked");
-                value = 5;
-            }
-
-            if (document.getElementById("b6").checked == true) {
-                console.log("button 6 clicked");
-                value = 6;
-            }
-
-            if (document.getElementById("b7").checked == true) {
-                console.log("button 7 clicked");
-                value = 7;
-            }
-        }
-
-        /* getUserChoice end
-        * source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 */
-
-    </script>
+    <script src="/js/survey_page_1.js"> </script>
 
 
 </body>
