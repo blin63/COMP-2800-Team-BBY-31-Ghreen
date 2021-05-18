@@ -54,9 +54,21 @@
     <div class="collapse" id="collapseExample">
         <div class="card card-body">
             <div class="list-group">
-                <a href="your_settings.html" class="list-group-item list-group-item-action" aria-current="true"><i class="fas fa-cog fa-1x"></i>Settings</a>
-                <a href="edit_answers.html" class="list-group-item list-group-item-action"><i class="far fa-edit fa-1x"></i>Edit Questionnaire</a>
-                <a href="about.html" class="list-group-item list-group-item-action"><i class="fas fa-info-circle fa-1x"></i>About Us</a>
+                <a href="your_settings.html" class="list-group-item list-group-item-action" aria-current="true">
+                    <div class="gridList">
+                    <i class="fas fa-cog fa-1x" id="cog"></i><span class="iconLabel" id="settings">Settings</span>
+                    </div>
+                </a>
+                <a href="edit_answers.html" class="list-group-item list-group-item-action">
+                    <div class="gridList">
+                    <i class="far fa-edit fa-1x" id="editIcon"></i><span class="iconLabel" id="edit">Edit Questionnaire</span>
+                    </div>
+                </a>
+                <a href="about.html" class="list-group-item list-group-item-action">
+                    <div class="gridList">
+                    <i class="fas fa-info-circle fa-1x" id="circle"></i><span class="iconLabel" id="about">About Us</span>
+                    </div>
+                </a>
                 <br/>
                 <button id="logout" class="btn container-fluid" type="button">Logout</button>
             </div>

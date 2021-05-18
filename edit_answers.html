@@ -23,7 +23,6 @@
 
     <!-- Our stylesheet(s) -->
     <link href="./css/universal.css" rel="stylesheet" />
-    <link href="./css/profile.css" rel="stylesheet" />
     <link href="./css/edit_answers.css" rel="stylesheet" />
 
     <!-- Firebase Authentication -->
@@ -37,13 +36,51 @@
         <div id="header-items">
             <img src="/images/logo_final.png" alt="logo" class="logo">
             <span id="title"><b>Ghreen</b></span>
+             <!-- Hamburger Button -->
+             <a class="btn btn-outline-secondary btn-lg" id="hamburger" data-bs-toggle="collapse" href="#collapseExample"
+             role="button" aria-expanded="false" aria-controls="collapseExample">
+             <!-- 
+                 Hamburger icon cited from MDB (start)
+                 Author: MDB
+                 See: https://mdbootstrap.com/docs/standard/navigation/navbar/
+             -->
+             <i class="fas fa-bars"></i>
+             <!-- 
+                 Hamburger icon cited from MDB (end)
+                 Author: MDB
+                 See: https://mdbootstrap.com/docs/standard/navigation/navbar/
+             -->
+         </a>
         </div>
     </nav>
 
-    <a href="profile.html"><i class="fas fa-chevron-circle-left fa-2x"></i></a>
+    <!-- Hamburger list when button is clicked -->
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            <div class="list-group">
+                <a href="your_settings.html" class="list-group-item list-group-item-action" aria-current="true">
+                    <div class="gridList">
+                    <i class="fas fa-cog fa-1x" id="cog"></i><span class="iconLabel" id="settings">Settings</span>
+                    </div>
+                </a>
+                <a href="edit_answers.html" class="list-group-item list-group-item-action">
+                    <div class="gridList">
+                    <i class="far fa-edit fa-1x" id="editIcon"></i><span class="iconLabel" id="edit">Edit Questionnaire</span>
+                    </div>
+                </a>
+                <a href="about.html" class="list-group-item list-group-item-action">
+                    <div class="gridList">
+                    <i class="fas fa-info-circle fa-1x" id="circle"></i><span class="iconLabel" id="about">About Us</span>
+                    </div>
+                </a>
+                <br/>
+                <button id="logout" class="btn container-fluid" type="button">Logout</button>
+            </div>
+        </div>
+    </div>
 
     <h1><i>Edit Questionnaire</i>
-        <i class="far fa-edit fa-1x"></i>
+        <i class="far fa-edit fa-1x" id="editQuestionnairePageIcon"></i>
     </h1>
     <!-- 
         Used Bootstrap Buttons.
