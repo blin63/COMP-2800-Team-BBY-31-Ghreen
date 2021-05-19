@@ -26,10 +26,11 @@ td {
 
 #item {
     width: 30%;
+    padding: 0px;
 }
 
 #special, .specialTD {
-    background-color: gold;
+    background-color: rgb(236, 209, 55);
     border: 1px solid black;
 }
 
@@ -58,6 +59,6 @@ td i {
     text-align: center;
     margin: 10%;
     padding: 3%;
-    background-color: gold;
+    background-color: rgb(236, 209, 55);
     outline: 1px solid black;
 }
