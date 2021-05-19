@@ -56,6 +56,9 @@ i {
     float: right;
     margin-right: 20px;
     margin-top: 20px;
+    outline: 1px solid #B6FFB0;
+    color: black;
+    border-radius: 0%;
 }
 
 .list-group {
@@ -89,4 +92,36 @@ i {
 
 .card, .list-group, .list-group-item {
     background-color: #93f87e;
+}
+
+.gridList {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+}
+
+.iconLabel {
+    grid-column: 2 / span 1;
+}
+
+#cog, #editIcon, #circle {
+    grid-column: 1 / span 1;
+    margin-top: 2.5%;
+    position: relative;
+    left: 30%;
+}
+
+#settings {
+    position: relative;
+    right: 40%;
+}
+
+#edit {
+    position: relative;
+    right: 20%;
+}
+
+#about {
+    position: relative;
+    right: 38%;
 }
