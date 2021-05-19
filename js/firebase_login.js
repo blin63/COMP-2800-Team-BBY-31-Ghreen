@@ -12,18 +12,16 @@ var uiConfig = {
         db.collection("users").doc(user.uid).set({         //write to firestore
           name: user.displayName,                    //"users" collection
           email: user.email,                          //with authenticated user's ID (user.uid)
-          baseline: {
-            'number of people': 0,
-            'size of home': 'none',
-            'types of meals': [],
-            'dishwasher usage': 'none',
-            'purchases': 0,
-            'garbage bags': 0,
-            'type of garbage': [],
-            'personal vehicle': 0,
-            'public transit': 0,
-            'flights': 'none'
-          }
+          Q0: 0,
+          Q1: 0,
+          Q2: 0,
+          Q3: 0,
+          Q4: 0,
+          Q5: 0,
+          Q6: 0,
+          Q7: 0,
+          Q8: 0,
+          Q9: 0
         }).then(function () {
           console.log("New user added to firestore");
           window.location.assign("beginQuestionnaire.html");
