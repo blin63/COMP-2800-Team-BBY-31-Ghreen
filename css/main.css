@@ -61,8 +61,8 @@
     font-size: 22px;
     text-shadow: 1px 1px black;
     float: right;
-    margin-right: 18vw;
-    margin-top: -7.5vh;
+    margin-right: 15vw;
+    margin-top: -7.8vh;
 }
 
 #direction, #change {
@@ -73,7 +73,10 @@
     color:chartreuse;
 }
 
-#direction {
+.fa-arrow-circle-down {
     color:chartreuse;
-/* Rotate if the change is negative --> transform: rotate(180deg) */
+}
+
+.fa-arrow-circle-up {
+    color:red;
 }
