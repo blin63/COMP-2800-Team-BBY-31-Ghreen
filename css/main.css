@@ -1,0 +1,79 @@
+
+#container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 25% 50%;
+}
+
+.welcome {
+    grid-column: 1 / 1;
+    grid-row: 1 / 2;
+    text-align: center;
+}
+
+#stats {
+    grid-column: 1 / 1;
+    grid-row: 2 / 3;
+    text-align: center;
+}
+
+#tree {
+    grid-column: 1 / 1;
+    grid-row: 3 / 4;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.welcome h1 {
+    margin-top: 2em;
+    text-align: center;
+}
+
+#stats {
+    text-align: center;
+}
+
+#carbon-score {
+    color: black;
+    border: 3px solid black;
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+#carbon-score span {
+    font-size: 35px;
+    margin-top: 1.8vh;
+    display: inline-block;
+    text-align: center;
+}
+
+#score-label {
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 0.5em;
+}
+
+#percentage-change {
+    font-size: 22px;
+    text-shadow: 1px 1px black;
+    float: right;
+    margin-right: 18vw;
+    margin-top: -7.5vh;
+}
+
+#direction, #change {
+    display: inline-block;
+}
+
+#change {
+    color:chartreuse;
+}
+
+#direction {
+    color:chartreuse;
+/* Rotate if the change is negative --> transform: rotate(180deg) */
+}

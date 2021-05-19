@@ -6,3 +6,42 @@ body {
 a {
     color: black;
 }
+
+.navbar.fixed-top {
+    position: relative;
+}
+
+nav, footer {
+    background-color: #A3FA91;
+}
+
+.logo {
+    width: 19%;
+    padding: 0% 1%;
+}
+
+#title {
+    font-size: 26px;
+    position: absolute;
+    bottom: 10px;
+}
+
+footer a {
+    margin-right: 5%;
+    margin-left: 4%;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 4.8em;
+}
+
+.fa-chevron-circle-left {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+}
+
+h1 .fa-cog, .fa-award {
+    margin-left: -3%;
+}
