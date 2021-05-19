@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=PT+Sans&display=swap');
+
 body {
     line-height: 1em;
 }
@@ -7,13 +9,23 @@ body {
     margin-top: 1em;
 }
 
+#back_icon:active {
+    opacity: 0.6;
+}
+
+#back_icon:hover {
+    opacity: 0.6;
+}
+
 .wrapper {
     text-align: center;
+    font-family: 'PT Sans', sans-serif;
+
 }
 
 .taskName {
+    font-family: 'Concert One', cursive;
     font-size: 1.5em;
-    font-weight: bolder;
     border-bottom: 2px solid black;
     margin-left: 2em;
     margin-right: 2em;
@@ -28,6 +40,8 @@ body {
     margin-bottom: .5em;
     margin-left: 2em;
     margin-right: 2em;
+    font-weight: bold;
+    color: #2E856E;
 }
 
 .icons {
@@ -40,6 +54,18 @@ body {
     margin-top: .5em;
     font-size: .8em;
     font-style: italic;
+    color: #006A4E;
+}
+
+.iconLabel:active {
+    color: #D8B9AA;
+    font-weight: bolder;
+}
+
+.iconLabel:hover {
+    opacity: 0.6;
+    color: #D8B9AA;
+    font-weight: bolder;
 }
 
 .descritionBox {
@@ -50,13 +76,18 @@ body {
 }
 
 .s1 {
-    background-color: #BAE7EC;
+    /* background-color: #BAE7EC; */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 10.94%, #FFFFFF 100%), #BAE7EC;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
     margin:1em;
     padding: 1em;
     text-align: left;
+    border-radius: 10px;
+
 }
 
 .s2 {
@@ -67,6 +98,10 @@ body {
     margin-bottom: 0;
     padding: 1em;
     text-align: left;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(239, 220, 210, 0.5) 21.35%, rgba(239, 220, 210, 0.5) 46.88%, rgba(255, 255, 255, 0) 91.67%), #DEFFF6;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 
 .furtherInfo {
@@ -77,9 +112,11 @@ body {
     margin-top: 0em;
     padding: 1em;
     text-align: left;
-    margin-bottom: 2em;
+    margin-bottom: 5em;
     line-height: 1.2em;
-
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255, 250, 248, 0.5) 21.35%, rgba(255, 255, 255, 0.5) 46.88%, rgba(254, 181, 146, 0) 91.67%), #FFDED5;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 #back_icon {
@@ -91,4 +128,16 @@ body {
 a {
     color: black;
     text-decoration: none;
+}
+
+.activeAnimation {
+    animation-name: fun;   
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes fun {
+    from {background-color: #eebfb2;}
+    to {background-color: #C7F5FB;}
 }

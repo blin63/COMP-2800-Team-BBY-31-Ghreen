@@ -19,7 +19,6 @@
     <link href="../css/universal_category_task.css" rel="stylesheet" />
     <link href="../css/category.css" rel="stylesheet" />
 
-
     <!-- Firebase Authentication -->
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
 
@@ -34,376 +33,417 @@
         </div>
     </nav>
 
-
-
-
     <!-- content -->
     <div class="wrapper">
-        <!-- C1 -->
-        <div class="category">
-            <p class="category_title">Transportation</p>
-            <img class="category_icon" src="../images/icons/categoryIcon/car-side-solid.svg" alt="">
-            <div class="task_container">
-                <ul class="tasks">
-                    <li class="task_detail"> <!--buttons for each li -->
-                        <p class="task_title">Use Electric Vehicle</p>
-                        <p class="des">Buy TSLA</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>******</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>**</p>
-                            </div>
-                        </div>
+        <!-- slideBar -->
+        <div class="slideshow-container">
+            <!-- C1 -->
+            <div class="category mySlides">
+                <!-- title -->
+                <p class="category_title">Transportation</p>
+                <!-- icon_category -->
+                <div class="icon_slidebar">
+                    <img class="left_icon prev" onclick="plusSlides(-1)"
+                    src="../images/icons/categoryIcon/caret-left.svg" alt="">
+                    <img class="category_icon" src="../images/icons/categoryIcon/car-side-solid.svg" alt="">
+                    <img class="right_icon next" onclick="plusSlides(1)"
+                        src="../images/icons/categoryIcon/caret-right.svg" alt="">
+                </div>
 
-                    </li>
-                    <a href="../html/task_demo_trasnport_ecoDriving.html">
+                <!-- task container -->
+                <div class="task_container">
+                    <ul class="tasks">
+                        <!-- task card -->
                         <li class="task_detail">
-                            <p class="task_title">Eco-driving</p>
-                            <p class="des">Go easy on the brakes and gas pedal. You can also lower impacts by reducing time spent idling, and using overdrive and cruise control.</p>
+                            <!--buttons for each li -->
+                            <p class="task_title">Use Electric Vehicle</p>
+                            <p class="des">Buy TSLA</p>
                             <div class="task_detail_box">
                                 <div class="leftColumn">Impact
-                                    <p>*****</p>
+                                    <p>******</p>
                                 </div>
                                 <div class="rightColumn">Difficulty
-                                    <p>*</p>
+                                    <p>**</p>
                                 </div>
                             </div>
-    
+
                         </li>
-                    </a>
+                        <a href="../html/task_demo_trasnport_ecoDriving.html">
+                            <li class="task_detail">
+                                <p class="task_title">Eco-driving</p>
+                                <p class="des">Go easy on the brakes and gas pedal. You can also lower impacts by
+                                    reducing time spent idling, and using overdrive and cruise control.</p>
+                                <div class="task_detail_box">
+                                    <div class="leftColumn">Impact
+                                        <p>*****</p>
+                                    </div>
+                                    <div class="rightColumn">Difficulty
+                                        <p>*</p>
+                                    </div>
+                                </div>
 
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
+                            </li>
+                        </a>
 
-                    </li>
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!--C2-->
-        <div class="category">
-            <p class="category_title">Food</p>
-            <img class="category_icon" src="../images/icons/categoryIcon/utensils-solid.svg" alt="">
-            <div class="task_container">
-                <ul class="tasks">
-                    <a href="../html/task_template.html">
                         <li class="task_detail">
-                            <p class="task_title">Try Plant-Based Protein</p>
-                            <p class="des">Replace meat in at least 1 meal with any of
-                                the following: legumes, nuts, seeds, beans,
-                                tofu.</p>
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
                             <div class="task_detail_box">
                                 <div class="leftColumn">Impact
-                                    <p>*****</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
                                     <p>***</p>
                                 </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
                             </div>
                         </li>
-                    </a>
+                    </ul>
+                </div>
+            </div>
 
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!--C3-->
-        <div class="category">
-            <p class="category_title">Grocery</p>
-            <img class="category_icon" src="../images/icons/categoryIcon/shopping-cart-solid.svg" alt="">
-            <div class="task_container">
-                <ul class="tasks">
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!--C4-->
-        <div class="category">
-            <p class="category_title">Water</p>
-            <img class="category_icon" src="../images/icons/categoryIcon/tint-solid.svg" alt="">
-            <div class="task_container">
-                <ul class="tasks">
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!--C5-->
-        <div class="category">
-            <p class="category_title">Resident</p>
-            <img class="category_icon" src="../images/icons/categoryIcon/house-fill.svg" alt="">
-            <div class="task_container">
-                <ul class="tasks">
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!--C6-->
-        <div class="category">
-            <p class="category_title">Recycle</p>
-            <img class="category_icon" src="../images/icons/categoryIcon/recycle.svg" alt="">
-            <div class="task_container">
-                <ul class="tasks">
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="task_detail">
-                        <p class="task_title">TaskName</p>
-                        <p class="des">TaskDes</p>
-                        <div class="task_detail_box">
-                            <div class="leftColumn">Impact
-                                <p>sdahgdgaslgd</p>
-                            </div>
-                            <div class="rightColumn">Difficulty
-                                <p>dhahdkas</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+            <!--C2-->
+            <!-- <div class="mySlides"> -->
+            <div class="category mySlides">
+                <p class="category_title">Food</p>
+                <div class="icon_slidebar">
+                    <img class="left_icon prev" onclick="plusSlides(-1)"
+                        src="../images/icons/categoryIcon/caret-left.svg" alt="">
+                    <img class="category_icon" src="../images/icons/categoryIcon/utensils-solid.svg" alt="">
+                    <img class="right_icon next" onclick="plusSlides(1)"
+                        src="../images/icons/categoryIcon/caret-right.svg" alt="">
+                </div>
+                <div class="task_container">
+                    <ul class="tasks">
+                        <a href="../html/task_template.html">
+                            <li class="task_detail">
+                                <p class="task_title">Try Plant-Based Protein</p>
+                                <p class="des">Replace meat in at least 1 meal with any of
+                                    the following: legumes, nuts, seeds, beans,
+                                    tofu.</p>
+                                <div class="task_detail_box">
+                                    <div class="leftColumn">Impact
+                                        <p>*****</p>
+                                    </div>
+                                    <div class="rightColumn">Difficulty
+                                        <p>***</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </a>
 
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- </div> -->
+
+            <!--C3-->
+            <div class="category mySlides">
+                <p class="category_title">Grocery</p>
+                <div class="icon_slidebar">
+                    <img class="left_icon prev" onclick="plusSlides(-1)"
+                        src="../images/icons/categoryIcon/caret-left.svg" alt="">
+                    <img class="category_icon" src="../images/icons/categoryIcon/shopping-cart-solid.svg" alt="">
+                    <img class="right_icon next" onclick="plusSlides(1)"
+                        src="../images/icons/categoryIcon/caret-right.svg" alt="">
+                </div>
+                <div class="task_container">
+                    <ul class="tasks">
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--C4-->
+            <div class="category mySlides">
+                <p class="category_title">Water</p>
+                <div class="icon_slidebar">
+                    <img class="left_icon prev" onclick="plusSlides(-1)"
+                        src="../images/icons/categoryIcon/caret-left.svg" alt="">
+                    <img class="category_icon" src="../images/icons/categoryIcon/tint-solid.svg" alt="">
+                    <img class="right_icon next" onclick="plusSlides(1)"
+                        src="../images/icons/categoryIcon/caret-right.svg" alt="">
+                </div>
+                <div class="task_container">
+                    <ul class="tasks">
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--C5-->
+            <div class="category mySlides">
+                <p class="category_title">Resident</p>
+                <div class="icon_slidebar">
+                    <img class="left_icon prev" onclick="plusSlides(-1)"
+                        src="../images/icons/categoryIcon/caret-left.svg" alt="">
+                    <img class="category_icon" src="../images/icons/categoryIcon/house-fill.svg" alt="">
+                    <img class="right_icon next" onclick="plusSlides(1)"
+                        src="../images/icons/categoryIcon/caret-right.svg" alt="">
+                </div>
+                <div class="task_container">
+                    <ul class="tasks">
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--C6-->
+            <div class="category mySlides">
+                <p class="category_title">Recycle</p>
+                <div class="icon_slidebar">
+                    <img class="left_icon prev" onclick="plusSlides(-1)"
+                        src="../images/icons/categoryIcon/caret-left.svg" alt="">
+                    <img class="category_icon" src="../images/icons/categoryIcon/recycle.svg" alt="">
+                    <img class="right_icon next" onclick="plusSlides(1)"
+                    src="../images/icons/categoryIcon/caret-right.svg" alt="">
+                </div>
+                <div class="task_container">
+                    <ul class="tasks">
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="task_detail">
+                            <p class="task_title">TaskName</p>
+                            <p class="des">TaskDes</p>
+                            <div class="task_detail_box">
+                                <div class="leftColumn">Impact
+                                    <p>***</p>
+                                </div>
+                                <div class="rightColumn">Difficulty
+                                    <p>**</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
+    <br>
     <!-- content -->
-
-
-
-
-
-
-
-
 
     <!-- Found this code on bootstrap, see @link = https://mdbootstrap.com/docs/standard/navigation/headers/# -->
     <!-- <nav class="navbar fixed-top">
@@ -421,6 +461,9 @@
             <a href="../html/profile.html"><i class="far fa-user"></i></a>
         </div>
     </footer>
+
+    <!-- Local JS; found at @link = https://www.w3schools.com/howto/howto_js_slideshow.asp-->
+    <script src="/js/showslide.js"></script>
 
     <!-- Found this code on fontawesome, see @link = https://fontawesome.com/ -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
