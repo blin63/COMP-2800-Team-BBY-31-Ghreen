@@ -24,6 +24,15 @@ td {
     padding: 0px;
 }
 
+#item {
+    width: 30%;
+}
+
+#special, .specialTD {
+    background-color: gold;
+    border: 1px solid black;
+}
+
 table {
     border-collapse: separate;
     border-spacing: 0 15px;
@@ -32,7 +41,7 @@ table {
     padding: 10px;
 }
 
-tr, td {
+.table, .td {
     background-color: #8AE9C1;
     border: 1px solid black;
 }
@@ -43,4 +52,12 @@ td i {
 
 #equip {
     border-left: hidden;
+}
+
+#secretMsg {
+    text-align: center;
+    margin: 10%;
+    padding: 3%;
+    background-color: gold;
+    outline: 1px solid black;
 }

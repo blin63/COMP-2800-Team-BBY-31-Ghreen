@@ -76,35 +76,45 @@
     </div>
 
     <div id="rewards">
+        <div id="secretMsg">
+            Congratulations! You found the app's hidden easter egg. Enjoy your Reward :)
+        </div>
+        
         <h1><i>Your Rewards!</i></h1>
         <table>
-            <tr>
-                <td><i class="fas fa-apple-alt fa-2x"></i></td>
-                <td>Granny Smith Apple</td>
-                <td id="equip">Equip</td>
+            <tr class="table">
+                <td class="td"><i class="fas fa-apple-alt fa-2x"></i></td>
+                <td class="td">Granny Smith Apple</td>
+                <td id="equip" class="td">Equip</td>
             </tr>
-            <tr>
-                <td><i class="fas fa-birthday-cake fa-2x"></i></td>
-                <td>Birthday Cake</td>
-                <td id="equip">Equip</td>
+            <tr class="table">
+                <td class="td"><i class="fas fa-birthday-cake fa-2x"></i></td>
+                <td class="td">Birthday Cake</td>
+                <td id="equip" class="td">Equip</td>
             </tr>
-            <tr>
-                <td><i class="fas fa-candy-cane fa-2x"></i></td>
-                <td>Candy Cane</td>
-                <td id="equip">Equip</td>
+            <tr class="table">
+                <td class="td"><i class="fas fa-candy-cane fa-2x"></i></td>
+                <td class="td">Candy Cane</td>
+                <td id="equip" class="td">Equip</td>
             </tr>
-            <tr>
-                <td><i class="fas fa-heart fa-2x"></i></td>
-                <td>Hearty Heart</td>
-                <td id="equip">Equip</td>
+            <tr class="table">
+                <td class="td"><i class="fas fa-heart fa-2x"></i></td>
+                <td class="td">Hearty Heart</td>
+                <td id="equip" class="td">Equip</td>
             </tr>
-            <tr>
-                <td><i class="fas fa-star fa-2x"></i></td>
-                <td>Shining Star</td>
-                <td id="equip">Equip</td>
+            <tr class="table">
+                <td class="td"><i class="fas fa-star fa-2x"></i></td>
+                <td class="td">Shining Star</td>
+                <td id="equip" class="td">Equip</td>
+            </tr>
+            <tr id="special">
+                <td class="specialTD"><img src="/images/logo_final.png" alt="logo" class="logo" id="item"></td>
+                <td class="specialTD">Shining Star</td>
+                <td id="equip" class="specialTD">Equip</td>
             </tr>
         </table>
     </div>
+    <br/>
 
     <!-- Bottom Nav Bar -->
     <footer class="navbar fixed-bottom">
@@ -140,6 +150,9 @@
 
     <!-- Logout scripts -->
     <script src="js/firebase_logout.js"></script>
+
+    <!-- Easter Egg Script -->
+    <script src="js/easterEgg.js"></script>
 </body>
 
 </html>
