@@ -1,0 +1,125 @@
+#question-container {
+    padding: 5%;
+    margin-bottom: -5%;
+    margin-top: 2%;
+}
+
+#question {
+    background-color: #66DAE8;
+    opacity: 80%;
+    padding: 3%;
+    border-radius: 5px;
+}
+
+div button {
+    background-color: #B6FFB0;
+}
+
+.choice {
+    color: black;
+    outline: 1px solid black;
+}
+
+#confirm {
+    background-color: #B6FFB0;
+    border-radius: 5px;
+    outline: 1px solid black;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 4.8em;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 8%;
+}
+
+.width-fix {
+    width: 100%;
+    height: 110%;
+}
+
+.padding-fix {
+    padding: 2%;
+}
+
+.fa-chevron-circle-left {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+}
+
+#thanks-logo {
+    padding: 4%;
+}
+
+#thanks-logo img {
+    width: 60%;
+    margin-left: 20%;
+}
+
+#bar {
+    background-color: black;
+    width: 100%;
+    height: 2px;
+    margin-top: 40%;
+}
+
+#question div {
+    text-align: center;
+}
+
+.button {
+  margin-bottom: 4%;
+}
+
+#question p {
+    text-align: center;
+    font-size: 18px;
+    margin-top: -0.8em;
+    margin-bottom: 1.4em;
+}
+
+/**
+* styles the radio buttons to look like regular buttons 
+* I found this code on markheath.net
+*
+* @author Mark Heath
+* @see https://markheath.net/post/customize-radio-button-css */
+
+input[type="checkbox"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+
+label {
+    color: black;
+    width: 100%;
+    height: 100%;
+    border-radius: 1%;
+    font-size: 18px;
+    padding: 1.2%;
+    line-height: 1.8em;
+    border: 2px solid black;
+}
+
+input[type="checkbox"]:checked + label {
+    background-color:#B6FFB0;
+    border-color: #4c4;
+}
+
+label:hover {
+    background-color: #E7FFE2;
+  }
+
+/* 
+* End of Mark Heath's code
+
+* @author Mark Heath
+* @see https://markheath.net/post/customize-radio-button-css 
+*/
+
+

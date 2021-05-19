@@ -61,8 +61,7 @@
 
         </div>
 
-        <a href="survey_page_7.html"><button id="confirm" class="btn container-fluid mt-4"
-                type="button">Confirm</button></a>
+        <button id="confirm" class="btn container-fluid mt-4" type="button">Confirm</button>
 
     </div>
 
@@ -104,7 +103,7 @@
                      * source: https://firebase.google.com/docs/functions/terminate-functions
                      */
                     return db.collection("users").doc(user.uid).update({
-                        'Q6 (Number of Garbage Bags)': value
+                        'Q6 (Garbage Bags)': value
                     }).then(() => {
                         document.location.href = 'survey_page_7.html'
                     });
@@ -148,10 +147,9 @@
                 value = 5;
             }
         }
-
         /* getUserChoice end
-        * source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 */
-
+         * source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7
+         */
     </script>
 </body>
 
