@@ -106,7 +106,7 @@
                      * source: https://firebase.google.com/docs/functions/terminate-functions
                      */
                     return db.collection("users").doc(user.uid).update({
-                        'Q9 (Public Transportation)': value
+                        'Q8': value
                     }).then(() => {
                         document.location.href = 'survey_page_10.html'
                     });

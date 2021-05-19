@@ -1,10 +1,9 @@
-
 document.getElementById("confirm").addEventListener('click', function () {
     console.log("confirm clicked");
-    getUserChoice();
+    calculateUserChoice();
 
     if (value == 0) {
-        alert ("Please select an option");
+        alert("Please select an option");
         return;
 
     } else {
@@ -16,9 +15,9 @@ document.getElementById("confirm").addEventListener('click', function () {
              * source: https://firebase.google.com/docs/functions/terminate-functions
              */
             return db.collection("users").doc(user.uid).update({
-                'Q0': value
+                'Q2': value
             }).then(() => {
-                document.location.href = 'survey_page_2.html'
+                document.location.href = 'survey_page_4.html'
             });
             /* promise end 
              * source: https://firebase.google.com/docs/functions/terminate-functions
@@ -32,44 +31,39 @@ var value = 0;
 * I modified Carly's original code which was can be found here: 
 * source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 
 * */
-function getUserChoice() {
+function calculateUserChoice() {
     console.log("getUserChoice() called");
 
     if (document.getElementById("b1").checked == true) {
         console.log("button 1 clicked");
-        value = 1;
+        value += 12;
     }
 
     if (document.getElementById("b2").checked == true) {
         console.log("button 2 clicked");
-        value = 2;
+        value += 10;
     }
 
     if (document.getElementById("b3").checked == true) {
         console.log("button 3 clicked");
-        value = 3;
+        value += 8;
     }
 
     if (document.getElementById("b4").checked == true) {
         console.log("button 4 clicked");
-        value = 4;
+        value += 6;
     }
 
     if (document.getElementById("b5").checked == true) {
         console.log("button 5 clicked");
-        value = 5;
+        value += 4;
     }
 
     if (document.getElementById("b6").checked == true) {
         console.log("button 6 clicked");
-        value = 6;
-    }
-
-    if (document.getElementById("b7").checked == true) {
-        console.log("button 7 clicked");
-        value = 7;
+        value += 2;
     }
 }
-
 /* getUserChoice end
-* source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 */
+ * source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7
+ */

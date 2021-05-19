@@ -103,7 +103,7 @@
                      * source: https://firebase.google.com/docs/functions/terminate-functions
                      */
                     return db.collection("users").doc(user.uid).update({
-                        'Q8 (Personal Driving)': value
+                        'Q7': value
                     }).then(() => {
                         document.location.href = 'survey_page_9.html'
                     });

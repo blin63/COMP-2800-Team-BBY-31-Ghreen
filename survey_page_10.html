@@ -104,7 +104,7 @@
                      * source: https://firebase.google.com/docs/functions/terminate-functions
                      */
                     return db.collection("users").doc(user.uid).update({
-                        'Q9+1 (Air Travel)': value
+                        'Q9': value
                     }).then(() => {
                         document.location.href = 'survey_page_complete.html'
                     });
