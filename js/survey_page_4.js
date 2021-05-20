@@ -17,7 +17,33 @@ document.getElementById("confirm").addEventListener('click', function () {
             return db.collection("users").doc(user.uid).update({
                 'Q3': value
             }).then(() => {
-                document.location.href = 'survey_page_5.html'
+                return db.collection("users").doc(user.uid)
+                    .get()
+                    .then(function (doc) {
+                        var score = doc.data().Q0
+                            + doc.data().Q1
+                            + doc.data().Q2
+                            + doc.data().Q3
+                            + doc.data().Q4
+                            + doc.data().Q5
+                            + doc.data().Q6
+                            + doc.data().Q7
+                            + doc.data().Q8
+                            + doc.data().Q9;
+                        db.collection("users").doc(user.uid).update({
+                            scoreChange: 100 * (score - doc.data().scoreCurrent) / (doc.data().scoreCurrent),
+                            scoreOld: doc.data().scoreCurrent,
+                            scoreCurrent: score
+                        }).then(function () {
+                            console.log("Old Score: " + doc.data().scoreOld
+                                + "\n" + "New Score: " + doc.data().scoreCurrent
+                                + "\n" + "Change: " + doc.data().scoreChange);
+                        })
+                            .catch(function (error) {
+                                console.log("Error updating data: " + error);
+                            });
+                        document.location.href = 'survey_page_5.html'
+                    })
             });
             /* promise end 
              * source: https://firebase.google.com/docs/functions/terminate-functions

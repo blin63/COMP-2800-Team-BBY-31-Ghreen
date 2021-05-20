@@ -74,14 +74,18 @@
     display: inline-block;
 }
 
-#change {
-    color:chartreuse;
-}
-
 .fa-arrow-circle-down {
     color:chartreuse;
 }
 
 .fa-arrow-circle-up {
     color:red;
+}
+
+.positive {
+    color:red;
+}
+
+.negative {
+    color:chartreuse;
 }

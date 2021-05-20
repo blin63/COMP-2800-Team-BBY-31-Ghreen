@@ -15,15 +15,18 @@ function readCarbonFootprintData() {
 
                     if (change < 0) {
                         $("#change").text(change.toFixed(1) + "%");
+                        $("#change").addClass("negative");
                         $("#direction").append('<i class="fas fa-arrow-circle-down"></i>')
                     } 
 
                     if (change == 0) {
                         $("#change").text(change.toFixed(1) + "%");
+                        $("#change").addClass("negative");
                     }
                     
                     if (change > 0){
                         $("#change").text("+" + change.toFixed(1) + "%");
+                        $("#change").addClass("positive");
                         $("#direction").append('<i class="fas fa-arrow-circle-up"></i>')
                     }
 
