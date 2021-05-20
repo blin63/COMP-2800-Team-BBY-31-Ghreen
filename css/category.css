@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=PT+Sans&display=swap');
+
 /* Horizontal scroll */
 .wrapper {
     max-height: auto;
@@ -5,21 +7,27 @@
     display: flex;
     overflow-x: scroll;
     margin-bottom: 15%;
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .wrapper::-webkit-scrollbar {
     width: 0;
 }
+
 /* Horizontal scroll */
 
 
 .category {
+    margin: 0;
     min-width: 375px;
     max-width: 375px;
     height: auto;
     /* line-height: 110px; */
     text-align: center;
-    background-color: #E7FFE2;
+    background-color: #e5ffe0;
     margin-right: 2px;
     margin-bottom: 1em;
 }
@@ -37,30 +45,56 @@
 }
 
 .task_detail {
-    background-color: #BAE7EC;
+    /* background-color: #BAE7EC; */
     line-height: 2em;
     margin-right: 2em;
     margin-left: 2em;
     margin-top: 1em;
 
+    /* Rectangle 891 */
+    border-radius: 10px;
+    background: #C7F5FB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    /* animation-name: fun;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+}
+
+/* @keyframes fun {
+    from {background-color: #BAE7EC;}
+    to {background-color: #B8D5CD;}
+} */
+
+.task_detail:active {
+    background-color: #c8f8fd;
+    opacity: 0.6;
 }
 
 .task_detail_box {
     display: flex;
     justify-content: space-around;
     font-weight: bold;
+    color: #2E856E;
+    border-radius: 10px;
+    margin-top: 1em;
+    /* background: linear-gradient(180deg, #e5ffe0 0%, rgba(255, 255, 255, 0) 100%), #E7FFE2; */
 }
 
 .category_icon {
     margin: 0.3em;
     height: 3em;
     width: 3em;
+    grid-area: categoryIcon;
+    place-self: center;
 }
 
 .category_title {
     font-size: 1.5em;
-    margin-top: 2em;
-    font-weight: bold;
+    margin-top: 1.5em;
+    padding: 0;
+    font-family: 'Concert One', cursive;
 }
 
 .task_title {
@@ -82,4 +116,43 @@
 a {
     color: black;
     text-decoration: none;
+}
+
+/* Grid update for category icons 0517*/
+.right_icon {
+    grid-area: right;
+    place-self: center;
+
+    /* animation */
+    width: 25px;
+    transition: transform 0.5s;
+}
+
+/* animation */
+.right_icon:active {
+    opacity: 0.6;
+    width: 35px;
+    transform: rotate(90deg);
+}
+
+.left_icon {
+    grid-area: left;
+    place-self: center;
+
+    /* animation */
+    width: 25px;
+    transition: transform 0.5s;
+}
+
+/* animation */
+.left_icon:active {
+    opacity: 0.6;
+    width: 35px;
+    transform: rotate(90deg);
+}
+
+.icon_slidebar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "left categoryIcon categoryIcon categoryIcon right";
 }
