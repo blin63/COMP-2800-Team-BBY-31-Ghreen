@@ -18,6 +18,7 @@
 
     <!-- Our stylesheet(s) -->
     <link href="/css/universal.css" rel="stylesheet" />
+    <link href="/css/questionnaire.css" rel="stylesheet" />
     <link href="/css/survey_page_3.css" rel="stylesheet" />
 
     <!-- Firebase Authentication -->
@@ -30,6 +31,13 @@
     <a href="survey_page_6.html"><i class="fas fa-chevron-circle-left fa-2x"></i></a>
 
     <h1><i>Waste Management</i></h1>
+
+    <!-- Progres bar used from BootStrap, @link = https://getbootstrap.com/docs/4.0/components/progress/ -->
+    <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuemin="0"
+            aria-valuemax="100"></div>
+    </div>
+    <!-- Progress bar end, @link = https://getbootstrap.com/docs/4.0/components/progress/ -->
 
     <div id="question-container">
         <div id="question">
@@ -54,7 +62,8 @@
                         <input type="checkbox" id="b5" class="btn" name="answer5"><label for="b5">Steel</label>
                     </div>
                     <div class="button" id="button6">
-                        <input type="checkbox" id="b6" class="btn" name="answer6"><label for="b6">Food Waste (Composting)</label>
+                        <input type="checkbox" id="b6" class="btn" name="answer6"><label for="b6">Food Waste
+                            (Composting)</label>
                     </div>
                 </div>
             </div>

@@ -17,6 +17,8 @@ document.getElementById("confirm").addEventListener('click', function () {
             return db.collection("users").doc(user.uid).update({
                 'Q9': value
             }).then(() => {
+                
+
                 document.location.href = 'survey_page_complete.html'
             });
             /* promise end 

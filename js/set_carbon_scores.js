@@ -14,7 +14,7 @@ function setCarbonScores() {
         if (user) {
             db.collection("users").doc(user.uid)
                 .get()
-                .then(function (doc) {
+                .then(function(doc) {
                     var score = doc.data().Q0
                         + doc.data().Q1
                         + doc.data().Q2
@@ -25,11 +25,10 @@ function setCarbonScores() {
                         + doc.data().Q7
                         + doc.data().Q8
                         + doc.data().Q9;
-
                     db.collection("users").doc(user.uid).update({
+                        scoreChange: 100 * (score - doc.data().scoreCurrent) / (doc.data().scoreCurrent),
                         scoreOld: doc.data().scoreCurrent,
-                        scoreCurrent: score,
-                        scoreChange: 100 * (score - doc.data().scoreCurrent) / (doc.data().scoreOld)
+                        scoreCurrent: score
                     }).then(function () {
                         console.log("Old Score: " + doc.data().scoreOld 
                         + "\n" + "New Score: " + doc.data().scoreCurrent 
