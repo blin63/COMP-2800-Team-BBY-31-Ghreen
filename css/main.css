@@ -2,7 +2,8 @@
 #container {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 25% 25% 50%;
+    grid-template-rows: 20% 20% 60%;
+    height: 84vh;
 }
 
 .welcome {
@@ -21,7 +22,10 @@
     grid-column: 1 / 1;
     grid-row: 3 / 4;
     text-align: center;
-    margin-top: 7vh;
+    position: fixed;
+    bottom: 7vh;
+    left: 0;
+    right: 0;
 }
 
 .welcome h1 {
@@ -31,7 +35,7 @@
 
 #stats {
     text-align: center;
-    margin-top: 1vh;
+    margin-top: 0.1vh;
 }
 
 #carbon-score {
@@ -62,8 +66,8 @@
     font-size: 22px;
     text-shadow: 1px 1px black;
     float: right;
-    margin-right: 15vw;
-    margin-top: -7.8vh;
+    margin-right: 16vw;
+    margin-top: -8vh;
 }
 
 #direction, #change {

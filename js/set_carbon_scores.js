@@ -29,7 +29,7 @@ function setCarbonScores() {
                     db.collection("users").doc(user.uid).update({
                         scoreOld: doc.data().scoreCurrent,
                         scoreCurrent: score,
-                        scoreChange: 100 * (doc.data().scoreCurrent - doc.data().scoreOld) / (doc.data().scoreCurrent + doc.data().scoreOld)
+                        scoreChange: 100 * (score - doc.data().scoreCurrent) / (doc.data().scoreOld)
                     }).then(function () {
                         console.log("Old Score: " + doc.data().scoreOld 
                         + "\n" + "New Score: " + doc.data().scoreCurrent 
