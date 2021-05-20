@@ -4,9 +4,43 @@ h1 {
     margin-bottom: 1em;
 }
 
+#container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 20% 60%;
+    height: 84vh;
+}
+
+.welcome {
+    grid-column: 1 / 1;
+    grid-row: 1 / 2;
+    text-align: center;
+}
+
+#stats {
+    grid-column: 1 / 1;
+    grid-row: 2 / 3;
+    text-align: center;
+}
+
+#tree {
+    grid-column: 1 / 1;
+    grid-row: 3 / 4;
+    text-align: center;
+    position: fixed;
+    bottom: 7vh;
+    left: 0;
+    right: 0;
+}
+
+.welcome h1 {
+    margin-top: 2em;
+    text-align: center;
+}
+
 #stats {
     text-align: center;
-    margin-left: 25vw;
+    margin-top: 0.1vh;
 }
 
 #carbon-score {
@@ -15,24 +49,48 @@ h1 {
     width: 90px;
     height: 90px;
     border-radius: 50px;
-    margin-left: 16%;
+    margin: 0 auto;
 }
 
-#carbon-score p {
+#carbon-score span {
     font-size: 35px;
-    margin-top: 20%;
+    margin-top: 1.8vh;
+    display: inline-block;
+    text-align: center;
+}
+
+#score-label {
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 0.5em;
 }
 
 #percentage-change {
     font-size: 22px;
-    color:chartreuse;
     text-shadow: 1px 1px black;
-    margin-top: -22%;
-    margin-left: 16%;
+    float: right;
+    margin-right: 10vw;
+    margin-top: -8vh;
 }
 
-#tree {
-    text-align: center;
-    margin-top: 22%;
+#direction, #change {
+    display: inline-block;
 }
 
+.fa-arrow-circle-down {
+    color:chartreuse;
+}
+
+.fa-arrow-circle-up {
+    color:red;
+}
+
+.positive {
+    color:red;
+}
+
+.negative {
+    color:chartreuse;
+}

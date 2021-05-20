@@ -20,9 +20,9 @@ body {
 }
 
 #firebaseui-auth-container {
-    padding: 0% 5%;
+    padding: 0% 6%;
+    margin-bottom: 2%;
 }
-
 
 div button {
     background-color: #B6FFB0;

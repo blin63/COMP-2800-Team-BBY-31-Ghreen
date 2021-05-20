@@ -32,40 +32,52 @@
 
     <h1><i>Shopping Habits</i></h1>
 
+        <!-- Progres bar used from BootStrap, @link = https://getbootstrap.com/docs/4.0/components/progress/ -->
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <!-- Progress bar end, @link = https://getbootstrap.com/docs/4.0/components/progress/ -->
+
     <div id="question-container">
         <div id="question">
-            <h2>How many new purchases do you make in a year?</h2>
+            <h2>How many new household purchases do you make in a year?</h2>
+            <p>This includes items such as furniture, electronics, household gadgets, etc.</p>
             <!-- Found this code from Carly's tech tip, see @link = https://www.notion.so/Tech-Tip-F006-How-do-I-make-nice-rows-of-buttons-08bd253aea9747a9bd77ff8cb27def9a -->
             <div class="container">
                 <div class="row row-cols-1">
-                    <div class="col text-center py-3">
-                        <button type="button" class="btn width-fix choice">7+ purchases</button>
+                    <div class="button" id="button1">
+                        <input type="radio" id="b1" class="btn" name="answer"><label for="b1">7+ Purchases</label>
                     </div>
-                    <div class="col text-center py-3">
-                        <button type="button" class="btn width-fix choice">5-7 purchases</button>
+                    <div class="button" id="button2">
+                        <input type="radio" id="b2" class="btn" name="answer"><label for="b2">5 - 7 Purchases</label>
                     </div>
-                    <div class="col text-center py-3">
-                        <button type="button" class="btn width-fix choice">3-5 purchases</button>
+                    <div class="button" id="button3">
+                        <input type="radio" id="b3" class="btn" name="answer"><label for="b3">3 - 5 Purchases</label>
                     </div>
-                    <div class="col text-center py-3">
-                        <button type="button" class="btn width-fix choice">1-3 purchases </button>
+                    <div class="button" id="button4">
+                        <input type="radio" id="b4" class="btn" name="answer"><label for="b4">1 -3 Purchases</label>
                     </div>
-                    <div class="col text-center py-3">
-                        <button type="button" class="btn width-fix choice">Purchase second hand items only</button>
+                    <div class="button" id="button5">
+                        <input type="radio" id="b5" class="btn" name="answer"><label for="b5">No purchases or secondhand
+                            items only</label>
                     </div>
                 </div>
             </div>
 
         </div>
-        
-        <a href="survey_page_6.html"><button id="confirm" class="btn container-fluid mt-4" type="button">Confirm</button></a>
+
+        <button id="confirm" class="btn container-fluid mt-4" type="button">Confirm</button>
 
     </div>
 
+    <!-- The link for Bootstrap 5.0, see @link = https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"></script>
-        
+
+    <!-- JQuery link from Google, see @link = https://developers.google.com/speed/libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <!-- Found this code on fontawesome, see @link = https://fontawesome.com/ -->
     <script src="https://kit.fontawesome.com/26da0e4274.js" crossorigin="anonymous"></script>
 
@@ -81,6 +93,9 @@
 
     <!-- Ghreen specific firebase scripts -->
     <script src="/js/firebase_api_ghreen.js"> </script>
+    <script src="/js/survey_page_5.js"> </script>
+    <script src="./js/redirect.js"> </script>
+
 </body>
 
 </html>
