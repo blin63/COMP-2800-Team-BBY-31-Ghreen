@@ -1,4 +1,4 @@
-// Code copied from Brendan Lin's 1800 demo code
+// Code copied and edited from Brendan Lin's 1800 demo code
 
 function rewardsQuery() {
     db.collection("rewards")
