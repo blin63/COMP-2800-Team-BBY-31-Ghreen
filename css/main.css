@@ -21,7 +21,7 @@
     grid-column: 1 / 1;
     grid-row: 3 / 4;
     text-align: center;
-    margin-top: 5vh;
+    margin-top: 7vh;
 }
 
 .welcome h1 {
@@ -31,6 +31,7 @@
 
 #stats {
     text-align: center;
+    margin-top: 1vh;
 }
 
 #carbon-score {
