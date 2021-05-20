@@ -1,3 +1,4 @@
+  
   // Ghreen's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyDrdcz9FEGzuEvO2zrp5SYt5EKlP4lVnk4",
@@ -10,3 +11,4 @@
 
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore(); 

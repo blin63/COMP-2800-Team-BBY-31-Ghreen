@@ -42,7 +42,6 @@ h1 {
     left: 20px;
 }
 
-a {
-    color: black;
+h1 .fa-cog, .fa-award {
+    margin-left: -3%;
 }
-

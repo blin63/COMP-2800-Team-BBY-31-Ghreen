@@ -1,3 +1,8 @@
+/**
+    Author: Kevin Chang
+    Ver: 1.0
+**/
+
 body {
     text-align: center;
 }
@@ -8,9 +13,9 @@ body {
 }
 
 #content img {
-        margin: 0 auto;
-        width: 60%;
-        margin-bottom: 10%;
+    margin: 0 auto;
+    width: 60%;
+    margin-bottom: 10%;
 }
 
 h3 {
