@@ -25,13 +25,27 @@ td {
 }
 
 #item {
-    width: 30%;
-    padding: 0px;
+    width: 120%;
+    padding: 0%;
+    position: relative;
+    right: 10%;
 }
 
 #special, .specialTD {
     background-color: rgb(236, 209, 55);
     border: 1px solid black;
+}
+
+.specialTD {
+    padding: 4.8%;
+}
+
+#specialSecond {
+    width: 58%;
+}
+
+#specialThird {
+    width: 200%;
 }
 
 table {
