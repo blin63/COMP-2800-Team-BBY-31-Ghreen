@@ -63,22 +63,22 @@ function getUserChoice() {
 
     if (document.getElementById("b1").checked == true) {
         console.log("button 1 clicked");
-        value = 2;
+        value = 10;
     }
 
     if (document.getElementById("b2").checked == true) {
         console.log("button 2 clicked");
-        value = 4;
+        value = 7;
     }
 
     if (document.getElementById("b3").checked == true) {
         console.log("button 3 clicked");
-        value = 7;
+        value = 4;
     }
 
     if (document.getElementById("b4").checked == true) {
         console.log("button 4 clicked");
-        value = 10;
+        value = 2;
     }
 }
         /* getUserChoice end
