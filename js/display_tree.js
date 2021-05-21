@@ -413,51 +413,51 @@ function makeTree() {
                     var score = doc.data().scoreCurrent;
                     console.log(score);
 
-                    if (score == 0 || score <= 10 ) {
+                    if (score == 0 || score <= 15 ) {
                         $("#tree").append(tree11);
                     }
 
-                    if (score > 10 && score <= 20) {
+                    if (score > 15 && score <= 30) {
                         $("#tree").append(tree10);
                     }
                     
-                    if (score > 20 && score <= 30) {
+                    if (score > 30 && score <= 45) {
                         $("#tree").append(tree9);
                     }
 
-                    if (score > 30 && score <= 40) {
+                    if (score > 45 && score <= 60) {
                         $("#tree").append(tree8);
                     }
 
-                    if (score > 40 && score <= 50) {
+                    if (score > 60 && score <= 75) {
                         $("#tree").append(tree7);
                     }
 
-                    if (score > 50 && score < 60) {
+                    if (score > 75 && score < 85) {
                         $("#tree").append(tree6);
                     }
 
-                    if (score >= 60 && score <= 75) {
+                    if (score > 85 && score <= 95) {
                         $("#tree").append(tree5);
                     }
 
-                    if (score > 75 && score <= 85) {
+                    if (score > 95 && score <= 105) {
                         $("#tree").append(tree4);
                     }
 
-                    if (score > 85 && score <= 95) {
+                    if (score > 105 && score <= 115) {
                         $("#tree").append(tree3);
                     }
 
-                    if (score > 95 && score <= 105) {
+                    if (score > 115 && score <= 125) {
                         $("#tree").append(tree2);
                     }
 
-                    if (score > 105 && score <= 115) {
+                    if (score > 125 && score <= 135) {
                         $("#tree").append(tree1);
                     }
 
-                    if (score > 115) {
+                    if (score > 135) {
                         $("#tree").append(tree0);
                     }
 

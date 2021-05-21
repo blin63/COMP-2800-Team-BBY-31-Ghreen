@@ -46,14 +46,14 @@ var uiConfig = {
   signInSuccessUrl: 'main.html',
   signInOptions: [
     firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     firebase.auth.FacebookAuthProvider.PROVIDER_ID,
     firebase.auth.TwitterAuthProvider.PROVIDER_ID,
     firebase.auth.GithubAuthProvider.PROVIDER_ID,
     firebase.auth.PhoneAuthProvider.PROVIDER_ID
-  ],
+  ]/* ,
   tosUrl: '<your-tos-url>',
-  privacyPolicyUrl: '<your-privacy-policy-url>'
+  privacyPolicyUrl: '<your-privacy-policy-url>' */
 };
 
 login.start('#firebaseui-auth-container', uiConfig);
