@@ -48,7 +48,7 @@ function checkTaskList() {
                     var task = doc.data().currenttask;
                     console.log(task);
                     // $("#user").text(a);
-                    task.forEach(function(element) {
+                    task.forEach(function (element) {
                         // user tasklist contains current task
                         if (element == id) {
                             // fail, do nothing
@@ -60,15 +60,15 @@ function checkTaskList() {
                             $("#add_icon").click(function () {
                                 $(".alert_success").fadeIn("slow");
                             });
-                            
+
                             // update user' tasklist
                             userObject.update({
                                 currenttask: id
-                            }).then(function() {
+                            }).then(function () {
                                 console.log("new taskID: " + doc.data().currenttask)
                             })
                         }
-                        
+
                     })
                 })
         }

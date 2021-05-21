@@ -14,8 +14,10 @@
         integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
     <!-- Local css -->
-    <link href="../css/universal_category_task.css" rel="stylesheet" />
-    <link href="../css/pList_task.css" rel="stylesheet" />
+    <link href="/css/universal_category_task.css" rel="stylesheet" />
+    <link href="/css/pList_task.css" rel="stylesheet" />
+    <link href="/css/universal.css" rel="stylesheet" />
+
 
 
     <!-- Firebase Authentication -->
@@ -38,7 +40,7 @@
     <!-- content -->
     <div class="wrapper">
         <div id="back_icon">
-            <a href="../html/category.html"><img src="../images/icons/categoryIcon/chevron-circle-left-solid.svg"
+            <a href="/category.html"><img src="../images/icons/categoryIcon/chevron-circle-left-solid.svg"
                     alt=""></a>
         </div>
         <div class="task_detail_wrapper">
@@ -101,10 +103,33 @@
 
     <footer class="navbar fixed-bottom">
         <div class="container py-2 fa-lg">
-            <a href="../html/main.html"><i class="fas fa-home"></i></a>
-            <a href="../html/category.html"><i class="fas fa-list"></i></a>
-            <a href="../html/tasklist.html"><i class="far fa-check-circle"></i></a>
-            <a href="../html/profile.html"><i class="far fa-user"></i></a>
+            <span class="iconContainer" id="homeContainer">
+            <a href="/main.html">
+                <i class="fas fa-home anchorNav"></i>
+                <p id="main">Main Menu</p>
+            </a>
+            
+            </span>
+            <span class="iconContainer" id="categoryContainer">
+            <a href="/category.html">
+                <i class="fas fa-list anchorNav"></i>
+                <p id="category">Category</p>
+            </a>
+            
+            </span>
+            <span class="iconContainer" id="personalizeContainer">
+            <a href="/tasklist.html">
+                <i class="far fa-check-circle anchorNav"></i>
+                <p id="personalized">Personalized Tasks</p>
+            </a>
+            
+            </span>
+            <span class="iconContainer" id="rewardContainer">
+            <a href="/rewards.html">
+                <i class="fas fa-award anchorNav"></i>
+                <p id="rewards">Rewards</p>
+            </a>
+            </span>
         </div>
     </footer>
 
