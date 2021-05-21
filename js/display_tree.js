@@ -413,11 +413,11 @@ function makeTree() {
                     var score = doc.data().scoreCurrent;
                     console.log(score);
 
-                    if (score == 0 || score <= 15 ) {
+                    if (score == 0 || score <= 20 ) {
                         $("#tree").append(tree11);
                     }
 
-                    if (score > 15 && score <= 30) {
+                    if (score > 20 && score <= 30) {
                         $("#tree").append(tree10);
                     }
                     
