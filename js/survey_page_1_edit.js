@@ -88,7 +88,7 @@ function getUserChoice() {
 
     if (document.getElementById("b6").checked == true) {
         console.log("button 6 clicked");
-        value = 12;
+        value = 14;
     }
 }
 
