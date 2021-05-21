@@ -63,37 +63,32 @@ function getUserChoice() {
 
     if (document.getElementById("b1").checked == true) {
         console.log("button 1 clicked");
-        value = 1;
+        value = 2;
     }
 
     if (document.getElementById("b2").checked == true) {
         console.log("button 2 clicked");
-        value = 2;
+        value = 4;
     }
 
     if (document.getElementById("b3").checked == true) {
         console.log("button 3 clicked");
-        value = 3;
+        value = 6;
     }
 
     if (document.getElementById("b4").checked == true) {
         console.log("button 4 clicked");
-        value = 4;
+        value = 8;
     }
 
     if (document.getElementById("b5").checked == true) {
         console.log("button 5 clicked");
-        value = 5;
+        value = 10;
     }
 
     if (document.getElementById("b6").checked == true) {
         console.log("button 6 clicked");
-        value = 6;
-    }
-
-    if (document.getElementById("b7").checked == true) {
-        console.log("button 7 clicked");
-        value = 7;
+        value = 14;
     }
 }
 
