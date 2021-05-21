@@ -1,5 +1,5 @@
 <!-- question1.html page
-     Author: Brendan Lin
+     Author: Brendan Lin (HTML), Kevin Chang (JavaScript, CSS)
      Ver: 1.0
     -->
 <!-- Bootstrap template used 
@@ -27,9 +27,9 @@
         integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
     <!-- Our stylesheet(s) -->
-    <link href="./css/survey_page_1_edit.css" rel="stylesheet" />
-    <link href="./css/universal.css" rel="stylesheet" />
-    <link href="./css/questionnaire.css" rel="stylesheet" />
+    <link href="css/survey_page_1.css" rel="stylesheet" />
+    <link href="css/universal.css" rel="stylesheet" />
+    <link href="css/questionnaire.css" rel="stylesheet" />
 
 
     <title>Ghreen</title>
@@ -44,27 +44,59 @@
             <h2>How many people do you live with?</h2>
             <div id="question">
                 <!-- b# = button number -->
-                <div class="button" id="b1"><button type="button" class="btn btn-secondary">1</button></div>
-                <div class="button" id="b2"><button type="button" class="btn btn-secondary">2</button></div>
-                <div class="button" id="b3"><button type="button" class="btn btn-secondary">3</button></div>
-                <div class="button" id="b4"><button type="button" class="btn btn-secondary">4</button></div>
-                <div class="button" id="b5"><button type="button" class="btn btn-secondary">5</button></div>
-                <div class="button" id="b6"><button type="button" class="btn btn-secondary">6</button></div>
-                <div class="button" id="b7"><button type="button" class="btn btn-secondary">7+</button></div>
+                <div class="button" id="button1">
+                    <input type="radio" id="b1" class="btn" name="answer"><label for="b1">1</label>
+                </div>
+                <div class="button" id="button2">
+                    <input type="radio" id="b2" class="btn" name="answer"><label for="b2">2</label>
+                </div>
+                <div class="button" id="button3">
+                    <input type="radio" id="b3" class="btn" name="answer"><label for="b3">3</label>
+                </div>
+                <div class="button" id="button4">
+                    <input type="radio" id="b4" class="btn" name="answer"><label for="b4">4</label>
+                </div>
+                <div class="button" id="button5">
+                    <input type="radio" id="b5" class="btn" name="answer"><label for="b5">5</label>
+                </div>
+                <div class="button" id="button6">
+                    <input type="radio" id="b6" class="btn" name="answer"><label for="b6">6</label>
+                </div>
+                <div class="button" id="button7">
+                    <input type="radio" id="b7" class="btn" name="answer"><label for="b7">7+</label>
+                </div>
             </div>
         </div>
-        <a href="edit_answers.html"><button id="confirm" class="btn container-fluid mt-4" type="button">Confirm</button></a>
+        <button id="confirm" class="btn container-fluid mt-4" type="button">Confirm</button>
     </div>
 
+    <!-- The link for Bootstrap 5.0, see @link = https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- JQuery link from Google, see @link = https://developers.google.com/speed/libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <!-- Found this code on fontawesome, see @link = https://fontawesome.com/ -->
     <script src="https://kit.fontawesome.com/26da0e4274.js" crossorigin="anonymous"></script>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
-        </script>
+    <!-- Firebase App (the core Firebase SDK) must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- Firebase products -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+    <!-- Firebase Authentication -->
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+
+    <!-- Ghreen specific firebase scripts -->
+    <script src="/js/firebase_api_ghreen.js"> </script>
+    <script src="/js/survey_page_1_edit.js"> </script>
+    <script src="./js/redirect.js"> </script>
+
+
 </body>
 
 </html>
