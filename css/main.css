@@ -18,7 +18,7 @@
     text-align: center;
 }
 
-#tree {
+.tree {
     grid-column: 1 / 1;
     grid-row: 3 / 4;
     text-align: center;
