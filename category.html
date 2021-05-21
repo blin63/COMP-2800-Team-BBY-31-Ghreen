@@ -9,43 +9,47 @@
         @author: Erin Glass
         @see: https://www.digitalocean.com/community/tutorials/how-to-add-a-favicon-to-your-website-with-html--%3E 
     -->
-    <link rel="shortcut icon" type="image/png" href="/images/icons/logo_final.png" />
+    <link rel="shortcut icon" type="image/png" href="../images/icons/logo_final.png" />
     <!-- End of source -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
     <!-- Local css -->
-    <link href="/css/universal_category_task.css" rel="stylesheet" />
+    <link href="../css/universal_category_task.css" rel="stylesheet" />
+    <link href="../css/category.css" rel="stylesheet" />
     <link href="/css/universal.css" rel="stylesheet" />
-    <link href="/css/category.css" rel="stylesheet" />
+
 
     <!-- Firebase Authentication -->
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
 
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
+
     <!-- App logo section-->
     <nav class="navbar fixed-top">
         <div id="header-items">
-            <img src="/images/icons/logo_final.png" alt="logo" class="logo">
+            <img src="../images/icons/logo_final.png" alt="logo" class="logo">
             <span id="title"><b>Ghreen</b></span>
             <!-- Hamburger Button -->
             <a class="btn btn-outline-secondary btn-lg" id="hamburger" data-bs-toggle="collapse" href="#collapseExample"
-                role="button" aria-expanded="false" aria-controls="collapseExample">
-                <!-- 
-                 Hamburger icon cited from MDB (start)
-                 Author: MDB
-                 See: https://mdbootstrap.com/docs/standard/navigation/navbar/
-             -->
-                <i class="fas fa-bars"></i>
-                <!-- 
-                 Hamburger icon cited from MDB (end)
-                 Author: MDB
-                 See: https://mdbootstrap.com/docs/standard/navigation/navbar/
-             -->
-            </a>
+            role="button" aria-expanded="false" aria-controls="collapseExample">
+            <!-- 
+                Hamburger icon cited from MDB (start)
+                Author: MDB
+                See: https://mdbootstrap.com/docs/standard/navigation/navbar/
+            -->
+            <i class="fas fa-bars"></i>
+            <!-- 
+                Hamburger icon cited from MDB (end)
+                Author: MDB
+                See: https://mdbootstrap.com/docs/standard/navigation/navbar/
+            -->
+        </a>
         </div>
     </nav>
 
@@ -55,20 +59,22 @@
             <div class="list-group">
                 <a href="your_settings.html" class="list-group-item list-group-item-action" aria-current="true">
                     <div class="gridList">
-                    <i class="fas fa-cog fa-1x" id="cog"></i><span class="iconLabel" id="settings">Settings</span>
+                        <i class="fas fa-cog fa-1x" id="cog"></i><span class="iconLabel" id="settings">Settings</span>
                     </div>
                 </a>
                 <a href="edit_answers.html" class="list-group-item list-group-item-action">
                     <div class="gridList">
-                    <i class="far fa-edit fa-1x" id="editIcon"></i><span class="iconLabel" id="edit">Edit Questionnaire</span>
+                        <i class="far fa-edit fa-1x" id="editIcon"></i><span class="iconLabel" id="edit">Edit
+                            Questionnaire</span>
                     </div>
                 </a>
                 <a href="about.html" class="list-group-item list-group-item-action">
                     <div class="gridList">
-                    <i class="fas fa-info-circle fa-1x" id="circle"></i><span class="iconLabel" id="about">About Us</span>
+                        <i class="fas fa-info-circle fa-1x" id="circle"></i><span class="iconLabel" id="about">About
+                            Us</span>
                     </div>
                 </a>
-                <br/>
+                <br />
                 <button id="logout" class="btn container-fluid" type="button">Logout</button>
             </div>
         </div>
@@ -85,72 +91,16 @@
                 <!-- icon_category -->
                 <div class="icon_slidebar">
                     <img class="left_icon prev" onclick="plusSlides(-1)"
-                    src="/images/icons/categoryIcon/caret-left.svg" alt="">
-                    <img class="category_icon" src="/images/icons/categoryIcon/car-side-solid.svg" alt="">
+                        src="../images/icons/categoryIcon/caret-left.svg" alt="">
+                    <img class="category_icon" src="../images/icons/categoryIcon/car-side-solid.svg" alt="">
                     <img class="right_icon next" onclick="plusSlides(1)"
-                        src="/images/icons/categoryIcon/caret-right.svg" alt="">
+                        src="../images/icons/categoryIcon/caret-right.svg" alt="">
                 </div>
 
                 <!-- task container -->
                 <div class="task_container">
-                    <ul class="tasks">
-                        <!-- task card -->
-                        <li class="task_detail">
-                            <!--buttons for each li -->
-                            <p class="task_title">Use Electric Vehicle</p>
-                            <p class="des">Buy TSLA</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>******</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-
-                        </li>
-                        <a href="task_demo_trasnport_ecoDriving.html">
-                            <li class="task_detail">
-                                <p class="task_title">Eco-driving</p>
-                                <p class="des">Go easy on the brakes and gas pedal. You can also lower impacts by
-                                    reducing time spent idling, and using overdrive and cruise control.</p>
-                                <div class="task_detail_box">
-                                    <div class="leftColumn">Impact
-                                        <p>*****</p>
-                                    </div>
-                                    <div class="rightColumn">Difficulty
-                                        <p>*</p>
-                                    </div>
-                                </div>
-
-                            </li>
-                        </a>
-
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-
-                        </li>
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
+                    <ul class="tasks" id="transportation">
+                        <!-- task location -->
                     </ul>
                 </div>
             </div>
@@ -161,66 +111,14 @@
                 <p class="category_title">Food</p>
                 <div class="icon_slidebar">
                     <img class="left_icon prev" onclick="plusSlides(-1)"
-                        src="/images/icons/categoryIcon/caret-left.svg" alt="">
-                    <img class="category_icon" src="/images/icons/categoryIcon/utensils-solid.svg" alt="">
+                        src="../images/icons/categoryIcon/caret-left.svg" alt="">
+                    <img class="category_icon" src="../images/icons/categoryIcon/utensils-solid.svg" alt="">
                     <img class="right_icon next" onclick="plusSlides(1)"
-                        src="/images/icons/categoryIcon/caret-right.svg" alt="">
+                        src="../images/icons/categoryIcon/caret-right.svg" alt="">
                 </div>
                 <div class="task_container">
-                    <ul class="tasks">
-                        <a href="/html/task_template.html">
-                            <li class="task_detail">
-                                <p class="task_title">Try Plant-Based Protein</p>
-                                <p class="des">Replace meat in at least 1 meal with any of
-                                    the following: legumes, nuts, seeds, beans,
-                                    tofu.</p>
-                                <div class="task_detail_box">
-                                    <div class="leftColumn">Impact
-                                        <p>*****</p>
-                                    </div>
-                                    <div class="rightColumn">Difficulty
-                                        <p>***</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </a>
-
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
+                    <ul class="tasks" id="food">
+                        <!--task location-->
                     </ul>
                 </div>
             </div>
@@ -231,61 +129,14 @@
                 <p class="category_title">Grocery</p>
                 <div class="icon_slidebar">
                     <img class="left_icon prev" onclick="plusSlides(-1)"
-                        src="/images/icons/categoryIcon/caret-left.svg" alt="">
-                    <img class="category_icon" src="/images/icons/categoryIcon/shopping-cart-solid.svg" alt="">
+                        src="../images/icons/categoryIcon/caret-left.svg" alt="">
+                    <img class="category_icon" src="../images/icons/categoryIcon/shopping-cart-solid.svg" alt="">
                     <img class="right_icon next" onclick="plusSlides(1)"
-                        src="/images/icons/categoryIcon/caret-right.svg" alt="">
+                        src="../images/icons/categoryIcon/caret-right.svg" alt="">
                 </div>
                 <div class="task_container">
-                    <ul class="tasks">
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
+                    <ul class="tasks" id="grocery">
+                        <!--task location-->
                     </ul>
                 </div>
             </div>
@@ -295,61 +146,14 @@
                 <p class="category_title">Water</p>
                 <div class="icon_slidebar">
                     <img class="left_icon prev" onclick="plusSlides(-1)"
-                        src="/images/icons/categoryIcon/caret-left.svg" alt="">
-                    <img class="category_icon" src="/images/icons/categoryIcon/tint-solid.svg" alt="">
+                        src="../images/icons/categoryIcon/caret-left.svg" alt="">
+                    <img class="category_icon" src="../images/icons/categoryIcon/tint-solid.svg" alt="">
                     <img class="right_icon next" onclick="plusSlides(1)"
-                        src="/images/icons/categoryIcon/caret-right.svg" alt="">
+                        src="../images/icons/categoryIcon/caret-right.svg" alt="">
                 </div>
                 <div class="task_container">
-                    <ul class="tasks">
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
+                    <ul class="tasks" id="water">
+                        <!-- task location -->
                     </ul>
                 </div>
             </div>
@@ -359,61 +163,14 @@
                 <p class="category_title">Resident</p>
                 <div class="icon_slidebar">
                     <img class="left_icon prev" onclick="plusSlides(-1)"
-                        src="/images/icons/categoryIcon/caret-left.svg" alt="">
-                    <img class="category_icon" src="/images/icons/categoryIcon/house-fill.svg" alt="">
+                        src="../images/icons/categoryIcon/caret-left.svg" alt="">
+                    <img class="category_icon" src="../images/icons/categoryIcon/house-fill.svg" alt="">
                     <img class="right_icon next" onclick="plusSlides(1)"
-                        src="/images/icons/categoryIcon/caret-right.svg" alt="">
+                        src="../images/icons/categoryIcon/caret-right.svg" alt="">
                 </div>
                 <div class="task_container">
-                    <ul class="tasks">
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
+                    <ul class="tasks" id="resident">
+                        <!-- task location -->
                     </ul>
                 </div>
             </div>
@@ -423,69 +180,19 @@
                 <p class="category_title">Recycle</p>
                 <div class="icon_slidebar">
                     <img class="left_icon prev" onclick="plusSlides(-1)"
-                        src="/images/icons/categoryIcon/caret-left.svg" alt="">
-                    <img class="category_icon" src="/images/icons/categoryIcon/recycle.svg" alt="">
+                        src="../images/icons/categoryIcon/caret-left.svg" alt="">
+                    <img class="category_icon" src="../images/icons/categoryIcon/recycle.svg" alt="">
                     <img class="right_icon next" onclick="plusSlides(1)"
-                    src="/images/icons/categoryIcon/caret-right.svg" alt="">
+                        src="../images/icons/categoryIcon/caret-right.svg" alt="">
                 </div>
                 <div class="task_container">
-                    <ul class="tasks">
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="task_detail">
-                            <p class="task_title">TaskName</p>
-                            <p class="des">TaskDes</p>
-                            <div class="task_detail_box">
-                                <div class="leftColumn">Impact
-                                    <p>***</p>
-                                </div>
-                                <div class="rightColumn">Difficulty
-                                    <p>**</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                    <ul class="tasks" id="recycle"></ul> <!-- task location -->
                 </div>
             </div>
         </div>
     </div>
     <br>
     <!-- content -->
-
     <!-- Found this code on bootstrap, see @link = https://mdbootstrap.com/docs/standard/navigation/headers/# -->
     <!-- <nav class="navbar fixed-top">
         <div id="header-items">
@@ -494,42 +201,38 @@
         </div>
     </nav> -->
 
-    <!-- Bottom Nav Bar -->
     <footer class="navbar fixed-bottom">
         <div class="container py-2 fa-lg">
             <span class="iconContainer" id="homeContainer">
-            <a href="main.html">
+            <a href="/main.html">
                 <i class="fas fa-home anchorNav"></i>
                 <p id="main">Main Menu</p>
             </a>
             
             </span>
             <span class="iconContainer" id="categoryContainer">
-            <a href="category.html">
+            <a href="/category.html">
                 <i class="fas fa-list anchorNav"></i>
                 <p id="category">Category</p>
             </a>
             
             </span>
             <span class="iconContainer" id="personalizeContainer">
-            <a href="tasklist.html">
+            <a href="/tasklist.html">
                 <i class="far fa-check-circle anchorNav"></i>
                 <p id="personalized">Personalized Tasks</p>
             </a>
             
             </span>
             <span class="iconContainer" id="rewardContainer">
-            <a href="rewards.html">
+            <a href="/rewards.html">
                 <i class="fas fa-award anchorNav"></i>
                 <p id="rewards">Rewards</p>
             </a>
-            
             </span>
         </div>
     </footer>
 
-    <!-- Local JS; found at @link = https://www.w3schools.com/howto/howto_js_slideshow.asp-->
-    <script src="/js/showslide.js"></script>
 
     <!-- Found this code on fontawesome, see @link = https://fontawesome.com/ -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
@@ -549,6 +252,12 @@
 
     <!-- Ghreen specific firebase scripts -->
     <script src="/js/firebase_api_ghreen.js"> </script>
+
+    <script src="/js/categoryContent.js"></script>
+
+    <!-- Local JS; found at @link = https://www.w3schools.com/howto/howto_js_slideshow.asp-->
+    <script src="/js/showslide.js"></script>
+
 </body>
 
 </html>
