@@ -18,14 +18,43 @@
 
     <!-- Local css -->
     <link href="/css/universal_category_task.css" rel="stylesheet" />
-    <link href="/css/universal.css" rel="stylesheet" />
     <link href="/css/pList_task.css" rel="stylesheet" />
+    <link href="/css/universal.css" rel="stylesheet" />
+
 
 
     <!-- Firebase Authentication -->
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
 
 </head>
+
+
+<!-- Hamburger list when button is clicked -->
+<div class="collapse" id="collapseExample">
+    <div class="card card-body">
+        <div class="list-group">
+            <a href="your_settings.html" class="list-group-item list-group-item-action" aria-current="true">
+                <div class="gridList">
+                    <i class="fas fa-cog fa-1x" id="cog"></i><span class="iconLabel" id="settings">Settings</span>
+                </div>
+            </a>
+            <a href="edit_answers.html" class="list-group-item list-group-item-action">
+                <div class="gridList">
+                    <i class="far fa-edit fa-1x" id="editIcon"></i><span class="iconLabel" id="edit">Edit
+                        Questionnaire</span>
+                </div>
+            </a>
+            <a href="about.html" class="list-group-item list-group-item-action">
+                <div class="gridList">
+                    <i class="fas fa-info-circle fa-1x" id="circle"></i><span class="iconLabel" id="about">About
+                        Us</span>
+                </div>
+            </a>
+            <br />
+            <button id="logout" class="btn container-fluid" type="button">Logout</button>
+        </div>
+    </div>
+</div>
 
 <body>
     <!-- App logo section-->
@@ -51,34 +80,11 @@
         </div>
     </nav>
 
-     <!-- Hamburger list when button is clicked -->
-     <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-            <div class="list-group">
-                <a href="your_settings.html" class="list-group-item list-group-item-action" aria-current="true">
-                    <div class="gridList">
-                    <i class="fas fa-cog fa-1x" id="cog"></i><span class="iconLabel" id="settings">Settings</span>
-                    </div>
-                </a>
-                <a href="edit_answers.html" class="list-group-item list-group-item-action">
-                    <div class="gridList">
-                    <i class="far fa-edit fa-1x" id="editIcon"></i><span class="iconLabel" id="edit">Edit Questionnaire</span>
-                    </div>
-                </a>
-                <a href="about.html" class="list-group-item list-group-item-action">
-                    <div class="gridList">
-                    <i class="fas fa-info-circle fa-1x" id="circle"></i><span class="iconLabel" id="about">About Us</span>
-                    </div>
-                </a>
-                <br/>
-                <button id="logout" class="btn container-fluid" type="button">Logout</button>
-            </div>
-        </div>
-    
+
     <!-- content -->
     <div class="wrapper">
         <div id="back_icon">
-            <a href="personalizeList_template.html"><img src="/images/icons/categoryIcon/chevron-circle-left-solid.svg" alt=""></a>
+            <a href="/category.html"><img src="../images/icons/categoryIcon/chevron-circle-left-solid.svg" alt=""></a>
         </div>
         <div class="task_detail_wrapper">
             <p class="taskName">Eco-Driving</p>
@@ -99,15 +105,15 @@
                 -->
                 <div class="icons">
                     <!-- CompleteBtn -->
-                    <a href="personalizeList_template.html">
+                    <a href="/tasklist.html">
                         <div class="iconLabel">
                             <img src="/images/icons/categoryIcon/check-circle.svg" alt="checkCir">
                             <p id="completeBtn">Complete</p>
                         </div>
                     </a>
 
-                     <!-- BookmarkBtn -->
-                    <a href="personalizeList_template.html">
+                    <!-- BookmarkBtn -->
+                    <a href="/tasklist.html">
                         <div class="iconLabel">
                             <img src="/images/icons/categoryIcon/bookmark.svg" alt="bookmark">
                             <p id="bookmarkBtn">BookMark</p>
@@ -115,7 +121,7 @@
                     </a>
 
                     <!-- CancelBtn -->
-                    <a href="personalizeList_template.html">
+                    <a href="/tasklist.html">
                         <div class="iconLabel">
                             <img src="/images/icons/categoryIcon/x-circle.svg" alt="xCir">
                             <p id="cancelBtn">Cancel</p>
@@ -124,10 +130,11 @@
                 </div>
             </div>
             <!-- descbox -->
-            <div class="descritionBox">  
+            <div class="descritionBox">
                 <section class="s1">
                     <h6>Task Description:</h4>
-                    <p>Go easy on the brakes and gas pedal. You can also lower impacts by reducing time spent idling, and using overdrive and cruise control.</p>
+                        <p>Go easy on the brakes and gas pedal. You can also lower impacts by reducing time spent
+                            idling, and using overdrive and cruise control.</p>
                 </section>
                 <section class="s2">
                     <img src="/images/icons/categoryIcon/info-circle.svg" alt="">
@@ -139,7 +146,11 @@
 
             <div id="info" class="furtherInfo activeAnimation">
                 <h2 onclick="furtherInfoBtn()" style="text-align: center;">Further Information</h2>
-                <p hidden id="f_info">The importance of eco driving (fuel efficient driving) is today a matter of constant scrutiny, especially after the recent emissions news, for both environmental and legal reasons. These days it is no longer enough just to have good intentions with regards to ‘going green’, companies are now required to control their emissions and there is constant pressure to cut fuel costs (probably one of the highest sources of expense within fleets).</p>
+                <p hidden id="f_info">The importance of eco driving (fuel efficient driving) is today a matter of
+                    constant scrutiny, especially after the recent emissions news, for both environmental and legal
+                    reasons. These days it is no longer enough just to have good intentions with regards to ‘going
+                    green’, companies are now required to control their emissions and there is constant pressure to cut
+                    fuel costs (probably one of the highest sources of expense within fleets).</p>
             </div>
 
         </div>
@@ -158,32 +169,31 @@
     <footer class="navbar fixed-bottom">
         <div class="container py-2 fa-lg">
             <span class="iconContainer" id="homeContainer">
-            <a href="main.html">
-                <i class="fas fa-home anchorNav"></i>
-                <p id="main">Main Menu</p>
-            </a>
-            
+                <a href="/main.html">
+                    <i class="fas fa-home anchorNav"></i>
+                    <p id="main">Main Menu</p>
+                </a>
+
             </span>
             <span class="iconContainer" id="categoryContainer">
-            <a href="category.html">
-                <i class="fas fa-list anchorNav"></i>
-                <p id="category">Category</p>
-            </a>
-            
+                <a href="/category.html">
+                    <i class="fas fa-list anchorNav"></i>
+                    <p id="category">Category</p>
+                </a>
+
             </span>
             <span class="iconContainer" id="personalizeContainer">
-            <a href="personalizeList_template.html">
-                <i class="far fa-check-circle anchorNav"></i>
-                <p id="personalized">Personalized Tasks</p>
-            </a>
-            
+                <a href="/tasklist.html">
+                    <i class="far fa-check-circle anchorNav"></i>
+                    <p id="personalized">Personalized Tasks</p>
+                </a>
+
             </span>
             <span class="iconContainer" id="rewardContainer">
-            <a href="rewards.html">
-                <i class="fas fa-award anchorNav"></i>
-                <p id="rewards">Rewards</p>
-            </a>
-            
+                <a href="/rewards.html">
+                    <i class="fas fa-award anchorNav"></i>
+                    <p id="rewards">Rewards</p>
+                </a>
             </span>
         </div>
     </footer>

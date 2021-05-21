@@ -23,11 +23,13 @@
     </script>
 
     <!-- Local css -->
-    <link href="../css/tasklist.css" rel="stylesheet" />
-    <link href="../css/universal_category_task.css" rel="stylesheet" />
-    <!-- <link href="../css/category.css" rel="stylesheet" />
-    <link href="../css/personalizeList.css" rel="stylesheet"> -->
+    <link href="/css/tasklist.css" rel="stylesheet" />
+    <link href="/css/universal_category_task.css" rel="stylesheet" />
+    <link href="/css/universal.css" rel="stylesheet" />
 
+
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Firebase Authentication -->
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
@@ -40,61 +42,97 @@
         <div id="header-items">
             <img src="../images/icons/logo_final.png" alt="logo" class="logo">
             <span id="title"><b>Ghreen</b></span>
+            <!-- Hamburger Button -->
+            <a class="btn btn-outline-secondary btn-lg" id="hamburger" data-bs-toggle="collapse" href="#collapseExample"
+                role="button" aria-expanded="false" aria-controls="collapseExample">
+                <!-- 
+              Hamburger icon cited from MDB (start)
+              Author: MDB
+              See: https://mdbootstrap.com/docs/standard/navigation/navbar/
+          -->
+                <i class="fas fa-bars"></i>
+                <!-- 
+              Hamburger icon cited from MDB (end)
+              Author: MDB
+              See: https://mdbootstrap.com/docs/standard/navigation/navbar/
+          -->
+            </a>
         </div>
     </nav>
+
+    <!-- Hamburger list when button is clicked -->
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            <div class="list-group">
+                <a href="your_settings.html" class="list-group-item list-group-item-action" aria-current="true">
+                    <div class="gridList">
+                        <i class="fas fa-cog fa-1x" id="cog"></i><span class="iconLabel" id="settings">Settings</span>
+                    </div>
+                </a>
+                <a href="edit_answers.html" class="list-group-item list-group-item-action">
+                    <div class="gridList">
+                        <i class="far fa-edit fa-1x" id="editIcon"></i><span class="iconLabel" id="edit">Edit
+                            Questionnaire</span>
+                    </div>
+                </a>
+                <a href="about.html" class="list-group-item list-group-item-action">
+                    <div class="gridList">
+                        <i class="fas fa-info-circle fa-1x" id="circle"></i><span class="iconLabel" id="about">About
+                            Us</span>
+                    </div>
+                </a>
+                <br />
+                <button id="logout" class="btn container-fluid" type="button">Logout</button>
+            </div>
+        </div>
+    </div>
 
     <!-- content -->
     <div class="wrapper">
         <div class="list_title">User's tasks</div>
         <!-- Progress Bar -->
         <div id="progressBar" class="progress mx-auto">
-            <div class="progress-bar bg-success" role="progressbar" style="width: 33%;" aria-valuenow="33" aria-valuemin="0"
-                aria-valuemax="100">33%</div>
+            <div class="progress-bar bg-success" role="progressbar" style="width: 33%;" aria-valuenow="33"
+                aria-valuemin="0" aria-valuemax="100">33%</div>
         </div>
         <!-- task -->
         <div class="task_wrapper">
             <div class="tab_section">
                 <ul class="tab">
-                    <li class="active">All</li>
-                    <li><img class="category_icon" src="../images/icons/categoryIcon/car-side-solid.svg" alt=""></li>
-                    <li><img class="category_icon" src="../images/icons/categoryIcon/utensils-solid.svg" alt=""></li>
-                    <li><img class="category_icon" src="../images/icons/categoryIcon/shopping-cart-solid.svg" alt=""></li>
-                    <li><img class="category_icon" src="../images/icons/categoryIcon/tint-solid.svg" alt=""></li>
-                    <li><img class="category_icon" src="../images/icons/categoryIcon/house-fill.svg" alt=""></li>
-                    <li><img class="category_icon" src="../images/icons/categoryIcon/recycle.svg" alt=""></li>
+                    <li id="0" class="active">All</li>
+                    <li id="1"><img class="category_icon" src="../images/icons/categoryIcon/car-side-solid.svg" alt="">
+                    </li>
+                    <li id="2"><img class="category_icon" src="../images/icons/categoryIcon/utensils-solid.svg" alt="">
+                    </li>
+                    <li id="3"><img class="category_icon" src="../images/icons/categoryIcon/shopping-cart-solid.svg"
+                            alt=""></li>
+                    <li id="4"><img class="category_icon" src="../images/icons/categoryIcon/tint-solid.svg" alt=""></li>
+                    <li id="5"><img class="category_icon" src="../images/icons/categoryIcon/house-fill.svg" alt=""></li>
+                    <li id="6"><img class="category_icon" src="../images/icons/categoryIcon/recycle.svg" alt=""></li>
                 </ul>
             </div>
 
             <!-- Task in diff category -->
             <div id="all" class="task_box">
-                <div class="task">
-                    Task Name
-                </div>
-                <div class="task">
-                    Task Name
-                </div>
+                <p>All Tasks</p>
             </div>
-
-            <div hidden id="transport" class="task_box">
-                <div class="task">
-                    Task Name
-                </div>
-                <div class="task">
-                    Task Name
-                </div>
+            <div id="transportation" class="task_box">
+                <p>Transportation Tasks</p>
             </div>
-
-            <div hidden class="task_box">
-                <div class="task">
-                    Task Name
-                </div>
-                <div class="task">
-                    Task Name
-                </div>
+            <div id="food" class="task_box">
+                <p>Food Tasks</p>
             </div>
-
-            <div  class="task_box">
-
+            <div id="grocery" class="task_box">
+                <p>Grocery Tasks</p>
+            </div>
+            <div id="water" class="task_box">
+                <p>Water Tasks</p>
+            </div>
+            <div id="resident" class="task_box">
+                <p>Resident Tasks</p>
+            </div>
+            <div id="recycle" class="task_box">
+                <p>Recycle Tasks</p>
             </div>
         </div>
     </div>
@@ -111,10 +149,33 @@
 
     <footer class="navbar fixed-bottom">
         <div class="container py-2 fa-lg">
-            <a href="../html/main.html"><i class="fas fa-home"></i></a>
-            <a href="../html/category.html"><i class="fas fa-list"></i></a>
-            <a href="../html/personalizeList_template.html"><i class="far fa-check-circle"></i></a>
-            <a href="../html/profile.html"><i class="far fa-user"></i></a>
+            <span class="iconContainer" id="homeContainer">
+                <a href="/main.html">
+                    <i class="fas fa-home anchorNav"></i>
+                    <p id="main">Main Menu</p>
+                </a>
+
+            </span>
+            <span class="iconContainer" id="categoryContainer">
+                <a href="/category.html">
+                    <i class="fas fa-list anchorNav"></i>
+                    <p id="category">Category</p>
+                </a>
+
+            </span>
+            <span class="iconContainer" id="personalizeContainer">
+                <a href="/tasklist.html">
+                    <i class="far fa-check-circle anchorNav"></i>
+                    <p id="personalized">Personalized Tasks</p>
+                </a>
+
+            </span>
+            <span class="iconContainer" id="rewardContainer">
+                <a href="/rewards.html">
+                    <i class="fas fa-award anchorNav"></i>
+                    <p id="rewards">Rewards</p>
+                </a>
+            </span>
         </div>
     </footer>
 
@@ -136,6 +197,9 @@
 
     <!-- Ghreen specific firebase scripts -->
     <script src="/js/firebase_api_ghreen.js"> </script>
+
+    <script src="/js/taskList.js"> </script>
+
 </body>
 
 </html>

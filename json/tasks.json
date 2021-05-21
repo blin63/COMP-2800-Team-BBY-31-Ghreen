@@ -1,0 +1,194 @@
+[
+    {
+        "id": 0,
+        "name": "Transportation",
+        "tasks": [{
+                "taskID": 0,
+                "taskName": "BuyTSLA",
+                "taskDes": "buybuybuy",
+                "tips": "??",
+                "info": "??",
+                "impact": "**",
+                "difficulty": "***"
+            },
+            {
+                "taskID": 1,
+                "taskName": "BuyTSLA1",
+                "taskDes": "buybuybuy",
+                "tips": "??",
+                "info": "??",
+                "impact": "**",
+                "difficulty": "***"
+            },
+            {
+                "taskID": 2,
+                "taskName": "BuyTSLA2",
+                "taskDes": "buybuybuy",
+                "tips": "??",
+                "info": "??",
+                "impact": "**",
+                "difficulty": "***"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Food",
+        "tasks": [{
+                "taskID": 0,
+                "taskName": "BuyTSLA",
+                "taskDes": "buybuybuy",
+                "tips": "??",
+                "info": "??",
+                "impact": "**",
+                "difficulty": "***"
+            },
+            {
+                "taskID": 1,
+                "taskName": "BuyTSLA1",
+                "taskDes": "buybuybuy",
+                "tips": "??",
+                "info": "??",
+                "impact": "**",
+                "difficulty": "***"
+            },
+            {
+                "taskID": 2,
+                "taskName": "BuyTSLA2",
+                "taskDes": "buybuybuy",
+                "tips": "??",
+                "info": "??",
+                "impact": "**",
+                "difficulty": "***"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Grocery",
+        "tasks": [{
+                "taskID": 0,
+                "taskName": "BuyTSLA",
+                "taskDes": "buybuybuy",
+                "tips": "??",
+                "info": "??",
+                "impact": "**",
+                "difficulty": "***"
+            },
+            {
+                "taskID": 1,
+                "taskName": "BuyTSLA1",
+                "taskDes": "buybuybuy",
+                "tips": "??",
+                "info": "??",
+                "impact": "**",
+                "difficulty": "***"
+            },
+            {
+                "taskID": 2,
+                "taskName": "BuyTSLA2",
+                "taskDes": "buybuybuy",
+                "tips": "??",
+                "info": "??",
+                "impact": "**",
+                "difficulty": "***"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Water",
+        "tasks": [{
+                "taskID": 0,
+                "taskName": "BuyTSLA",
+                "taskDes": "buybuybuy",
+                "tips": "??",
+                "info": "??",
+                "impact": "**",
+                "difficulty": "***"
+            },
+            {
+                "taskID": 1,
+                "taskName": "BuyTSLA1",
+                "taskDes": "buybuybuy",
+                "tips": "??",
+                "info": "??",
+                "impact": "**",
+                "difficulty": "***"
+            },
+            {
+                "taskID": 2,
+                "taskName": "BuyTSLA2",
+                "taskDes": "buybuybuy",
+                "tips": "??",
+                "info": "??",
+                "impact": "**",
+                "difficulty": "***"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Resident",
+        "tasks": [{
+                "taskID": 0,
+                "taskName": "BuyTSLA",
+                "taskDes": "buybuybuy",
+                "tips": "??",
+                "info": "??",
+                "impact": "**",
+                "difficulty": "***"
+            },
+            {
+                "taskID": 1,
+                "taskName": "BuyTSLA1",
+                "taskDes": "buybuybuy",
+                "tips": "??",
+                "info": "??",
+                "impact": "**",
+                "difficulty": "***"
+            },
+            {
+                "taskID": 2,
+                "taskName": "BuyTSLA2",
+                "taskDes": "buybuybuy",
+                "tips": "??",
+                "info": "??",
+                "impact": "**",
+                "difficulty": "***"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Recycle",
+        "tasks": [{
+                "taskID": 0,
+                "taskName": "BuyTSLA",
+                "taskDes": "buybuybuy",
+                "tips": "??",
+                "info": "??",
+                "impact": "**",
+                "difficulty": "***"
+            },
+            {
+                "taskID": 1,
+                "taskName": "BuyTSLA1",
+                "taskDes": "buybuybuy",
+                "tips": "??",
+                "info": "??",
+                "impact": "**",
+                "difficulty": "***"
+            },
+            {
+                "taskID": 2,
+                "taskName": "BuyTSLA2",
+                "taskDes": "buybuybuy",
+                "tips": "??",
+                "info": "??",
+                "impact": "**",
+                "difficulty": "***"
+            }
+        ]
+    }
+]
