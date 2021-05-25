@@ -4,7 +4,7 @@
 const parseUrl = new URL(location.href);
 // console.log(parseUrl.searchParams.get("id")); // "123"
 
-// task ID
+// task id
 var id = parseUrl.searchParams.get("id");
 
 function getDetails() {
@@ -22,6 +22,7 @@ function getDetails() {
                 var diff = doc.data().difficulty;
                 var info = doc.data().furtherInfo;
                 var localid = doc.id;
+
                 if (localid == id) {
                     $("#details-go-here").html = category;
                     $("#taskNamee").append("<p class='taskName'> " + task + "</p>");
@@ -33,54 +34,53 @@ function getDetails() {
                     // $("#details-go-here").append("<a href='" + url + "' > " + url);
                 }
             })
-
         })
 }
 getDetails();
 
-function checkTaskList() {
+// taskDetail, display 2 diff msgs for addable task and unaddable task
+function checkUserTaskList() {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-            var userObject = db.collection("users").doc(user.uid);
-            db.collection("users").doc(user.uid)
+            db.collection("users").doc(user.uid).collection("taskList")
                 .get()
-                .then(function (doc) {
-                    var task = doc.data().currenttask;
-                    console.log(task);
-                    // $("#user").text(a);
-                    task.forEach(function (element) {
-                        // user tasklist contains current task
-                        if (element == id) {
-                            // fail, do nothing
-                            $("#add_icon").click(function () {
-                                $(".alert_fail").fadeIn("slow");
-                            });
-                        } else {
-                            // success, add to list
-                            $("#add_icon").click(function () {
-                                $(".alert_success").fadeIn("slow");
-                            });
+                .then(querySnapshot => {
+                    var count = 0;
+                    var size = querySnapshot.size
+                    console.log("taskListSize: " + size);
 
-                            // update user' tasklist
-                            userObject.update({
-                                currenttask: id
-                            }).then(function () {
-                                console.log("new taskID: " + doc.data().currenttask)
-                            })
+                    querySnapshot.forEach(doc => {
+                        console.log(doc.id, " => ", doc.data().taskID);
+                        var taskListID = doc.data().taskID;
+
+                        if (taskListID != id) {
+                            count++;
                         }
+                    });
 
-                    })
-                })
+                    console.log("# of Different task: " + count);
+
+                    //  find same task in taskList
+                    if (count != size) {
+                        $(".alert_fail").fadeIn("slow");
+                        $(".addtolist_btn").hide();
+                    } else {
+                        // add task to list
+                        $("#add_icon").click(function () {
+                            $(".alert_success").fadeIn("slow");
+                            $(".addtolist_btn").hide();
+
+                            db.collection("users").doc(user.uid).collection("taskList").add({
+                                taskID: id
+                            });
+                            console.log("add data:", id);
+
+                        });
+
+                    }
+                    console.log("Current taskDetail: " + id);
+                });
         }
     });
 }
-checkTaskList();
-
-// temp for showcase
-$("#add_icon").click(function () {
-    // if user.list.contains()
-    $(".alert_success").fadeIn("slow");
-    // else
-    // $(".alert_fail").fadeIn("slow");
-
-});
+checkUserTaskList();

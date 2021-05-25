@@ -53,7 +53,6 @@ function showCollection() {
             })
             console.log(objAry);
             console.log(objAry.length);
-            // objAry.forEach(appendTaskcard);
         })
 
 }

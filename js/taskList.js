@@ -1,6 +1,5 @@
 const objAry = [];
 
-
 class taskConstructor {
     constructor(category, task, des, impact, diff, info, id) {
         this.category = category;
@@ -16,32 +15,11 @@ class taskConstructor {
 
     }
     get latest() {
-        if (this.log.length === 0) {
-          return undefined;
+        if (this.log.length == 0) {
+            return undefined;
         }
         return this.log[this.log.length - 1];
-      }
-    // get ca() {
-    //     return this.category;
-    // }
-    // get task() {
-    //     return this.task;
-    // }
-    // get des() {
-    //     return this.des;
-    // }
-    // get impact() {
-    //     return this.impact;
-    // }
-    // get diff() {
-    //     return this.diff;
-    // }
-    // get info() {
-    //     return this.info;
-    // }
-    // get id() {
-    //     return this.id;
-    // }
+    }
 }
 
 
@@ -51,70 +29,50 @@ var task;
 function showCollection() {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-            var userObject = db.collection("users").doc(user.uid);
-
-            var taskDoc = db.collection('tasks').get();
-            console.log(taskDoc);
-
-            db.collection("users").doc(user.uid)
+            db.collection("users").doc(user.uid).collection("taskList")
                 .get()
-                .then(function (doc) {
-                    // userList
-                    task = doc.data().currenttask;
-                    console.log(task);
-                })
+                .then(querySnapshot => {
+                    var size = querySnapshot.size
+                    console.log("taskListSize: " + size);
+
+                    querySnapshot.forEach(doc => {
+                        // console.log(doc.id, " => ", doc.data().taskID);
+                        var taskListID = doc.data().taskID;
+
+                        // Find each item in currentTaskList in "tasks" col,
+                        // display content of currentTaskList only.
+                        db.collection("tasks")
+                            .get() //get whole collection
+                            .then(function (snap) {
+                                snap.forEach(function (doc) { //cycle thru each doc 
+
+                                    if (doc.id == taskListID) {
+                                        // do something with each document
+                                        var category = doc.data().category;
+                                        var task = doc.data().task;
+                                        var des = doc.data().description;
+                                        var impact = doc.data().impact;
+                                        var diff = doc.data().difficulty;
+                                        var info = doc.data().furtherInfo;
+                                        var id = doc.id;
+                                        // console.log("id" + id + "\n");
+                                        // "<div id='" + id + "'> " // '<a href="/personalizeList_taskDetail_template_ecoDriving.html">'
+                                        var content = '<div ' + 'id="' + id + '"' + 'class="task">' + task + '</div>';
+                                        var contentAll = '<div ' + 'id="' + id + 'ALL"' + 'class="task">' + task + '</div>';
+
+                                        $("#" + category).append(content);
+                                        $("#all").append(contentAll);
+                                        addWebcamListener(id);
+                                        addWebcamListener(id + "ALL");
+
+                                    }
+                                })
+                            })
+
+                    });
+                });
         }
     });
-
-    db.collection("tasks")
-        .get() //get whole collection
-        .then(function (snap) {
-            snap.forEach(function (doc) { //cycle thru each doc 
-                // do something with each document
-                var category = doc.data().category;
-                var task = doc.data().task;
-                var des = doc.data().description;
-                var impact = doc.data().impact;
-                var diff = doc.data().difficulty;
-                var info = doc.data().furtherInfo;
-                var id = doc.id;
-                // console.log("id" + id + "\n");
-
-                // load from db to local array
-                var obj = new taskConstructor(category, task, des, impact, diff, info, id);
-                objAry.push(obj);
-
-                //
-                // temp content for showcase only
-                //
-                var content = '<a href="/personalizeList_taskDetail_template_ecoDriving.html">' +
-                 '<div ' + 'id="' + id + '"'  + 'class="task">' + task + '</div>' + '</a>';
-                $("#" + category).append(content);
-                $("#all").append(content);
-                openTask(id);
-
-            })
-
-            //   ******************** match user data before updateing page
-            // console.log(objAry);
-            // console.log(objAry.length);
-            // for (var i = 0; i < objAry.length; i++) {
-            //     console.log(objAry[i].id);
-            // }
-            // find qualified element
-            // task.forEach(function (element) {
-            //     if (element == id) {
-            //         // content
-            //         var content = '<div class="task">' + task + '</div>';
-            //         $("#" + category).append(content);
-            //         $("#all").append(content);
-            //         // addWebcamListener(id);
-
-            //     }
-            // })
-
-        })
-
 
 
 }
@@ -145,6 +103,14 @@ function tabControl() {
 }
 tabControl();
 
+function addWebcamListener(id) {
+    document.getElementById(id)
+        .addEventListener("click", function () {
+            console.log(id + " was clicked!")
+            id = id.replace("ALL", "");
+            window.location.href = "personalizedTasks_detail.html?id=" + id; //"details.html?id=1232ildjfkad"
+        });
+}
 
 function tabHidden() {
     $(".task_box").hide();
@@ -159,10 +125,7 @@ function openTask(id) {
     });
 }
 
-// add temp link for showcase
-function addLink() {
 
-}
 
 // function showTaskList() {
 //     firebase.auth().onAuthStateChanged(function (user) {
@@ -187,12 +150,41 @@ function addLink() {
 // }
 // showTaskList();
 
-// function getfile() {
-//     const userRef = db.collection('users').doc(id);
-//     const doc = await userRef.get();
-//     if (!doc.exists) {
-//         console.log('No such document!');
-//     } else {
-//         console.log('Document data:', doc.data());
-//     }
+
+
+// function readUserTasks() {
+//     firebase.auth().onAuthStateChanged(function (user) {
+//         if (user) {
+//             db.collection("users").doc(user.uid)
+//                 .get()
+//                 .then(function (doc) {
+//                     var userTaskList = doc.data().currentTask
+//                     var progress = doc.data().progressBar
+
+
+
+//                     $("#user-score").text(score);
+//                     console.log("Change: " + change);
+
+//                     if (change < 0) {
+//                         $("#change").text(change.toFixed(1) + "%");
+//                         $("#change").addClass("negative");
+//                         $("#direction").append('<i class="fas fa-arrow-circle-down"></i>')
+//                     } 
+
+//                     if (change == 0) {
+//                         $("#change").text(change.toFixed(1) + "%");
+//                         $("#change").addClass("negative");
+//                     }
+
+//                     if (change > 0){
+//                         $("#change").text("+" + change.toFixed(1) + "%");
+//                         $("#change").addClass("positive");
+//                         $("#direction").append('<i class="fas fa-arrow-circle-up"></i>')
+//                     }
+
+//                 })
+//         }
+//     });
 // }
+// readUserTasks();
