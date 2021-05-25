@@ -37,22 +37,31 @@
     <div id="container">
 
         <div class="welcome">
-            <h1><i>Welcome, <span id="user">...</span>!</i></h1>
+            <h1>Welcome <span id="user">...</span>,</h1>
+            <h3>Here is your data.</h3>
         </div>
 
         <div id="stats">
             <div id="carbon-score">
-                <span id="user-score">...</span>
+                <div id="score">
+                    <span id="user-score">...</span>
+                    <p id="score-label">Carbon Footprint Score</p>
+                    <p id="next">Lower your score by <span id="next-tree"></span> points to reach the next tree.</p>
+                </div>
+                
+                <div id="percentage-change">
+                    <span id="change"></span>
+                    <span id="direction"></span>
+                    <p id="percentage-label">Change from Previous Score</p>
+                </div>
             </div>
-            <div id="percentage-change">
-                <span id="change"></span>
-                <span id="direction"></span>
-            </div>
-            <p id="score-label">Carbon Footprint Score</p>
         </div>
 
-        <div class="tree">
+        <div id="tree-container">
+            <div class="tree">
+            </div>
         </div>
+
     </div>
 
     <!-- Made the footer with fontawesome icons, @link = https://fontawesome.com/ -->

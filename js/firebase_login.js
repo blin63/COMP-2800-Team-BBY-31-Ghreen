@@ -8,10 +8,10 @@ var uiConfig = {
   callbacks: {
     signInSuccessWithAuthResult: function (authResult, redirectUrl) {
       var user = authResult.user;
-      if (authResult.additionalUserInfo.isNewUser) {         //if new user
-        db.collection("users").doc(user.uid).set({         //write to firestore
-          name: user.displayName,                    //"users" collection
-          email: user.email,                          //with authenticated user's ID (user.uid)
+      if (authResult.additionalUserInfo.isNewUser) {        
+        db.collection("users").doc(user.uid).set({        
+          name: user.displayName,                   
+          email: user.email,                        
           Q0: 0,
           Q1: 0,
           Q2: 0,
@@ -46,7 +46,7 @@ var uiConfig = {
   signInSuccessUrl: 'main.html',
   signInOptions: [
     firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     firebase.auth.FacebookAuthProvider.PROVIDER_ID,
     firebase.auth.TwitterAuthProvider.PROVIDER_ID,
     firebase.auth.GithubAuthProvider.PROVIDER_ID,
