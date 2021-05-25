@@ -8,8 +8,16 @@ function readCarbonFootprintData() {
             db.collection("users").doc(user.uid)
                 .get()
                 .then(function (doc) {
-                    var score = doc.data().scoreCurrent
-                    var change = doc.data().scoreChange
+
+                    score = doc.data().scoreCurrent;
+
+                    db.collection("users").doc(user.uid).update({
+                        scoreChange: 100 * (doc.data().scoreCurrent - doc.data().scoreOld) / (doc.data().scoreOld)
+                    })
+
+                    var change = doc.data().scoreChange;
+
+
                     $("#user-score").text(score);
                     console.log("Change: " + change);
 
