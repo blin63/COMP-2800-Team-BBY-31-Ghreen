@@ -125,3 +125,49 @@ i {
     position: relative;
     right: 38%;
 }
+
+/* Bottom Nav Bar Labels */
+#main, #category, #personalized, #rewards, #rewardsText {
+    font-size: 10px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+#rewards {
+    position: relative;
+    right: 2%;
+}
+
+#homeContainer {
+    grid-column: 1 / span 1;
+    width: 25%;
+    margin: 0 auto;
+}
+
+#categoryContainer {
+    grid-column: 2 / span 1;
+    width: 25%;
+    margin: 0 auto;
+}
+
+#personalizeContainer {
+    grid-column: 3 / span 1;
+    width: 25%;
+    margin: 0 auto;
+}
+
+#rewardContainer {
+    grid-column: 4 / span 1;
+    width: 25%;
+    margin: 0 auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    text-align: center;
+    margin-top: 2px;
+}

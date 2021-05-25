@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=PT+Sans&display=swap');
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #e5ffe0;
+
+    justify-content: center;
+    display: flex;
+}
+
+li {
+    max-width: 50px;
+    min-width: 50px;
+    float:inline-start;
+    float: left;
+    border: 1px solid #bbb;
+    border-bottom: none;
+    border-radius: 5px;
+}
+
+li {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: .3em;
+    text-decoration: none;
+}
+
+/* li:hover:not(.active) {
+    background-color: #c0ffb4;
+} */
+
+.active {
+    background-color: #C7F5FB;
+
+}
+
+.category_icon {
+    height: 1.5em;
+    width: 1.5em;
+
+}
+
+.wrapper {
+    background-color: #e5ffe0;
+    margin-bottom: 1em;
+    font-family: 'PT Sans', sans-serif;
+
+}
+
+.task_wrapper {
+    margin: 0;
+    min-width: 375px;
+    max-width: 375px;
+    height: auto;
+    text-align: center;
+    background-color: #e5ffe0;
+    margin-bottom:5em;
+    margin-top: 1em;
+    
+    /* border: 1px solid #bbb; */
+}
+
+.list_title {
+    margin: 1em;
+    font-family: 'Concert One', cursive;
+    font-size: 1.5em;
+
+}
+
+.progress {
+    width:90%;
+}
+
+.task_box {
+    background-color: #C7F5FB;
+    margin:1em;
+    margin-top: 0;
+    padding: 1em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+}
+
+.task {
+    background-color: #e5ffe0;
+    margin: .5em;
+    min-height: 40px;
+    border-radius: 10px;
+    background: #e5ffe0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* //C7F5FB */
+}
+
+.task:active {
+    background-color: #f3f3f3;
+}
+
+.task:hover {
+    background-color: #9cf88a;
+}
+
+p {
+    font-weight: bold;
+    font-size: x-large;
+}
+

@@ -1,0 +1,210 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ghreen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+        Used link element from digitalocean
+        @author: Erin Glass
+        @see: https://www.digitalocean.com/community/tutorials/how-to-add-a-favicon-to-your-website-with-html--%3E 
+    -->
+    <link rel="shortcut icon" type="image/png" href="../images/icons/logo_final.png" />
+    <!-- End of source -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <!--BootStrap stylesheet cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+
+    <!-- Local css -->
+    <link href="/css/tasklist.css" rel="stylesheet" />
+    <link href="/css/universal_category_task.css" rel="stylesheet" />
+    <link href="/css/universal.css" rel="stylesheet" />
+
+
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Firebase Authentication -->
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+
+</head>
+
+<body>
+    <!-- App logo section-->
+    <nav class="navbar fixed-top">
+        <div id="header-items">
+            <img src="../images/icons/logo_final.png" alt="logo" class="logo">
+            <span id="title"><b>Ghreen</b></span>
+            <!-- Hamburger Button -->
+            <a class="btn btn-outline-secondary btn-lg" id="hamburger" data-bs-toggle="collapse" href="#collapseExample"
+                role="button" aria-expanded="false" aria-controls="collapseExample">
+                <!-- 
+              Hamburger icon cited from MDB (start)
+              Author: MDB
+              See: https://mdbootstrap.com/docs/standard/navigation/navbar/
+          -->
+                <i class="fas fa-bars"></i>
+                <!-- 
+              Hamburger icon cited from MDB (end)
+              Author: MDB
+              See: https://mdbootstrap.com/docs/standard/navigation/navbar/
+          -->
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hamburger list when button is clicked -->
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            <div class="list-group">
+                <a href="your_settings.html" class="list-group-item list-group-item-action" aria-current="true">
+                    <div class="gridList">
+                        <i class="fas fa-cog fa-1x" id="cog"></i><span class="iconLabel" id="settings">Settings</span>
+                    </div>
+                </a>
+                <a href="edit_answers.html" class="list-group-item list-group-item-action">
+                    <div class="gridList">
+                        <i class="far fa-edit fa-1x" id="editIcon"></i><span class="iconLabel" id="edit">Edit
+                            Questionnaire</span>
+                    </div>
+                </a>
+                <a href="about.html" class="list-group-item list-group-item-action">
+                    <div class="gridList">
+                        <i class="fas fa-info-circle fa-1x" id="circle"></i><span class="iconLabel" id="about">About
+                            Us</span>
+                    </div>
+                </a>
+                <br />
+                <button id="logout" class="btn container-fluid" type="button">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- content -->
+    <div class="wrapper">
+        <div class="list_title">User's tasks</div>
+        <!-- Progress Bar -->
+        <div id="progressBar" class="progress mx-auto">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 33%;" aria-valuenow="33"
+                aria-valuemin="0" aria-valuemax="100">33%</div>
+        </div>
+        <!-- task -->
+        <div class="task_wrapper">
+            <div class="tab_section">
+                <ul class="tab">
+                    <li id="0" class="active">All</li>
+                    <li id="1"><img class="category_icon" src="../images/icons/categoryIcon/car-side-solid.svg" alt="">
+                    </li>
+                    <li id="2"><img class="category_icon" src="../images/icons/categoryIcon/utensils-solid.svg" alt="">
+                    </li>
+                    <li id="3"><img class="category_icon" src="../images/icons/categoryIcon/shopping-cart-solid.svg"
+                            alt=""></li>
+                    <li id="4"><img class="category_icon" src="../images/icons/categoryIcon/tint-solid.svg" alt=""></li>
+                    <li id="5"><img class="category_icon" src="../images/icons/categoryIcon/house-fill.svg" alt=""></li>
+                    <li id="6"><img class="category_icon" src="../images/icons/categoryIcon/recycle.svg" alt=""></li>
+                </ul>
+            </div>
+
+            <!-- Task in diff category -->
+            <div id="all" class="task_box">
+                <p>All Tasks</p>
+            </div>
+            <div id="transportation" class="task_box">
+                <p>Transportation Tasks</p>
+            </div>
+            <div id="food" class="task_box">
+                <p>Food Tasks</p>
+            </div>
+            <div id="grocery" class="task_box">
+                <p>Grocery Tasks</p>
+            </div>
+            <div id="water" class="task_box">
+                <p>Water Tasks</p>
+            </div>
+            <div id="resident" class="task_box">
+                <p>Resident Tasks</p>
+            </div>
+            <div id="recycle" class="task_box">
+                <p>Recycle Tasks</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- content -->
+
+    <!-- Found this code on bootstrap, see @link = https://mdbootstrap.com/docs/standard/navigation/headers/# -->
+    <!-- <nav class="navbar fixed-top">
+        <div id="header-items">
+            <img src="../images/icons/logo_final.png" alt="logo" class="logo">
+            <span id="title"><b>Ghreen</b></span>
+        </div>
+    </nav> -->
+
+    <footer class="navbar fixed-bottom">
+        <div class="container py-2 fa-lg">
+            <span class="iconContainer" id="homeContainer">
+                <a href="/main.html">
+                    <i class="fas fa-home anchorNav"></i>
+                    <p id="main">Main Menu</p>
+                </a>
+
+            </span>
+            <span class="iconContainer" id="categoryContainer">
+                <a href="/category.html">
+                    <i class="fas fa-list anchorNav"></i>
+                    <p id="category">Category</p>
+                </a>
+
+            </span>
+            <span class="iconContainer" id="personalizeContainer">
+                <a href="/tasklist.html">
+                    <i class="far fa-check-circle anchorNav"></i>
+                    <p id="personalized">Personalized Tasks</p>
+                </a>
+
+            </span>
+            <span class="iconContainer" id="rewardContainer">
+                <a href="/rewards.html">
+                    <i class="fas fa-award anchorNav"></i>
+                    <p id="rewards">Rewards</p>
+                </a>
+            </span>
+        </div>
+    </footer>
+
+    <!-- Found this code on fontawesome, see @link = https://fontawesome.com/ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/26da0e4274.js" crossorigin="anonymous"></script>
+
+    <!-- Firebase App (the core Firebase SDK) must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- JQuery link from google, see @link = https://developers.google.com/speed/libraries#jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Firebase products -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+    <!-- Firebase Authentication -->
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+
+    <!-- Ghreen specific firebase scripts -->
+    <script src="/js/firebase_api_ghreen.js"> </script>
+
+    <script src="/js/taskList.js"> </script>
+
+    <script src="/js/firebase_logout.js"></script>
+
+</body>
+
+</html>

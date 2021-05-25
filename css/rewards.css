@@ -24,6 +24,30 @@ td {
     padding: 0px;
 }
 
+#item {
+    width: 120%;
+    padding: 0%;
+    position: relative;
+    right: 10%;
+}
+
+#special, .specialTD {
+    background-color: rgb(236, 209, 55);
+    border: 1px solid black;
+}
+
+.specialTD {
+    padding: 4.8%;
+}
+
+#specialSecond {
+    width: 58%;
+}
+
+#specialThird {
+    width: 200%;
+}
+
 table {
     border-collapse: separate;
     border-spacing: 0 15px;
@@ -32,7 +56,7 @@ table {
     padding: 10px;
 }
 
-tr, td {
+.table, .td, tr, td {
     background-color: #8AE9C1;
     border: 1px solid black;
 }
@@ -45,6 +69,14 @@ td i {
     border-left: hidden;
 }
 
+#secretMsg {
+    text-align: center;
+    margin: 10%;
+    padding: 3%;
+    background-color: rgb(236, 209, 55);
+    outline: 1px solid black;
+    font-size: 12pt;
+}
 .fa-chevron-circle-left {
     position: absolute;
     top: 120px;
@@ -73,6 +105,7 @@ a:link {
   a:active {
     color: black;
   }
+<<<<<<< HEAD
 
   /* RewardMsg CSS; Author: Brendan Lin; Ver: 1.0 */
 #rewardMsg {
@@ -82,3 +115,5 @@ a:link {
     padding: 2%;
     margin: 5%;
 }
+=======
+>>>>>>> dev
