@@ -414,94 +414,91 @@ function makeTree() {
                     var diff;
                     console.log(score);
 
-                    if (score == 0 || score <= 10 ) {
+                    if (score <= 36 ) {
                         $(".tree").append(tree11);
                         $(".tree").addClass("tree11");
-                        $("#next").text("Congratulations! You've grown the largest tree!");
-
-
+                        $("#next").html(`Congratulations! You've grown the largest tree! Click <span id="end">here</span>.`);
                     }
 
-                    if (score > 10 && score <= 20) {
+                    if (score > 36 && score <= 46) {
                         $(".tree").append(tree10);
                         $(".tree").addClass("tree10");
-                        diff = score - 10;
+                        diff = score - 36;
                         $("#next-tree").append(diff);
 
                     }
                     
-                    if (score > 20 && score <= 30) {
+                    if (score > 46 && score <= 56) {
                         $(".tree").append(tree9);
                         $(".tree").addClass("tree9");
-                        diff = score - 20;
+                        diff = score - 46;
                         $("#next-tree").append(diff);
                     }
 
-                    if (score > 30 && score <= 40) {
+                    if (score > 56 && score <= 66) {
                         $(".tree").append(tree8);
                         $(".tree").addClass("tree8");
-                        diff = score - 30;
+                        diff = score - 56;
                         $("#next-tree").append(diff);
                     }
 
-                    if (score > 40 && score <= 50) {
+                    if (score > 66 && score <= 76) {
                         $(".tree").append(tree7);
                         $(".tree").addClass("tree7");
-                        diff = score - 40;
+                        diff = score - 66;
                         $("#next-tree").append(diff);
                     }
 
-                    if (score > 50 && score <= 60) {
+                    if (score > 76 && score <= 86) {
                         $(".tree").append(tree6);
                         $(".tree").addClass("tree6");
-                        diff = score - 50;
+                        diff = score - 76;
                         $("#next-tree").append(diff);
                     }
 
-                    if (score > 60 && score <= 75) {
+                    if (score > 86 && score <= 96) {
                         $(".tree").append(tree5);
                         $(".tree").addClass("tree5");
-                        diff = score - 60;
+                        diff = score - 86;
                         $("#next-tree").append(diff);
                     }
 
-                    if (score > 75 && score <= 85) {
+                    if (score > 96 && score <= 106) {
                         $(".tree").append(tree4);
                         $(".tree").addClass("tree4");
-                        diff = score - 75;
+                        diff = score - 96;
                         $("#next-tree").append(diff);
                     }
 
-                    if (score > 85 && score <= 95) {
+                    if (score > 106 && score <= 116) {
                         $(".tree").append(tree3);
                         $(".tree").addClass("tree3");
-                        diff = score - 85;
+                        diff = score - 106;
                         $("#next-tree").append(diff);
                     }
 
-                    if (score > 95 && score <= 105) {
+                    if (score > 116 && score <= 126) {
                         $(".tree").append(tree2);
                         $(".tree").addClass("tree2");
-                        diff = score - 95;
+                        diff = score - 116;
                         $("#next-tree").append(diff);
                     }
 
-                    if (score > 105 && score <= 115) {
+                    if (score > 126 && score <= 136) {
                         $(".tree").before("");
                         $(".tree").append(tree1);
                         $(".tree").addClass("tree1");
-                        diff = score - 105;
+                        diff = score - 126;
                         $("#next-tree").append(diff);
                     }
 
-                    if (score > 115) {
+                    if (score > 136) {
                         $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
                         $(".tree").append(tree0);
                         $(".tree").addClass("tree0");
-                        diff = score - 115;
+                        diff = score - 130;
                         $("#next-tree").append(diff);
                     }
-
                 })
         }
     });
