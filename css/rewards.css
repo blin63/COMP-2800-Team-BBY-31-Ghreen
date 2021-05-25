@@ -73,3 +73,12 @@ a:link {
   a:active {
     color: black;
   }
+
+  /* RewardMsg CSS; Author: Brendan Lin; Ver: 1.0 */
+#rewardMsg {
+    text-align: center;
+    background-color: lightgray;
+    outline: 1px solid black;
+    padding: 2%;
+    margin: 5%;
+}

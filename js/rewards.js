@@ -24,3 +24,22 @@ function rewardsQuery() {
 }
 
 rewardsQuery();
+
+//Function to control reward message for when the user unlocks a new reward
+/**
+ * Author: Brendan Lin
+ * Ver: 1.0
+ */
+
+function rewardMsg() {
+    $(document).ready(function() {
+        $("#rewardMsg").css("visibility", "hidden");
+        $("#rewardMsg").fadeOut();
+
+        $("#rewardMsg").css("visibility", "visible");
+        $("#rewardMsg").fadeIn(5000).fadeOut(5000);
+        
+    });
+}
+
+rewardMsg();
