@@ -51,8 +51,8 @@
 
 #carbon-score {
     border: 5px solid #44cc44;
-    width: 18em;
-    height: 18em;
+    width: 17em;
+    height: 17em;
     border-radius: 50%;
     margin: 0 auto;
 }
@@ -72,7 +72,7 @@
 }
 
 #score {
-    margin-top: 0.2em;
+    margin-top: 0em;
 }
 
 #user-score {
