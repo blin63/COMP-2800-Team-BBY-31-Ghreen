@@ -1,4 +1,80 @@
-const objAry = [];
+
+/* createList start
+* I modified Carly's original code which was can be found here: 
+* source: https://www.notion.so/Tech-Tip-011-How-do-I-search-for-more-than-one-filter-from-Firestore-a5ef26555e3044b3ab31f627e6412015 
+* */
+function createList() {
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            var usertasks = [];
+            db.collection("users").doc(user.uid)
+                .get()
+                .then(function (doc) {
+                    db.collection("tasks").get().then(function (rs) {
+                        if (rs) {
+                            rs.forEach(function (r) {
+                                var taskID = r.data().id;
+                                var category = r.data().category;
+
+                                if (doc.data().Q0 > 8 || doc.data().Q1 > 6) {
+                                    if (category == "resident") {
+                                        usertasks.push(taskID);
+                                    }
+                                    console.log(usertasks);
+                                }
+
+                                if (doc.data().Q2 > 7) {
+                                    if (category == "food") {
+                                        usertasks.push(taskID);
+                                    }
+                                    console.log(usertasks);
+                                }
+
+                                if (doc.data().Q3 > 1.5) {
+                                    if (category == "water") {
+                                        usertasks.push(taskID);
+                                    }
+                                    console.log(usertasks);
+                                }
+
+                                if (doc.data().Q4 > 6) {
+                                    if (category == "grocery") {
+                                        usertasks.push(taskID);
+                                    }
+                                    console.log(usertasks);
+                                }
+
+                                if (doc.data().Q5 > 27.5 || doc.data().Q6 > 12) {
+                                    if (category == "recycle") {
+                                        usertasks.push(taskID);
+                                    }
+                                    console.log(usertasks);
+                                }
+
+                                if (doc.data().Q7 > 6 || doc.data().Q8 > 6 || doc.data().Q9 > 10) {
+                                    if (category == "transportation") {
+                                        usertasks.push(taskID);
+                                    }
+                                    console.log(usertasks);
+                                }
+                            })
+                            console.log("User's Tasks: " + usertasks);
+                        }
+                    })
+                })
+            firebase.auth().onAuthStateChanged(function (user) {
+                db.collection("users").doc(user.uid)
+                    .update({
+                        "userTasks": usertasks
+                    })
+            })
+        }
+    })
+}
+createList();
+/* createList end
+* source: https://www.notion.so/Tech-Tip-011-How-do-I-search-for-more-than-one-filter-from-Firestore-a5ef26555e3044b3ab31f627e6412015 
+* */
 
 class taskConstructor {
     constructor(category, task, des, impact, diff, info, id) {
@@ -12,7 +88,6 @@ class taskConstructor {
         // this.displayInfo=function(){
         //   return this.name + "is " + this.age + "year's old!";
         // }
-
     }
     get latest() {
         if (this.log.length == 0) {
@@ -21,7 +96,6 @@ class taskConstructor {
         return this.log[this.log.length - 1];
     }
 }
-
 
 // userList
 var task;
@@ -127,7 +201,6 @@ function updateUsernameTitle(user) {
         .then(function (doc) {
             var userName = doc.data().name;
             $(".list_title").html(userName + "'s TaskList");
-
         });
 }
 

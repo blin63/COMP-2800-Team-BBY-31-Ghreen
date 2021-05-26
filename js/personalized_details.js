@@ -93,6 +93,7 @@ function completeTask() {
                                         }
                                     })
                             }
+                            document.location.href = 'tasklist.html'
                         });
                     });
             }
