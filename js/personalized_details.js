@@ -106,7 +106,7 @@ function completeTask() {
                                                 console.log("reach100%, get reward");
                                                 rewardTime(parseInt(progress));
                                             }
-                                        })
+                                        });
                                 }
                             }
                         });

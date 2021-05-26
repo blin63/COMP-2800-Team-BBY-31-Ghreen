@@ -219,7 +219,8 @@ function progressBarUpdate(user) {
             var carbonFootPrintScore = doc.data().scoreCurrent;
             var progressExp = doc.data().progressBar;
             var progress = progressExp / ptPerTask / expBoundary;
-            var progressBarPercentage = (progress - parseInt(progress)) * 100;
+
+            var progressBarPercentage = carbonFootPrintScore % 10 * 10;
 
             console.log("pts: " + carbonFootPrintScore);
             console.log("progressExp: " + progressExp);
