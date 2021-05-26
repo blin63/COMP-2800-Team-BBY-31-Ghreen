@@ -75,28 +75,26 @@
         </div>
     </div>
 
-    <h1><i>Settings</i>
-        <i class="fas fa-cog"></i>
-    </h1>
-
-
     <div class="details grid-container">
-        <div class="grid-heading"><h4>Account Details</h4></div>
+        <div class="grid-heading"><h4 id="centered">Account Details</h4></div>
         
         <div class="grid-label"><form id="updateForm"><label for="name">Name:</label></div>
         <div class="grid-input"><input type="text" id="name" name="name" placeholder="Your name" /></div>
         <div class="grid-label"><label for="email">Email:</label></div>
         <div class="grid-input"><input type="text" id="email" name="email" placeholder="Your email" /></div>
-        <div class="grid-label"><label for="country">Country:</label></div>
-        <div class="grid-input"><input type="text" id="country" name="country" placeholder="Your country" /></div>
-        <div class="grid-heading"><h4>Change Password</h4></div>
-        <div class="grid-label"><label for="currentPassword">Password:</label></div>
-        <div class="grid-input"><input type="text" id="currentPassword" name="currentPassword" placeholder="Current password" /></div>
+        <div class="grid-label"><button type="button" id="confirmAccount" class="btn">Confirm</button></div>
+        <div class="grid-input"><input type="reset" value="Reset" id="resetAccount" class="btn" /></div></form>
+    </div>
+    <br />
+    <div class="details grid-container">
+        <div class="grid-heading"><h4 id="centered">Change Password</h4></div>
+        <div class="grid-label"><form id="updateForm"><label for="currentPassword">Password:</label></div>
+        <div class="grid-input"><input type="password" id="currentPassword" name="currentPassword" placeholder="Current password" /></div>
         <div class="grid-label"><label for="newPassword">New Password:</label></div>
-        <div class="grid-input"><input type="text" id="newPassword" name="newPassword" placeholder="New password" /></div>
-        <div class="grid-label"><button id="confirm" class="btn" type="button">Confirm</button></div>
-        <div class="grid-input"><input type="reset" value="Reset" id="reset" class="btn" /></div>
-        </form>
+        <div class="grid-input"><input type="password" id="newPassword" name="newPassword" placeholder="New password" /></div>
+        <div class="grid-label"><button type="button" id="confirmPassword" class="btn">Confirm</button></div>
+        <div class="grid-input"><input type="reset" value="Reset" id="resetPassword" class="btn" />
+    </div></form>
     </div>
 
 
