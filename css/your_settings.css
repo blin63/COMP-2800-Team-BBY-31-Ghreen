@@ -126,3 +126,14 @@ a:link {
   #centered {
       text-align: center;
   }
+
+  .resetEmail {
+    background-color: #B6FFB0;
+    outline: 1px solid black;
+    border-radius: 5px;
+    height: 30px;
+    line-height: 2px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
