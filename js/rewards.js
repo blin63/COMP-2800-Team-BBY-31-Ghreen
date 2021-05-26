@@ -1,9 +1,17 @@
 // Code copied and edited from Brendan Lin's 1800 demo code
+/**
+ * Author: Carl Magno & Brendan Lin
+ * Ver: 1.0
+ */
 
 function rewardsQuery() {
     var counter = 0;
 
     //code adapted and modified from Kevin Chang's display_tree.js
+    /**
+     * Author: Kevin Chang (start)
+     * Ver: 1.0
+     */
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             db.collection("users").doc(user.uid)
@@ -20,6 +28,11 @@ function rewardsQuery() {
                         db.collection("users").doc(user.uid).update({rewardCount: counter});
                         revealRewardMsg();
                     }
+
+                    /**
+     * Author: Kevin Chang (end)
+     * Ver: 1.0
+     */
 
                     console.log(counter);
 

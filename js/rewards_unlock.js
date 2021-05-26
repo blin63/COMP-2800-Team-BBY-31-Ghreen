@@ -1,6 +1,15 @@
 //Function to unlock rewards based on carbon footprint score
+/**
+ * Creator of this JS file, modifications made by:
+ * Author: Brendan Lin
+ * Ver: 1.0
+ */
 function unlock() {
     //code adapted and modified from Kevin Chang's display_tree.js
+    /**
+     * Author: Kevin Chang
+     * Ver: 1.0
+     */
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             db.collection("users").doc(user.uid)
