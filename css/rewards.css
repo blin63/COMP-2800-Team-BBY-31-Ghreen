@@ -1,13 +1,3 @@
-.fa-award {
-    width: 10%;
-}
-
-.fa-chevron-circle-left {
-    position: absolute;
-    top: 120px;
-    left: 20px;
-}
-
 #rewards {
     margin: 0 auto;
     text-align: center;
@@ -78,6 +68,11 @@ td i {
     outline: 1px solid black;
     font-size: 12pt;
 }
+
+#specialTable {
+    margin-bottom: 10%;
+}
+
 .fa-chevron-circle-left {
     position: absolute;
     top: 120px;

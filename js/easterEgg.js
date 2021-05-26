@@ -13,6 +13,7 @@ $(document).ready(function() {
     
     //Hide Secret Message
     $("#secretMsg").css("visibility", "hidden");
+    $("#secretMsg").css("display", "none");
     $("#secretMsg").fadeOut();
 
     $(".logo").click(function() {
@@ -27,6 +28,7 @@ $(document).ready(function() {
 
             //Make Secret Message Visible for a few seconds
             $("#secretMsg").css("visibility", "visible");
+            $("#secretMsg").css("display", "block");
             $("#secretMsg").fadeIn().fadeOut(10000);
         }
     });
