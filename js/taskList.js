@@ -136,8 +136,8 @@ function progressBarUpdate(user) {
     .get()
     .then(function (doc) {
         // Check progress and calculate % for progress bar.
-        const ptPerTask = 5; // pts per task
-        const expBoundary = 4; // # of task to complete for one reward
+        const ptPerTask = 1; // pts per task
+        const expBoundary = 3; // # of task to complete for one reward
         var carbonFootPrintScore = doc.data().scoreCurrent;
         var progressExp = doc.data().progressBar;
         var progress = progressExp / ptPerTask / expBoundary;
@@ -150,7 +150,7 @@ function progressBarUpdate(user) {
 
         // Update progress bar.
         $("#progressBarPercentage").attr("style", "width: " + progressBarPercentage + "%");
-        $("#progressBarPercentage").html(progressBarPercentage + "%");
+        $("#progressBarPercentage").html(parseInt(progressBarPercentage) + "%");
     });
 }
 

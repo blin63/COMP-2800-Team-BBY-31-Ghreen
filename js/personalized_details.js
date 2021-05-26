@@ -1,6 +1,4 @@
 // example from mozilla website// https://some.site/?id=123
-
-// console.log(location.href);
 const parseUrl = new URL(location.href);
 // console.log(parseUrl.searchParams.get("id")); // "123"
 
@@ -30,8 +28,6 @@ function getDetails() {
                     $(".difficulty").append("<p> " + diff + "</p>");
                     $(".s1").append("<p> " + des + "</p>");
                     $(".furtherInfo").append("<p hidden id='f_info' > " + info + "</p>");
-
-                    // $("#details-go-here").append("<a href='" + url + "' > " + url);
                 }
             })
         })
@@ -64,8 +60,8 @@ function completeTask() {
                                     .get()
                                     .then(function (doc) {
                                         // Update progressBar 
-                                        const expPerTask = 5;
-                                        const expBoundary = 4; // # of task to complete for one reward
+                                        const expPerTask = 1;
+                                        const expBoundary = 3; // # of task to complete for one reward
 
                                         var currentExp = doc.data().progressBar;
                                         currentExp += expPerTask; // scale this value by diffLvL (** Incomplete)
@@ -78,7 +74,7 @@ function completeTask() {
                                         const carbonScoreDeduc = 3;
                                         var oldScore = doc.data().scoreCurrent;
                                         var newScore = doc.data().scoreCurrent - carbonScoreDeduc;
-                                        var scoreChange = carbonScoreDeduc;
+                                        var scoreChange = newScore - oldScore;
 
                                         db.collection("users").doc(user.uid).update({
                                             'scoreChange': scoreChange,
@@ -105,34 +101,6 @@ function completeTask() {
 }
 completeTask();
 
-
-//Cancel task
-function cancelTask() {
-    $("#cancel").click(function () {
-        //pop confirm window (**havent implement)
-
-        // 1)delete task from taskList col; 2) alert for confirmation
-        firebase.auth().onAuthStateChanged(function (user) {
-            console.log("delete: " + id + "?");
-            if (user) {
-                db.collection("users").doc(user.uid).collection("taskList")
-                    .get()
-                    .then(querySnapshot => {
-                        querySnapshot.forEach(doc => {
-                            console.log(doc.id, " => ", doc.data().taskID);
-                            if (doc.data().taskID == id) {
-                                db.collection("users").doc(user.uid).collection("taskList").doc(doc.id).delete();
-                                console.log("delete doc: " + doc);
-                                console.log("delete: " + id);
-                            }
-                        });
-                    });
-            }
-        });
-    });
-}
-cancelTask();
-
 // Reward section. Follow Reward order in database.
 // Every 4 tasks fnished will trigger
 function rewardTime(index) {
@@ -143,6 +111,7 @@ function rewardTime(index) {
         .then(function (snap) {
             snap.forEach(function (doc) {
 
+                // Write reward into user's data(incomplete)
                 if (count == index) {
                     alert("Congratz! Gain reward: " + doc.data().Name + "in your Rewards Page");
                 }
@@ -151,4 +120,61 @@ function rewardTime(index) {
         });
 }
 
-$("#cancel").click();
+// Click cancel btn
+// 1) pop confirm box; 
+// 2) redirect to pList_detai/pList
+// 3) process request
+$("#cancel").click(function () {
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // When the user clicks the Cancel button, open the modal 
+    modal.style.display = "block";
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
+
+function backTaskList() {
+    var modal = document.getElementById("myModal");
+    console.log("cancel process");
+    modal.style.display = "none";
+}
+
+// Delete task
+function deleteTask() {
+    // delete task from taskList col;
+    firebase.auth().onAuthStateChanged(function (user) {
+        console.log("delete: " + id + "?");
+        if (user) {
+            db.collection("users").doc(user.uid).collection("taskList")
+                .get()
+                .then(querySnapshot => {
+                    querySnapshot.forEach(doc => {
+                        console.log(doc.id, " => ", doc.data().taskID);
+                        if (doc.data().taskID == id) {
+                            db.collection("users").doc(user.uid).collection("taskList").doc(doc.id).delete();
+                            console.log("delete doc: " + doc);
+                            console.log("delete: " + id);
+
+                            // Wait 1s and return to taskList
+                            setTimeout(() => {
+                                console.log("confrim delete task");
+                                window.location.href = "tasklist.html";
+                            }, 1000);
+                        }
+                    });
+                });
+        }
+    });
+}
+
+// Click complete btn
+// 1) display congratz msg
+// 2) redirect to taskList
+$("#complete").click(function () {
+    console.log("clicked complte ");
+});

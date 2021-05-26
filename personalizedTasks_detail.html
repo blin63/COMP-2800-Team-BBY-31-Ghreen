@@ -81,12 +81,24 @@
         </div>
     </nav>
 
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p>Remove task from your task list?</p>
+            <div class="sectionBtn">
+                <button onclick="deleteTask()" id="confirmBtn_popup">Confirm</button>
+                <button onclick="backTaskList()" id="cancelBtn_popup">Cancel</button>
+            </div>
+        </div>
+    </div>
 
     <!-- content -->
     <div class="wrapper">
         <div id="back_icon">
             <a href="/tasklist.html"><img src="../images/icons/categoryIcon/chevron-circle-left-solid.svg" alt=""></a>
         </div>
+
         <div class="task_detail_wrapper">
             <div id="taskNamee"></div>
             <div class="taskLevel">
@@ -97,6 +109,7 @@
                     <p>Difficulty</p>
                 </div>
             </div>
+
             <!-- Icons -->
             <div id="icon_section">
                 <!--
