@@ -18,69 +18,93 @@ function unlock() {
                     var score = doc.data().scoreCurrent;
                     console.log(score);
 
-                    if (score == 0 || score <= 20) {
+                    if (score == 0 || score <= 30) {
                         db.collection("users").doc(user.uid).update({
-                            rewards: [true, true, true, true, true, true, true, true, true, true]
+                            rewards: [true, true, true, true, true, true, true, true, true, true, true, true, true, true]
                         });
                     }
 
-                    if (score > 20 && score <= 30) {
+                    if (score > 35 && score <= 40) {
                         db.collection("users").doc(user.uid).update({
-                            rewards: [true, true, true, true, true, true, true, true, true, false]
+                            rewards: [true, true, true, true, true, true, true, true, true, true, true, true, true, false]
                         });
                     }
 
-                    if (score > 30 && score <= 45) {
+                    if (score > 45 && score <= 50) {
                         db.collection("users").doc(user.uid).update({
-                            rewards: [true, true, true, true, true, true, true, true, false, false]
+                            rewards: [true, true, true, true, true, true, true, true, true, true, true, true, false, false]
                         });
                     }
 
-                    if (score > 45 && score <= 60) {
+                    if (score > 55 && score <= 60) {
                         db.collection("users").doc(user.uid).update({
-                            rewards: [true, true, true, true, true, true, true, false, false, false]
+                            rewards: [true, true, true, true, true, true, true, true, true, true, true, false, false, false]
                         });
                     }
 
-                    if (score > 60 && score <= 75) {
+                    if (score > 65 && score <= 70) {
                         db.collection("users").doc(user.uid).update({
-                            rewards: [true, true, true, true, true, true, false, false, false, false]
+                            rewards: [true, true, true, true, true, true, true, true, true, true, false, false, false, false]
                         });
                     }
 
-                    if (score > 75 && score < 85) {
+                    if (score > 75 && score < 80) {
                         db.collection("users").doc(user.uid).update({
-                            rewards: [true, true, true, true, true, false, false, false, false, false]
+                            rewards: [true, true, true, true, true, true, true, true, true, false, false, false, false, false]
                         });
                     }
 
-                    if (score > 85 && score <= 95) {
+                    if (score > 80 && score <= 85) {
                         db.collection("users").doc(user.uid).update({
-                            rewards: [true, true, true, true, false, false, false, false, false, false]
+                            rewards: [true, true, true, true, true, true, true, true, false, false, false, false, false, false]
                         });
                     }
 
-                    if (score > 95 && score <= 105) {
+                    if (score > 85 && score <= 90) {
                         db.collection("users").doc(user.uid).update({
-                            rewards: [true, true, true, false, false, false, false, false, false, false]
+                            rewards: [true, true, true, true, true, true, true, false, false, false, false, false, false, false]
                         });
                     }
 
-                    if (score > 105 && score <= 115) {
+                    if (score > 95 && score <= 100) {
                         db.collection("users").doc(user.uid).update({
-                            rewards: [true, true, false, false, false, false, false, false, false, false]
+                            rewards: [true, true, true, true, true, true, false, false, false, false, false, false, false, false]
                         });
                     }
 
-                    if (score > 115 && score <= 125) {
+                    if (score > 100 && score <= 105) {
                         db.collection("users").doc(user.uid).update({
-                            rewards: [true, false, false, false, false, false, false, false, false, false]
+                            rewards: [true, true, true, true, true, false, false, false, false, false, false, false, false, false]
+                        });
+                    }
+
+                    if (score > 105 && score <= 110) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, true, false, false, false, false, false, false, false, false, false, false]
+                        });
+                    }
+
+                    if (score > 110 && score <= 115) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, false, false, false, false, false, false, false, false, false, false, false]
+                        });
+                    }
+
+                    if (score > 115 && score <= 120) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, false, false, false, false, false, false, false, false, false, false, false, false]
+                        });
+                    }
+
+                    if (score > 120 && score <= 125) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, false, false, false, false, false, false, false, false, false, false, false, false, false]
                         });
                     }
 
                     if (score > 125) {
                         db.collection("users").doc(user.uid).update({
-                            rewards: [false, false, false, false, false, false, false, false, false, false]
+                            rewards: [false, false, false, false, false, false, false, false, false, false, false, false, false, false]
                         });
                     }
                 })
