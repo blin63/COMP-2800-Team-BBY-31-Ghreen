@@ -436,6 +436,7 @@ function makeTree() {
                     }
 
                     if (score > 56 && score <= 66) {
+                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
                         $(".tree").append(tree8);
                         $(".tree").addClass("tree8");
                         diff = score - 56;
@@ -443,6 +444,7 @@ function makeTree() {
                     }
 
                     if (score > 66 && score <= 76) {
+                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
                         $(".tree").append(tree7);
                         $(".tree").addClass("tree7");
                         diff = score - 66;
@@ -450,6 +452,7 @@ function makeTree() {
                     }
 
                     if (score > 76 && score <= 86) {
+                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
                         $(".tree").append(tree6);
                         $(".tree").addClass("tree6");
                         diff = score - 76;
@@ -457,6 +460,7 @@ function makeTree() {
                     }
 
                     if (score > 86 && score <= 96) {
+                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
                         $(".tree").append(tree5);
                         $(".tree").addClass("tree5");
                         diff = score - 86;
@@ -464,6 +468,7 @@ function makeTree() {
                     }
 
                     if (score > 96 && score <= 106) {
+                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
                         $(".tree").append(tree4);
                         $(".tree").addClass("tree4");
                         diff = score - 96;
@@ -471,6 +476,7 @@ function makeTree() {
                     }
 
                     if (score > 106 && score <= 116) {
+                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
                         $(".tree").append(tree3);
                         $(".tree").addClass("tree3");
                         diff = score - 106;
@@ -478,6 +484,7 @@ function makeTree() {
                     }
 
                     if (score > 116 && score <= 126) {
+                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
                         $(".tree").append(tree2);
                         $(".tree").addClass("tree2");
                         diff = score - 116;
@@ -485,7 +492,7 @@ function makeTree() {
                     }
 
                     if (score > 126 && score <= 136) {
-                        $(".tree").before("");
+                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
                         $(".tree").append(tree1);
                         $(".tree").addClass("tree1");
                         diff = score - 126;

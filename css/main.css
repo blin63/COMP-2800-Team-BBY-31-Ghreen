@@ -2,9 +2,9 @@
 #container {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 16% 40% 44%;
-    height: 90vh;
-    margin-bottom: 18vh;
+    grid-template-rows: 16% 37% 3% 40%;
+    height: 95vh;
+    margin-bottom: 21vh;
     grid-gap: 1em;
 }
 
@@ -27,26 +27,38 @@
     text-align: center;
 }
 
-#tree-container {
+#tweet-container {
     grid-column: 1 / 1;
     grid-row: 3 / 4;
     text-align: center;
+    padding: 0em 1em;
+}
+
+#tweet-container div {
+    display: inline-block;
+    margin-bottom: 0.5em;
+    margin: 0 0.2em;
+}
+
+#tree-container {
+    grid-column: 1 / 1;
+    grid-row: 4 / 5;
+    text-align: center;
     padding: 0.2em;
     position: relative;
-
 }
 
 .tree {
     position: absolute;
-    bottom: -2.8em;
+    bottom: -5.2em;
     left: 0;
     right: 0;
 }
 
 #stats {
     text-align: center;
-    padding: 0.2em;
-    margin-top: -0.5em;
+    padding: 0em 0.2em;
+    margin-top: 0.2em;
 }
 
 #carbon-score {

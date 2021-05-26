@@ -52,8 +52,8 @@ var uiConfig = {
     firebase.auth.GithubAuthProvider.PROVIDER_ID,
     firebase.auth.PhoneAuthProvider.PROVIDER_ID
   ],
-  tosUrl: '<your-tos-url>',
-  privacyPolicyUrl: '<your-privacy-policy-url>'
+  tosUrl: 'tos.html',
+  privacyPolicyUrl: 'privacy_policy.html'
 };
 
 login.start('#firebaseui-auth-container', uiConfig);
