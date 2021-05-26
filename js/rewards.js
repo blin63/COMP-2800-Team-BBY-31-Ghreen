@@ -6,6 +6,7 @@ function rewardsQuery() {
     //code adapted and modified from Kevin Chang's display_tree.js
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
+            unlock();
             db.collection("users").doc(user.uid)
                 .get()
                 .then(function (userDoc) {
@@ -47,7 +48,6 @@ function rewardsQuery() {
                 });
         }
     });
-
 }
 
 rewardsQuery();
@@ -65,7 +65,6 @@ function rewardMsg() {
 
     });
 }
-
 rewardMsg();
 
 //reveal the reward message when new rewards are unlocked
@@ -73,5 +72,80 @@ function revealRewardMsg() {
     $(document).ready(function() {
         $("#rewardMsg").css("visibility", "visible");
         $("#rewardMsg").fadeIn(5000).fadeOut(5000);
+    });
+}
+
+//Function to unlock rewards based on carbon footprint score
+function unlock() {
+    //code adapted and modified from Kevin Chang's display_tree.js
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            db.collection("users").doc(user.uid)
+                .get()
+                .then(function (doc) {
+                    var score = doc.data().scoreCurrent;
+                    console.log(score);
+
+                    if (score == 0 || score <= 20) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, true, true, true, true, true, true, true]
+                        });
+                    }
+
+                    if (score > 20 && score <= 30) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, true, true, true, true, true, true, false]
+                        });
+                    }
+
+                    if (score > 30 && score <= 45) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, true, true, true, true, true, false, false]
+                        });
+                    }
+
+                    if (score > 45 && score <= 60) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, true, true, true, true, false, false, false]
+                        });
+                    }
+
+                    if (score > 60 && score <= 75) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, true, true, true, false, false, false, false]
+                        });
+                    }
+
+                    if (score > 75 && score < 85) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, true, true, false, false, false, false, false]
+                        });
+                    }
+
+                    if (score > 85 && score <= 95) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, true, false, false, false, false, false, false]
+                        });
+                    }
+
+                    if (score > 95 && score <= 105) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, false, false, false, false, false, false, false]
+                        });
+                    }
+
+                    if (score > 105 && score <= 115) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, false, false, false, false, false, false, false, false]
+                        });
+                    }
+
+                    if (score > 115 && score <= 125) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, false, false, false, false, false, false, false, false, false]
+                        });
+                    }
+                })
+        }
     });
 }
