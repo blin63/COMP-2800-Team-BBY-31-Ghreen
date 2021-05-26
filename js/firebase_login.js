@@ -25,7 +25,7 @@ var uiConfig = {
           scoreCurrent: 0,
           scoreOld: 0,
           scoreChange: 0,
-          rewards: [false, false, false, false, false, false, false, false, false, false],
+          rewards: [false, false, false, false, false, false, false, false, false, false, false, false, false, false],
           rewardCount: 0
         }).then(function () {
           console.log("New user added to firestore");
