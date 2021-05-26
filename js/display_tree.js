@@ -398,8 +398,6 @@ tree0 = `<svg width="80" height="76" viewBox="0 0 80 76" fill="none" xmlns="http
 </svg>`
 
 
-
-
 /* Extract data start
 * This block of code was adapted from Carly's code found here: 
 * source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 
