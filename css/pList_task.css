@@ -26,7 +26,7 @@ body {
 .taskName {
     font-family: 'Concert One', cursive;
     font-size: 1.5em;
-    border-bottom: 2px solid black;
+    /* border-bottom: 2px solid black; */
     margin-left: 2em;
     margin-right: 2em;
     padding-top: 1em;
@@ -77,18 +77,16 @@ body {
 }
 
 .s1 {
-    /* background-color: #BAE7EC; */
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 10.94%, #FFFFFF 100%), #BAE7EC;
+    background-color: #BAE7EC;
+    /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 10.94%, #FFFFFF 100%), #BAE7EC; */
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
     margin: 1em;
     padding: 1em;
     text-align: left;
-    border-radius: 10px;
-
+    /* border-radius: 10px; */
 }
 
 .s2 {
@@ -106,17 +104,20 @@ body {
 }
 
 .furtherInfo {
+    background-color: #BAE7EC;
+
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
-    margin: 1em;
+    margin: 2em;
     margin-top: 0em;
     padding: 1em;
     text-align: left;
     margin-bottom: 5em;
     line-height: 1.2em;
-    border-radius: 10px;
-    background: linear-gradient(180deg, rgba(255, 250, 248, 0.5) 21.35%, rgba(255, 255, 255, 0.5) 46.88%, rgba(254, 181, 146, 0) 91.67%), #FFDED5;
+    padding: 1em;
+    /* border-radius: 10px; */
+    /* background: linear-gradient(180deg, rgba(255, 250, 248, 0.5) 21.35%, rgba(255, 255, 255, 0.5) 46.88%, rgba(254, 181, 146, 0) 91.67%), #FFDED5; */
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -131,7 +132,7 @@ a {
     text-decoration: none;
 }
 
-.activeAnimation {
+/* .activeAnimation {
     animation-name: fun;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -146,7 +147,7 @@ a {
     to {
         background-color: #C7F5FB;
     }
-}
+} */
 
 #add_icon {
     height: 3.5%;
