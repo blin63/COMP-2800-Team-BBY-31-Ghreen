@@ -12,7 +12,6 @@ class taskConstructor {
         // this.displayInfo=function(){
         //   return this.name + "is " + this.age + "year's old!";
         // }
-
     }
     get latest() {
         if (this.log.length == 0) {

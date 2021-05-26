@@ -30,7 +30,6 @@ function getDetails() {
                     $(".difficulty").append("<p> " + diff + "</p>");
                     $(".s1").append("<p> " + des + "</p>");
                     $(".furtherInfo").append("<p hidden id='f_info' > " + info + "</p>");
-
                     // $("#details-go-here").append("<a href='" + url + "' > " + url);
                 }
             })
@@ -78,7 +77,7 @@ function completeTask() {
                                         const carbonScoreDeduc = 3;
                                         var oldScore = doc.data().scoreCurrent;
                                         var newScore = doc.data().scoreCurrent - carbonScoreDeduc;
-                                        var scoreChange = carbonScoreDeduc;
+                                        var scoreChange = newScore - oldScore;
 
                                         db.collection("users").doc(user.uid).update({
                                             'scoreChange': scoreChange,
@@ -97,6 +96,7 @@ function completeTask() {
                                         }
                                     })
                             }
+                            document.location.href = 'tasklist.html'
                         });
                     });
             }
