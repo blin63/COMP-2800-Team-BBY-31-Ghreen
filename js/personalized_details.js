@@ -41,9 +41,9 @@ getDetails();
 //Complete task
 function completeTask() {
     $("#complete").click(function () {
-        //pop confirm window (**havent implement)
+        // pop confirm window (** incomplete)
 
-        // 1)delete task from taskList col;
+        // 1) delete task from taskList col;
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
                 db.collection("users").doc(user.uid).collection("taskList")
@@ -51,24 +51,51 @@ function completeTask() {
                     .then(querySnapshot => {
                         querySnapshot.forEach(doc => {
                             console.log(doc.id, " => ", doc.data().taskID);
+
+                            // Find current task in database; 
                             if (doc.data().taskID == id) {
                                 db.collection("users").doc(user.uid).collection("taskList").doc(doc.id).delete();
-                                console.log("delete doc: " + doc + ":(");
-                                console.log("delete: " + id + ":(");
+                                console.log("delete doc: " + doc);
+                                console.log("delete: " + id);
 
-                                // 2)add exp point to user; Get current exp, update exp;
+                                // 2) add exp point to user; Get current exp, update exp;
+                                //    Update carbonScore;
                                 db.collection("users").doc(user.uid)
                                     .get()
                                     .then(function (doc) {
+                                        // Update progressBar 
+                                        const expPerTask = 5;
+                                        const expBoundary = 4; // # of task to complete for one reward
+
                                         var currentExp = doc.data().progressBar;
-                                        currentExp += 5; // scale this value by diffLvL (** Incomplete)
+                                        currentExp += expPerTask; // scale this value by diffLvL (** Incomplete)
                                         db.collection("users").doc(user.uid).update({
                                             'progressBar': currentExp
                                         });
                                         console.log("currentExp: " + currentExp);
+
+                                        // Update carbonScore
+                                        const carbonScoreDeduc = 3;
+                                        var oldScore = doc.data().scoreCurrent;
+                                        var newScore = doc.data().scoreCurrent - carbonScoreDeduc;
+                                        var scoreChange = carbonScoreDeduc;
+
+                                        db.collection("users").doc(user.uid).update({
+                                            'scoreChange': scoreChange,
+                                            'scoreCurrent': newScore,
+                                            'scoreOld': oldScore
+                                        });
+
+                                        // If reach 100%, display reward.
+                                        var progress = currentExp / expPerTask / expBoundary;
+                                        var progressBarPercentage = (progress - parseInt(progress))
+                                        console.log("parseInt(progress)" + parseInt(progress));
+
+                                        if (progressBarPercentage == 0) {
+                                            console.log("reach100%, get reward");
+                                            rewardTime(parseInt(progress));
+                                        }
                                     })
-                            } else {
-                                throw new Error("task not exist.");
                             }
                         });
                     });
@@ -79,15 +106,14 @@ function completeTask() {
 completeTask();
 
 
-
 //Cancel task
 function cancelTask() {
     $("#cancel").click(function () {
         //pop confirm window (**havent implement)
 
-        // 1)delete task from taskList col; 2)add exp point to user
+        // 1)delete task from taskList col; 2) alert for confirmation
         firebase.auth().onAuthStateChanged(function (user) {
-            console.log("delete: " + id + ":(");
+            console.log("delete: " + id + "?");
             if (user) {
                 db.collection("users").doc(user.uid).collection("taskList")
                     .get()
@@ -96,10 +122,8 @@ function cancelTask() {
                             console.log(doc.id, " => ", doc.data().taskID);
                             if (doc.data().taskID == id) {
                                 db.collection("users").doc(user.uid).collection("taskList").doc(doc.id).delete();
-                                console.log("delete doc: " + doc + ":(");
-                                console.log("delete: " + id + ":(");
-                            } else {
-                                throw new Error("delete a task not exist.");
+                                console.log("delete doc: " + doc);
+                                console.log("delete: " + id);
                             }
                         });
                     });
@@ -108,3 +132,23 @@ function cancelTask() {
     });
 }
 cancelTask();
+
+// Reward section. Follow Reward order in database.
+// Every 4 tasks fnished will trigger
+function rewardTime(index) {
+    var count = 0;
+    console.log("index" + index);
+    db.collection("rewards")
+        .get() //get whole collection
+        .then(function (snap) {
+            snap.forEach(function (doc) {
+
+                if (count == index) {
+                    alert("Congratz! Gain reward: " + doc.data().Name + "in your Rewards Page");
+                }
+                count++;
+            });
+        });
+}
+
+$("#cancel").click();

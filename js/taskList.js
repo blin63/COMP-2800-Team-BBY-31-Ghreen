@@ -29,6 +29,9 @@ var task;
 function showCollection() {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
+            updateUsernameTitle(user);
+            progressBarUpdate(user);
+
             db.collection("users").doc(user.uid).collection("taskList")
                 .get()
                 .then(querySnapshot => {
@@ -118,13 +121,38 @@ function tabHidden() {
 }
 tabHidden();
 
-// click to open task
-function openTask(id) {
-    $(id).click(function () {
-        console.log("?");
-    });
+function updateUsernameTitle(user) {
+    db.collection("users").doc(user.uid)
+        .get()
+        .then(function (doc) {
+            var userName = doc.data().name;
+            $(".list_title").html(userName + "'s TaskList");
+
+        });
 }
 
+function progressBarUpdate(user) {
+    db.collection("users").doc(user.uid)
+    .get()
+    .then(function (doc) {
+        // Check progress and calculate % for progress bar.
+        const ptPerTask = 5; // pts per task
+        const expBoundary = 4; // # of task to complete for one reward
+        var carbonFootPrintScore = doc.data().scoreCurrent;
+        var progressExp = doc.data().progressBar;
+        var progress = progressExp / ptPerTask / expBoundary;
+        var progressBarPercentage = (progress - parseInt(progress)) * 100;
+
+        console.log("pts: " + carbonFootPrintScore);
+        console.log("progressExp: " + progressExp);
+        console.log("progressBarPercentage: " + progressBarPercentage);
+        console.log("parseInt(progress): " + parseInt(progress));
+
+        // Update progress bar.
+        $("#progressBarPercentage").attr("style", "width: " + progressBarPercentage + "%");
+        $("#progressBarPercentage").html(progressBarPercentage + "%");
+    });
+}
 
 
 // function showTaskList() {
