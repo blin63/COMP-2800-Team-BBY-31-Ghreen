@@ -1,4 +1,3 @@
-
 tree11 = `<svg width="349" height="375" viewBox="0 0 349 375" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect x="194.379" y="276.27" width="3.64932" height="116.078" transform="rotate(-74.1729 194.379 276.27)" fill="#A56E2E" />
     <rect x="247.943" y="258.178" width="3.64932" height="75.7355" transform="rotate(-74.1729 247.943 258.178)" fill="#A56E2E" />
@@ -401,9 +400,9 @@ tree0 = `<svg width="80" height="76" viewBox="0 0 80 76" fill="none" xmlns="http
 
 
 /* Extract data start
-* This block of code was adapted from Carly's code found here: 
-* source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 
-*/
+ * This block of code was adapted from Carly's code found here: 
+ * source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 
+ */
 function makeTree() {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
@@ -414,97 +413,94 @@ function makeTree() {
                     var diff;
                     console.log(score);
 
-                    if (score <= 36 ) {
-                        $(".tree").append(tree11);
-                        $(".tree").addClass("tree11");
-                        $("#next").html(`Congratulations! You've grown the largest tree! Click <span id="end">here</span>.`);
+                    if (score == 0 || score <= 30) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, true, true, true, true, true, true, true, true, true, true, true]
+                        });
                     }
 
-                    if (score > 36 && score <= 46) {
-                        $(".tree").append(tree10);
-                        $(".tree").addClass("tree10");
-                        diff = score - 36;
-                        $("#next-tree").append(diff);
-
-                    }
-                    
-                    if (score > 46 && score <= 56) {
-                        $(".tree").append(tree9);
-                        $(".tree").addClass("tree9");
-                        diff = score - 46;
-                        $("#next-tree").append(diff);
+                    if (score > 35 && score <= 40) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, true, true, true, true, true, true, true, true, true, true, false]
+                        });
                     }
 
-                    if (score > 56 && score <= 66) {
-                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
-                        $(".tree").append(tree8);
-                        $(".tree").addClass("tree8");
-                        diff = score - 56;
-                        $("#next-tree").append(diff);
+                    if (score > 45 && score <= 50) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, true, true, true, true, true, true, true, true, true, false, false]
+                        });
                     }
 
-                    if (score > 66 && score <= 76) {
-                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
-                        $(".tree").append(tree7);
-                        $(".tree").addClass("tree7");
-                        diff = score - 66;
-                        $("#next-tree").append(diff);
+                    if (score > 55 && score <= 60) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, true, true, true, true, true, true, true, true, false, false, false]
+                        });
                     }
 
-                    if (score > 76 && score <= 86) {
-                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
-                        $(".tree").append(tree6);
-                        $(".tree").addClass("tree6");
-                        diff = score - 76;
-                        $("#next-tree").append(diff);
+                    if (score > 65 && score <= 70) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, true, true, true, true, true, true, true, false, false, false, false]
+                        });
                     }
 
-                    if (score > 86 && score <= 96) {
-                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
-                        $(".tree").append(tree5);
-                        $(".tree").addClass("tree5");
-                        diff = score - 86;
-                        $("#next-tree").append(diff);
+                    if (score > 75 && score < 80) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, true, true, true, true, true, true, false, false, false, false, false]
+                        });
                     }
 
-                    if (score > 96 && score <= 106) {
-                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
-                        $(".tree").append(tree4);
-                        $(".tree").addClass("tree4");
-                        diff = score - 96;
-                        $("#next-tree").append(diff);
+                    if (score > 80 && score <= 85) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, true, true, true, true, true, false, false, false, false, false, false]
+                        });
                     }
 
-                    if (score > 106 && score <= 116) {
-                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
-                        $(".tree").append(tree3);
-                        $(".tree").addClass("tree3");
-                        diff = score - 106;
-                        $("#next-tree").append(diff);
+                    if (score > 85 && score <= 90) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, true, true, true, true, false, false, false, false, false, false, false]
+                        });
                     }
 
-                    if (score > 116 && score <= 126) {
-                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
-                        $(".tree").append(tree2);
-                        $(".tree").addClass("tree2");
-                        diff = score - 116;
-                        $("#next-tree").append(diff);
+                    if (score > 95 && score <= 100) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, true, true, true, false, false, false, false, false, false, false, false]
+                        });
                     }
 
-                    if (score > 126 && score <= 136) {
-                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
-                        $(".tree").append(tree1);
-                        $(".tree").addClass("tree1");
-                        diff = score - 126;
-                        $("#next-tree").append(diff);
+                    if (score > 100 && score <= 105) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, true, true, false, false, false, false, false, false, false, false, false]
+                        });
                     }
 
-                    if (score > 136) {
-                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
-                        $(".tree").append(tree0);
-                        $(".tree").addClass("tree0");
-                        diff = score - 130;
-                        $("#next-tree").append(diff);
+                    if (score > 105 && score <= 110) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, true, false, false, false, false, false, false, false, false, false, false]
+                        });
+                    }
+
+                    if (score > 110 && score <= 115) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, true, false, false, false, false, false, false, false, false, false, false, false]
+                        });
+                    }
+
+                    if (score > 115 && score <= 120) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, true, false, false, false, false, false, false, false, false, false, false, false, false]
+                        });
+                    }
+
+                    if (score > 120 && score <= 125) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [true, false, false, false, false, false, false, false, false, false, false, false, false, false]
+                        });
+                    }
+
+                    if (score > 125) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+                        });
                     }
                 })
         }
@@ -513,4 +509,4 @@ function makeTree() {
 makeTree();
 
 /* Extract data end 
-* source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 */
+ * source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 */

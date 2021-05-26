@@ -42,44 +42,55 @@ getDetails();
 function checkUserTaskList() {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-            db.collection("users").doc(user.uid).collection("taskList")
+
+            var taskArray = [];
+            db.collection("users").doc(user.uid)
                 .get()
-                .then(querySnapshot => {
-                    var count = 0;
-                    var size = querySnapshot.size
-                    console.log("taskListSize: " + size);
+                .then(function (doc) {
+                    taskArray = doc.data().userTasks;
+                    console.log("!!taskArray: " + taskArray);
+                });
 
-                    querySnapshot.forEach(doc => {
-                        console.log(doc.id, " => ", doc.data().taskID);
-                        var taskListID = doc.data().taskID;
+                setTimeout(function(){
+                    db.collection("tasks")
+                .get()
+                .then(function (snap) {
+                    snap.forEach(function (doc) {
+                        // Found Current task
+                        // console.log("!!doc.data().id: " + doc.id);
+                        // console.log("!!id: " + id);
 
-                        if (taskListID != id) {
-                            count++;
+                        if (doc.id == id) {
+                            var taskID = doc.data().id;
+                            console.log(taskID);
+                            // Found current task in user' taskLisk, popup warning
+                            console.log(taskArray);
+                            if (taskArray.includes(taskID)) {
+                                console.log("included");
+                                $(".alert_fail").fadeIn("slow");
+                                $(".addtolist_btn").hide();
+
+                            } else {
+                                // Task is addable to list
+                                console.log("not included");
+
+                                $("#add_icon").click(function () {
+                                    $(".alert_success").fadeIn("slow");
+                                    $(".addtolist_btn").hide();
+
+                                    taskArray.push(taskID);
+                                    db.collection("users").doc(user.uid)
+                                        .update({
+                                            "userTasks": taskArray
+                                        });
+                                    console.log("add data:", taskID);
+                                    console.log("new taskArray:", taskArray);
+                                });
+                            }
                         }
                     });
-
-                    console.log("# of Different task: " + count);
-
-                    //  find same task in taskList
-                    if (count != size) {
-                        $(".alert_fail").fadeIn("slow");
-                        $(".addtolist_btn").hide();
-                    } else {
-                        // add task to list
-                        $("#add_icon").click(function () {
-                            $(".alert_success").fadeIn("slow");
-                            $(".addtolist_btn").hide();
-
-                            db.collection("users").doc(user.uid).collection("taskList").add({
-                                taskID: id
-                            });
-                            console.log("add data:", id);
-
-                        });
-
-                    }
-                    console.log("Current taskDetail: " + id);
                 });
+                }, 500);
         }
     });
 }

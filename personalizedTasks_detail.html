@@ -81,7 +81,7 @@
         </div>
     </nav>
 
-    <!-- The Modal -->
+    <!-- The Cancel Modal -->
     <div id="myModal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
@@ -89,6 +89,28 @@
             <div class="sectionBtn">
                 <button onclick="deleteTask()" id="confirmBtn_popup">Confirm</button>
                 <button onclick="backTaskList()" id="cancelBtn_popup">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Reward Modal -->
+    <div id="congratzPopup" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p>New reward is unlock!</p>
+            <div class="sectionBtn">
+                <button onclick="directReward()" id="confirmBtn_popup">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- The CompleteTask Modal -->
+    <div id="thanksPopup" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p>Good job! Thank you for your contribution to the environment!</p>
+            <div class="sectionBtn">
+                <button onclick="directPList()" id="confirmBtn_popup">Confirm</button>
             </div>
         </div>
     </div>
