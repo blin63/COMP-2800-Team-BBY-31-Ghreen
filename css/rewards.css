@@ -106,8 +106,8 @@ a:link {
     color: black;
   }
 
-  /* RewardMsg CSS; Author: Brendan Lin; Ver: 1.0 */
-#rewardMsg {
+  /* RewardMsg CSS & noReward CSS; Author: Brendan Lin; Ver: 1.0 */
+#rewardMsg, #noReward {
     text-align: center;
     background-color: lightgray;
     outline: 1px solid black;

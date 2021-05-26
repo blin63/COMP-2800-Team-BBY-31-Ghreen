@@ -77,6 +77,12 @@ function unlock() {
                             rewards: [true, false, false, false, false, false, false, false, false, false]
                         });
                     }
+
+                    if (score > 125) {
+                        db.collection("users").doc(user.uid).update({
+                            rewards: [false, false, false, false, false, false, false, false, false, false]
+                        });
+                    }
                 })
         }
     });
