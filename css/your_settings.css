@@ -41,7 +41,7 @@ p, label, input {
     margin-left: 4%;
 }
 
-.confirm input {
+#confirmAccount input, #confirmPassword input {
     /* CSS code taken from style.css
         from templating-and-sessions
         from LearningHub */
@@ -51,13 +51,7 @@ p, label, input {
     margin-left: 100%;
 }
 
-.logout input {
-    padding-left: 40%;
-    padding-right: 35%;
-    margin-bottom: 25%;
-}
-
-#confirm, #reset {
+#confirmAccount, #confirmPassword, #resetAccount, #resetPassword {
     background-color: #B6FFB0;
     outline: 1px solid black;
     border-radius: 5px;
@@ -66,11 +60,13 @@ p, label, input {
     line-height: 2px;
 }
 
-#confirm {
+#confirmAccount, #confirmPassword {
+    margin-top: 20px;
     float: left;
 }
 
-#reset {
+#resetAccount, #resetPassword {
+    margin-top: 20px;
     float: right;
 }
 
@@ -117,4 +113,23 @@ a:link {
   /* selected link */
   a:active {
     color: black;
+  }
+
+  div input {
+      float: right;
+  }
+
+  #centered {
+      text-align: center;
+  }
+
+  .resetEmail {
+    background-color: #B6FFB0;
+    outline: 1px solid black;
+    border-radius: 5px;
+    height: 30px;
+    line-height: 2px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }

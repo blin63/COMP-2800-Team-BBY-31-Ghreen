@@ -6,58 +6,49 @@ firebase.auth().onAuthStateChanged(function(user) {
 
         let email = user.email;
         let userName = user.displayName;
-        let country = user.country;
 
         console.log("Before update: ")
         console.log("Name: " + userName);
         console.log("Email: " + email);
-        console.log("Country: " + country);
         console.log(user);
         
-        document.getElementById("confirm").addEventListener("click", function() {
+
+        // Confirm Account changes function
+
+        document.getElementById("confirmAccount").addEventListener("click", function() {
 
             let newName = document.getElementById("name").value;
             let newEmail = document.getElementById("email").value;
-            let newCountry = document.getElementById("country").value;
-            let currentPassword = document.getElementById("currentPassword").value;
-            let newPassword = document.getElementById("newPassword").value;
 
-            if (currentPassword == user.password) {
-                user.updatePassword(newPassword)
+            let nameRegex = new RegExp("[A-Z]{1}[a-z]{1,}[A-Z]{1}[a-z]{1,}");
+            let emailRegex = new RegExp('[A-Za-z0-9]{1,}@[a-z]{1,}.[a-z]{,3}');
+
+            if (newName.match(nameRegex)) {
+                console.log("Name Match");
+                user.updateProfile({
+                    displayName: newName
+                }).then(function() {
+                    console.log("Update successful.");
+                }).catch (function(error) {
+                    console.log("Update unsuccesful: " + error);
+                });
+            }
+
+            if (newEmail.match(emailRegex)) {
+                console.log("Email Match");
+                user.updateEmail(newEmail)
                 .then( function() {
                     console.log("Update successful.");
                 }).catch (function(error) {
                     console.log("Update unsuccesful: " + error);
                 });
-            } else {
-                alert("Current password must match password in database.");
             }
 
-            user.updateProfile({
-                displayName: newName
-            }).then(function() {
-                console.log("Update successful.");
-            }).catch (function(error) {
-                console.log("Update unsuccesful: " + error);
-            });
 
-            user.updateEmail(newEmail)
-            .then( function() {
-                console.log("Update successful.");
-            }).catch (function(error) {
-                console.log("Update unsuccesful: " + error);
-            });
-
-            user.displayName = newName;
-            user.email = newEmail;
-            user.password = newPassword;
             
             return db.collection("users").doc(user.uid).update({
                 name: newName ,
                 email: newEmail ,
-                country: newCountry,
- 
-                
             }).then (function () {
 
                 console.log(user);
@@ -67,20 +58,15 @@ firebase.auth().onAuthStateChanged(function(user) {
                 .get()
                 .then(function(doc) {
                     email = doc.data().email,
-                    country = doc.data().country,
                     displayName = doc.data().name
 
                     console.log("After update");
                     console.log(displayName);
                     console.log(email);
-                    console.log(country);
                     console.log(doc.data());
 
                     document.getElementById("name").value = "";
                     document.getElementById("email").value = "";
-                    document.getElementById("country").value = "";
-                    document.getElementById("currentPassword").value = "";
-                    document.getElementById("newPassword").value = "";
                 })
 
             })
@@ -88,6 +74,24 @@ firebase.auth().onAuthStateChanged(function(user) {
                 console.log("Error updating user: " + error);
             })
 
+        });
+
+        // Confirm Password changes function
+
+        document.getElementById("resetEmail").addEventListener("click", function() {
+
+            
+            let auth = firebase.auth();
+            let emailAddress = user.email;
+
+            auth.sendPasswordResetEmail(emailAddress).then(function() {
+                alert("Email sent. Please check your email.");
+                console.log("Email sent.");
+              }).catch(function(error) {
+                console.log("Email not sent: " + error);
+              });
+            
+            
         });
 
     } else {
