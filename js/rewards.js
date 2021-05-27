@@ -15,6 +15,7 @@ function rewardsQuery() {
      */
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
+            console.log(user);
             db.collection("users").doc(user.uid)
                 .get()
                 .then(function (userDoc) {
@@ -58,6 +59,8 @@ function rewardsQuery() {
                                     cell2.innerHTML = name;
                                     cell3.innerHTML = "Equip";
                                     cell3.setAttribute('id', 'equip');
+                                    cell3.setAttribute('class',icon);
+
                                 })
                             })
                     } else {
