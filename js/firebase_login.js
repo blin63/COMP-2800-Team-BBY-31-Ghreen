@@ -8,10 +8,10 @@ var uiConfig = {
   callbacks: {
     signInSuccessWithAuthResult: function (authResult, redirectUrl) {
       var user = authResult.user;
-      if (authResult.additionalUserInfo.isNewUser) {        
-        db.collection("users").doc(user.uid).set({        
-          name: user.displayName,                   
-          email: user.email,                        
+      if (authResult.additionalUserInfo.isNewUser) {
+        db.collection("users").doc(user.uid).set({
+          name: user.displayName,
+          email: user.email,
           Q0: 0,
           Q1: 0,
           Q2: 0,
@@ -32,10 +32,13 @@ var uiConfig = {
           .catch(function (error) {
             console.log("Error adding new user: " + error);
           });
-      } else {
         return true;
       }
-      return false;
+      if (user) {
+        return true
+      } else {
+        return false;
+      }
     },
     uiShown: function () {
       document.getElementById('loader').style.display = 'none';
@@ -48,14 +51,14 @@ var uiConfig = {
     firebase.auth.EmailAuthProvider.PROVIDER_ID,
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-    firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-    firebase.auth.PhoneAuthProvider.PROVIDER_ID
+    firebase.auth.TwitterAuthProvider.PROVIDER_ID
   ],
   tosUrl: 'tos.html',
   privacyPolicyUrl: 'privacy_policy.html'
 };
 
 login.start('#firebaseui-auth-container', uiConfig);
+
 
 /* welcome end
 * source: https://firebase.google.com/docs/web/setup#from-the-cdn */
