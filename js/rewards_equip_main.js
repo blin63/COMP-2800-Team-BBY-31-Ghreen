@@ -20,7 +20,7 @@ function equipTree() {
                 console.log(doc.data().specialRewardEquip);
                 if (doc.data().specialRewardEquip) {
                     //document.getElementById("tree").innerHTML = '<img src="/images/logo_final.png" />';
-                    $("#tree").prepend('<img src="/images/logo_final.png" id="specialReward"/>');
+                    $("#tree-container").prepend('<img src="/images/logo_final.png" id="specialReward"/>');
                     document.getElementById('specialReward').style.width = 50;
                     document.getElementById('specialReward').style.height = 50;
                     document.getElementById('specialReward').style.position = "absolute";
@@ -32,7 +32,7 @@ function equipTree() {
                 console.log(icon);
                 let newIcon = '<div id="specialReward">' + icon + '</div>';
                 console.log(newIcon);
-                $("#tree").prepend(newIcon);
+                $("#tree-container").prepend(newIcon);
                 
             })
         }
