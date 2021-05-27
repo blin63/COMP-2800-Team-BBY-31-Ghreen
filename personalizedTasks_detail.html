@@ -21,7 +21,8 @@
     <link href="/css/pList_task.css" rel="stylesheet" />
     <link href="/css/universal.css" rel="stylesheet" />
 
-
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Firebase Authentication -->
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
@@ -80,24 +81,57 @@
         </div>
     </nav>
 
+    <!-- The Cancel Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p>Remove task from your task list?</p>
+            <div class="sectionBtn">
+                <button onclick="deleteTask()" id="confirmBtn_popup">Confirm</button>
+                <button onclick="backTaskList()" id="cancelBtn_popup">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Reward Modal -->
+    <div id="congratzPopup" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p>New reward is unlock!</p>
+            <div class="sectionBtn">
+                <button onclick="directReward()" id="confirmBtn_popup">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- The CompleteTask Modal -->
+    <div id="thanksPopup" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p>Good job! Thank you for your contribution to the environment!</p>
+            <div class="sectionBtn">
+                <button onclick="directPList()" id="confirmBtn_popup">Confirm</button>
+            </div>
+        </div>
+    </div>
 
     <!-- content -->
     <div class="wrapper">
         <div id="back_icon">
-            <a href="/category.html"><img src="../images/icons/categoryIcon/chevron-circle-left-solid.svg" alt=""></a>
+            <a href="/tasklist.html"><img src="../images/icons/categoryIcon/chevron-circle-left-solid.svg" alt=""></a>
         </div>
+
         <div class="task_detail_wrapper">
-            <p class="taskName">Eco-Driving</p>
+            <div id="taskNamee"></div>
             <div class="taskLevel">
                 <div class="impact">
                     <p>Impact</p>
-                    <p>******</p>
                 </div>
                 <div class="difficulty">
                     <p>Difficulty</p>
-                    <p>*</p>
                 </div>
             </div>
+
             <!-- Icons -->
             <div id="icon_section">
                 <!--
@@ -105,52 +139,34 @@
                 -->
                 <div class="icons">
                     <!-- CompleteBtn -->
-                    <a href="/tasklist.html">
-                        <div class="iconLabel">
-                            <img src="/images/icons/categoryIcon/check-circle.svg" alt="checkCir">
-                            <p id="completeBtn">Complete</p>
-                        </div>
-                    </a>
-
-                    <!-- BookmarkBtn -->
-                    <a href="/tasklist.html">
-                        <div class="iconLabel">
-                            <img src="/images/icons/categoryIcon/bookmark.svg" alt="bookmark">
-                            <p id="bookmarkBtn">BookMark</p>
-                        </div>
-                    </a>
+                    <div id="complete" class="iconLabel">
+                        <img src="/images/icons/categoryIcon/check-circle.svg" alt="checkCir">
+                        <p id="completeBtn">Complete</p>
+                    </div>
 
                     <!-- CancelBtn -->
-                    <a href="/tasklist.html">
-                        <div class="iconLabel">
-                            <img src="/images/icons/categoryIcon/x-circle.svg" alt="xCir">
-                            <p id="cancelBtn">Cancel</p>
-                        </div>
-                    </a>
+                    <div id="cancel" class="iconLabel">
+                        <img src="/images/icons/categoryIcon/x-circle.svg" alt="xCir">
+                        <p id="cancelBtn">Cancel</p>
+                    </div>
                 </div>
             </div>
             <!-- descbox -->
             <div class="descritionBox">
                 <section class="s1">
-                    <h6>Task Description:</h4>
-                        <p>Go easy on the brakes and gas pedal. You can also lower impacts by reducing time spent
-                            idling, and using overdrive and cruise control.</p>
+                    <h5>Task Details:</h5>
+                        <p></p>
                 </section>
-                <section class="s2">
+                <!-- <section class="s2">
                     <img src="/images/icons/categoryIcon/info-circle.svg" alt="">
                     Eating more plant-based protein can
                     dramatically cut your greenhouse gas
                     emissions.
-                </section>
+                </section> -->
             </div>
 
             <div id="info" class="furtherInfo activeAnimation">
                 <h2 onclick="furtherInfoBtn()" style="text-align: center;">Further Information</h2>
-                <p hidden id="f_info">The importance of eco driving (fuel efficient driving) is today a matter of
-                    constant scrutiny, especially after the recent emissions news, for both environmental and legal
-                    reasons. These days it is no longer enough just to have good intentions with regards to ‘going
-                    green’, companies are now required to control their emissions and there is constant pressure to cut
-                    fuel costs (probably one of the highest sources of expense within fleets).</p>
             </div>
 
         </div>
@@ -223,6 +239,8 @@
     <!-- Ghreen specific firebase scripts -->
     <script src="/js/firebase_api_ghreen.js"> </script>
     <script src="/js/firebase_logout.js"></script>
+    <script src="/js/personalized_details.js"> </script>
+    <script src="/js/task_animation.js"> </script>
 </body>
 
 </html>

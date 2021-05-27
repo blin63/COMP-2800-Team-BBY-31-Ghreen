@@ -20,13 +20,20 @@ body {
 .wrapper {
     text-align: center;
     font-family: 'PT Sans', sans-serif;
+}
 
+.task_detail_wrapper {
+    margin-bottom: 25vw;
+}
+
+.addtolist_btn {
+    margin: 1.6em 0em;
 }
 
 .taskName {
     font-family: 'Concert One', cursive;
     font-size: 1.5em;
-    border-bottom: 2px solid black;
+    /* border-bottom: 2px solid black; */
     margin-left: 2em;
     margin-right: 2em;
     padding-top: 1em;
@@ -42,20 +49,31 @@ body {
     margin-left: 2em;
     margin-right: 2em;
     font-weight: bold;
+    /* color: #2E856E; */
     color: #2E856E;
+    font-size: 1.2em;
 }
 
 .icons {
     display: flex;
     justify-content: space-evenly;
-    line-height: 2em;
+    line-height: 1.5em;
+    margin-right: 0.8em;
 }
 
 .iconLabel {
     margin-top: .5em;
-    font-size: .8em;
-    font-style: italic;
+    font-size: 1em;
     color: #006A4E;
+    font-weight: bold;
+}
+
+#complete {
+    color: #17ad03;
+}
+
+#cancel {
+    color:#af4c4c;
 }
 
 .iconLabel:active {
@@ -72,23 +90,26 @@ body {
 .descritionBox {
     margin-top: 0;
     margin: 1em;
-    min-height: 250px;
+    /* min-height: 250px; */
     line-height: 1.2em;
 }
 
 .s1 {
-    /* background-color: #BAE7EC; */
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 10.94%, #FFFFFF 100%), #BAE7EC;
-    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+    background-color: #BAE7EC;
+    /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 10.94%, #FFFFFF 100%), #BAE7EC; */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
     margin: 1em;
     padding: 1em;
     text-align: left;
-    border-radius: 10px;
 
+    /* border-radius: 10px; */
+}
+
+.s1 h5 {
+    font-weight: bold;
 }
 
 .s2 {
@@ -101,23 +122,30 @@ body {
     text-align: left;
     border-radius: 10px;
     background: linear-gradient(180deg, rgba(239, 220, 210, 0.5) 21.35%, rgba(239, 220, 210, 0.5) 46.88%, rgba(255, 255, 255, 0) 91.67%), #DEFFF6;
-    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
 
 .furtherInfo {
+    background-color: #BAE7EC;
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
-    margin: 1em;
+    margin: 2em;
     margin-top: 0em;
-    padding: 1em;
+    padding: 0.2em 1em;
     text-align: left;
     margin-bottom: 5em;
-    line-height: 1.2em;
-    border-radius: 10px;
-    background: linear-gradient(180deg, rgba(255, 250, 248, 0.5) 21.35%, rgba(255, 255, 255, 0.5) 46.88%, rgba(254, 181, 146, 0) 91.67%), #FFDED5;
-    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* border-radius: 10px; */
+    /* background: linear-gradient(180deg, rgba(255, 250, 248, 0.5) 21.35%, rgba(255, 255, 255, 0.5) 46.88%, rgba(254, 181, 146, 0) 91.67%), #FFDED5; */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.furtherInfo h2 {
+    line-height: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 0.4em;
 }
 
 #back_icon {
@@ -131,7 +159,7 @@ a {
     text-decoration: none;
 }
 
-.activeAnimation {
+/* .activeAnimation {
     animation-name: fun;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -146,31 +174,36 @@ a {
     to {
         background-color: #C7F5FB;
     }
-}
+} */
 
 #add_icon {
-    height: 3.5%;
+    height: 3.6%;
 
 }
 
 #add_to_list {
+    margin-top: 0.6em;
+    margin-bottom: 1.4em;
     font-weight: bold;
+    font-size: 1.3em;
+    text-shadow: 1.5px 1px rgb(235, 233, 233);
+    color:#149e02;
 }
 
 .alert_fail {
-    margin:10px;
+    margin: 10px;
     padding: 20px;
     background-color: #e6b01b;
     color: white;
-    display:none;
+    display: none;
 }
 
 .alert_success {
-    margin:10px;
+    margin: 10px;
     padding: 20px;
     background-color: #17ad03;
     color: white;
-    display:none;
+    display: none;
 }
 
 .closebtn {
@@ -186,4 +219,77 @@ a {
 
 .closebtn:hover {
     color: black;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 200px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(231, 255, 226, 0.7);
+    /* Black w/ opacity */
+    font-weight: bold;
+
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #E7FFE2;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+}
+
+button {
+    background-color: white;
+    border: 2px solid #4CAF50;
+    /* border: none; */
+    color: #4CAF50;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-left: 1em;
+    margin-right: 1em;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#cancelBtn_popup {
+    border: 2px solid #af4c4c;
+    color: #af4c4c;
+}
+
+
+#cancelBtn_popup:hover {
+    background-color: #af4c4c;
+    color: white;
+}
+
+.sectionBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

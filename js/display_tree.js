@@ -1,4 +1,3 @@
-
 tree11 = `<svg width="349" height="375" viewBox="0 0 349 375" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect x="194.379" y="276.27" width="3.64932" height="116.078" transform="rotate(-74.1729 194.379 276.27)" fill="#A56E2E" />
     <rect x="247.943" y="258.178" width="3.64932" height="75.7355" transform="rotate(-74.1729 247.943 258.178)" fill="#A56E2E" />
@@ -401,9 +400,9 @@ tree0 = `<svg width="80" height="76" viewBox="0 0 80 76" fill="none" xmlns="http
 
 
 /* Extract data start
-* This block of code was adapted from Carly's code found here: 
-* source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 
-*/
+ * This block of code was adapted from Carly's code found here: 
+ * source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 
+ */
 function makeTree() {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
@@ -411,6 +410,7 @@ function makeTree() {
                 .get()
                 .then(function (doc) {
                     var score = doc.data().scoreCurrent;
+                    var diff;
                     console.log(score);
 
                     if (score == 0 || score <= 20 ) {
@@ -460,7 +460,6 @@ function makeTree() {
                     if (score > 135) {
                         $("#tree").append(tree0);
                     }
-
                 })
         }
     });
@@ -468,4 +467,4 @@ function makeTree() {
 makeTree();
 
 /* Extract data end 
-* source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 */
+ * source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 */

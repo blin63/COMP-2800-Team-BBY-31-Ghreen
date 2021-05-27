@@ -4,7 +4,7 @@
 const parseUrl = new URL(location.href);
 // console.log(parseUrl.searchParams.get("id")); // "123"
 
-// task ID
+// task id
 var id = parseUrl.searchParams.get("id");
 
 function getDetails() {
@@ -22,6 +22,7 @@ function getDetails() {
                 var diff = doc.data().difficulty;
                 var info = doc.data().furtherInfo;
                 var localid = doc.id;
+
                 if (localid == id) {
                     $("#details-go-here").html = category;
                     $("#taskNamee").append("<p class='taskName'> " + task + "</p>");
@@ -33,54 +34,64 @@ function getDetails() {
                     // $("#details-go-here").append("<a href='" + url + "' > " + url);
                 }
             })
-
         })
 }
 getDetails();
 
-function checkTaskList() {
+// taskDetail, display 2 diff msgs for addable task and unaddable task
+function checkUserTaskList() {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-            var userObject = db.collection("users").doc(user.uid);
+
+            var taskArray = [];
             db.collection("users").doc(user.uid)
                 .get()
                 .then(function (doc) {
-                    var task = doc.data().currenttask;
-                    console.log(task);
-                    // $("#user").text(a);
-                    task.forEach(function (element) {
-                        // user tasklist contains current task
-                        if (element == id) {
-                            // fail, do nothing
-                            $("#add_icon").click(function () {
+                    taskArray = doc.data().userTasks;
+                    console.log("!!taskArray: " + taskArray);
+                });
+
+                setTimeout(function(){
+                    db.collection("tasks")
+                .get()
+                .then(function (snap) {
+                    snap.forEach(function (doc) {
+                        // Found Current task
+                        // console.log("!!doc.data().id: " + doc.id);
+                        // console.log("!!id: " + id);
+
+                        if (doc.id == id) {
+                            var taskID = doc.data().id;
+                            console.log(taskID);
+                            // Found current task in user' taskLisk, popup warning
+                            console.log(taskArray);
+                            if (taskArray.includes(taskID)) {
+                                console.log("included");
                                 $(".alert_fail").fadeIn("slow");
-                            });
-                        } else {
-                            // success, add to list
-                            $("#add_icon").click(function () {
-                                $(".alert_success").fadeIn("slow");
-                            });
+                                $(".addtolist_btn").hide();
 
-                            // update user' tasklist
-                            userObject.update({
-                                currenttask: id
-                            }).then(function () {
-                                console.log("new taskID: " + doc.data().currenttask)
-                            })
+                            } else {
+                                // Task is addable to list
+                                console.log("not included");
+
+                                $("#add_icon").click(function () {
+                                    $(".alert_success").fadeIn("slow");
+                                    $(".addtolist_btn").hide();
+
+                                    taskArray.push(taskID);
+                                    db.collection("users").doc(user.uid)
+                                        .update({
+                                            "userTasks": taskArray
+                                        });
+                                    console.log("add data:", taskID);
+                                    console.log("new taskArray:", taskArray);
+                                });
+                            }
                         }
-
-                    })
-                })
+                    });
+                });
+                }, 500);
         }
     });
 }
-checkTaskList();
-
-// temp for showcase
-$("#add_icon").click(function () {
-    // if user.list.contains()
-    $(".alert_success").fadeIn("slow");
-    // else
-    // $(".alert_fail").fadeIn("slow");
-
-});
+checkUserTaskList();

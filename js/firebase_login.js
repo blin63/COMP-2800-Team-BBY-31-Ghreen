@@ -24,7 +24,9 @@ var uiConfig = {
           Q9: 0,
           scoreCurrent: 0,
           scoreOld: 0,
-          scoreChange: 0
+          scoreChange: 0,
+          progressBar: 0,
+          userTasks: []
         }).then(function () {
           console.log("New user added to firestore");
           window.location.assign("survey_page_0.html");
