@@ -69,24 +69,13 @@ function completeTask() {
                                             })
                                     })
 
-                                    // 2) add exp point to user; Get current exp, update exp;
-                                    //    Update carbonScore;
+                                    // 2) Update carbonScore;
                                     db.collection("users").doc(user.uid)
                                         .get()
                                         .then(function (doc) {
-                                            // Update progressBar 
-                                            const expPerTask = 1;
-                                            const expBoundary = 3; // # of task to complete for one reward
-
-                                            var currentExp = doc.data().progressBar;
-                                            currentExp += expPerTask; // scale this value by diffLvL (** Incomplete)
-                                            db.collection("users").doc(user.uid).update({
-                                                'progressBar': currentExp
-                                            });
-                                            console.log("currentExp: " + currentExp);
-
                                             // Update carbonScore
-                                            const carbonScoreDeduc = 3;
+                                            const carbonScoreDeduc = 5;
+                                            const ten = 10;
                                             var oldScore = doc.data().scoreCurrent;
                                             var newScore = doc.data().scoreCurrent - carbonScoreDeduc;
                                             var scoreChange = newScore - oldScore;
@@ -98,14 +87,12 @@ function completeTask() {
                                             });
 
                                             // If reach 100%, display reward.
-                                            var progress = currentExp / expPerTask / expBoundary;
-                                            var progressBarPercentage = (progress - parseInt(progress))
-                                            console.log("parseInt(progress)" + parseInt(progress));
+                                            // var digitTenthDiff = newScore / ten - oldScore / ten;
 
-                                            if (progressBarPercentage == 0) {
-                                                console.log("reach100%, get reward");
-                                                rewardTime(parseInt(progress));
-                                            }
+                                            // if (digitTenthDiff != 0) {
+                                            //     console.log("reach100%, get reward");
+                                            //     rewardTime(parseInt(digitTenthDiff));
+                                            // }
                                         });
                                 }
                             }
@@ -129,23 +116,6 @@ $("#complete").click(function () {
         }
     }
 });
-
-// Reward section. Every n tasks finished pop congratz msg.
-function rewardTime(index) {
-    var count = 0;
-    console.log("index" + index);
-    db.collection("rewards")
-        .get() //get whole collection
-        .then(function (snap) {
-            snap.forEach(function (doc) {
-                if (count == index) {
-                    var modal = document.getElementById("congratzPopup");
-                    modal.style.display = "block";
-                }
-                count++;
-            });
-        });
-}
 
 // When the user clicks the Cancel button, open the modal 
 $("#cancel").click(function () {
@@ -228,3 +198,20 @@ function directReward() {
         window.location.href = "rewards.html";
     }, 500);
 }
+
+// Reward section. Every n tasks finished pop congratz msg.
+// function rewardTime(index) {
+//     var count = 0;
+//     console.log("index" + index);
+//     db.collection("rewards")
+//         .get() //get whole collection
+//         .then(function (snap) {
+//             snap.forEach(function (doc) {
+//                 if (count == index) {
+//                     var modal = document.getElementById("congratzPopup");
+//                     modal.style.display = "block";
+//                 }
+//                 count++;
+//             });
+//         });
+// }
