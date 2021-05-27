@@ -105,61 +105,6 @@ class taskConstructor {
     }
 }
 
-// function showCollection() {
-//     firebase.auth().onAuthStateChanged(function (user) {
-//         if (user) {
-//             updateUsernameTitle(user);
-//             progressBarUpdate(user);
-
-//             db.collection("users").doc(user.uid).collection("taskList")
-//                 .get()
-//                 .then(querySnapshot => {
-//                     var size = querySnapshot.size
-//                     console.log("taskListSize: " + size);
-
-//                     querySnapshot.forEach(doc => {
-//                         // console.log(doc.id, " => ", doc.data().taskID);
-//                         var taskListID = doc.data().taskID;
-
-//                         // Find each item in currentTaskList in "tasks" col,
-//                         // display content of currentTaskList only.
-//                         db.collection("tasks")
-//                             .get()
-//                             .then(function (snap) {
-//                                 snap.forEach(function (doc) {
-
-//                                     if (doc.id == taskListID) {
-//                                         // Display each document
-//                                         var category = doc.data().category;
-//                                         var task = doc.data().task;
-//                                         var des = doc.data().description;
-//                                         var impact = doc.data().impact;
-//                                         var diff = doc.data().difficulty;
-//                                         var info = doc.data().furtherInfo;
-//                                         var id = doc.id;
-//                                         // console.log("id" + id + "\n");
-//                                         // "<div id='" + id + "'> " // '<a href="/personalizeList_taskDetail_template_ecoDriving.html">'
-//                                         var content = '<div ' + 'id="' + id + '"' + 'class="task">' + task + '</div>';
-//                                         var contentAll = '<div ' + 'id="' + id + 'ALL"' + 'class="task">' + task + '</div>';
-
-//                                         $("#" + category).append(content);
-//                                         $("#all").append(contentAll);
-//                                         addWebcamListener(id);
-//                                         addWebcamListener(id + "ALL");
-
-//                                     }
-//                                 })
-//                             })
-
-//                     });
-//                 });
-//         }
-//     });
-
-
-// }
-// showCollection();
-
 function tabControl() {
     $("li").click(function () {
         $(".task_box").hide();
@@ -220,8 +165,9 @@ function progressBarUpdate(user) {
             var progressExp = doc.data().progressBar;
             var progress = progressExp / ptPerTask / expBoundary;
 
-            var progressBarPercentage = carbonFootPrintScore % 10 * 10;
+            var progressBarPercentage = (10 - carbonFootPrintScore % 10) * 10;
 
+            console.log("scoreCurrent: " + carbonFootPrintScore);
             console.log("pts: " + carbonFootPrintScore);
             console.log("progressExp: " + progressExp);
             console.log("progressBarPercentage: " + progressBarPercentage);
