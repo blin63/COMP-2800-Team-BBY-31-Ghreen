@@ -46,10 +46,7 @@
 
 .task_detail {
     /* background-color: #BAE7EC; */
-    line-height: 2em;
-    margin-right: 2em;
-    margin-left: 2em;
-    margin-top: 1em;
+    margin: 1.6em 2em;
 
     /* Rectangle 891 */
     /* border-radius: 10px; */
@@ -98,9 +95,12 @@
 }
 
 .task_title {
-    font-size: 1em;
-    margin-top: 2em;
+    font-size: 1.1em;
+    line-height: 1.4em;
+    width: 90%;
+    margin: 0 auto;
     font-weight: bold;
+    padding-top: 0.6em;
 }
 
 .des {
@@ -109,8 +109,8 @@
     line-height: 1.2em;
     padding-left: 1em;
     padding-right: 1em;
-
 }
+
 
 /* Hide link effect*/
 a {

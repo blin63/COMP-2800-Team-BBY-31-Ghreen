@@ -20,7 +20,14 @@ body {
 .wrapper {
     text-align: center;
     font-family: 'PT Sans', sans-serif;
+}
 
+.task_detail_wrapper {
+    margin-bottom: 25vw;
+}
+
+.addtolist_btn {
+    margin: 1.6em 0em;
 }
 
 .taskName {
@@ -51,6 +58,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     line-height: 1.5em;
+    margin-right: 0.8em;
 }
 
 .iconLabel {
@@ -89,16 +97,19 @@ body {
 .s1 {
     background-color: #BAE7EC;
     /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 10.94%, #FFFFFF 100%), #BAE7EC; */
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
     margin: 1em;
     padding: 1em;
     text-align: left;
-    font-weight: bold;
 
     /* border-radius: 10px; */
+}
+
+.s1 h5 {
+    font-weight: bold;
 }
 
 .s2 {
@@ -111,28 +122,30 @@ body {
     text-align: left;
     border-radius: 10px;
     background: linear-gradient(180deg, rgba(239, 220, 210, 0.5) 21.35%, rgba(239, 220, 210, 0.5) 46.88%, rgba(255, 255, 255, 0) 91.67%), #DEFFF6;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
 
 .furtherInfo {
     background-color: #BAE7EC;
-    font-weight: bold;
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
     margin: 2em;
     margin-top: 0em;
-    padding: 0.5em 0em;
+    padding: 0.2em 1em;
     text-align: left;
     margin-bottom: 5em;
     /* border-radius: 10px; */
     /* background: linear-gradient(180deg, rgba(255, 250, 248, 0.5) 21.35%, rgba(255, 255, 255, 0.5) 46.88%, rgba(254, 181, 146, 0) 91.67%), #FFDED5; */
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .furtherInfo h2 {
     line-height: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 0.4em;
 }
 
 #back_icon {
@@ -164,14 +177,15 @@ a {
 } */
 
 #add_icon {
-    height: 5.5%;
+    height: 3.6%;
 
 }
 
 #add_to_list {
-    margin: .5em;
+    margin-top: 0.6em;
+    margin-bottom: 1.4em;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.3em;
     text-shadow: 1.5px 1px rgb(235, 233, 233);
     color:#149e02;
 }
@@ -266,8 +280,8 @@ button:hover {
 #cancelBtn_popup {
     border: 2px solid #af4c4c;
     color: #af4c4c;
-
 }
+
 
 #cancelBtn_popup:hover {
     background-color: #af4c4c;
