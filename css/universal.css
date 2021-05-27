@@ -1,6 +1,8 @@
 body {
     margin: 0;
     background-color: #E7FFE2;
+/*     background-image: url(/images/ghreen-gradient.png);
+ */
 }
 
 a {
@@ -12,7 +14,12 @@ a {
 }
 
 nav, footer {
-    background-color: #A3FA91;
+    background-color: #E7FFE2;
+}
+
+footer {
+    border-top: 0.1px solid black;
+    margin-bottom: -0.1em;
 }
 
 .logo {
@@ -91,7 +98,7 @@ i {
 }
 
 .card, .list-group, .list-group-item {
-    background-color: #93f87e;
+    background-color: #E7FFE2;
 }
 
 .gridList {
