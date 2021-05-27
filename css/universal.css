@@ -173,6 +173,10 @@ a {
     margin: 0 auto;
 }
 
+#personalizeContainer .fa-check-circle {
+    margin-right: 0.4em;
+}
+
 #rewardContainer {
     grid-column: 4 / span 1;
     width: 25%;
