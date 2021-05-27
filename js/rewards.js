@@ -195,6 +195,7 @@ function unlock() {
 function rewardMsg() {
     $(document).ready(function () {
         $("#rewardMsg").css("visibility", "hidden");
+        $("#rewardMsg").css("display", "none");
         $("#rewardMsg").fadeOut();
 
     });
@@ -205,6 +206,7 @@ rewardMsg();
 function revealRewardMsg() {
     $(document).ready(function () {
         $("#rewardMsg").css("visibility", "visible");
+        $("#rewardMsg").css("display", "block");
         $("#rewardMsg").fadeIn(5000).fadeOut(5000);
     });
 }
@@ -218,6 +220,7 @@ function revealRewardMsg() {
 function noRewardMsg() {
     $(document).ready(function () {
         $("#noReward").css("visibility", "hidden");
+        $("#noReward").css("display", "none");
     });
 }
 
@@ -232,5 +235,6 @@ noRewardMsg();
 function revealNoRewardMsg() {
     $(document).ready(function () {
         $("#noReward").css("visibility", "visible");
+        $("#noReward").css("display", "block");
     });
 }
