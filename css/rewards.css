@@ -1,15 +1,5 @@
-.fa-award {
-    width: 10%;
-}
-
-.fa-chevron-circle-left {
-    position: absolute;
-    top: 120px;
-    left: 20px;
-}
-
 #rewards {
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
     font-style: italic;
   }
@@ -18,6 +8,7 @@ td {
     margin: 10px;
     padding: 10px;
     text-align: center;
+    
 }
 
 .fas, .fab {
@@ -78,8 +69,21 @@ td i {
     
 }
 
+table tr td{
+    border-radius: 10px;
+}
+
 #equip {
     border-left: hidden;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 10.94%, #FFFFFF 100%), #BAE7EC;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    margin: 1em;
+    padding: 1em;
+    text-align: left;
 }
 
 #secretMsg {
@@ -90,6 +94,11 @@ td i {
     outline: 1px solid black;
     font-size: 12pt;
 }
+
+#specialTable {
+    margin-bottom: 10%;
+}
+
 .fa-chevron-circle-left {
     position: absolute;
     top: 120px;
@@ -118,3 +127,13 @@ a:link {
   a:active {
     color: black;
   }
+
+  /* RewardMsg CSS & noReward CSS; Author: Brendan Lin; Ver: 1.0 */
+#rewardMsg, #noReward {
+    text-align: center;
+    background-color: lightgray;
+    outline: 1px solid black;
+    padding: 2%;
+    margin: 5%;
+    font-size: 12pt;
+}

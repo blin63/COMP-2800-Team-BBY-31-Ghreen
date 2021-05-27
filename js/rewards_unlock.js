@@ -1,77 +1,3 @@
-// Code copied and edited from Brendan Lin's 1800 demo code
-/**
- * Author: Carl Magno & Brendan Lin
- * Ver: 1.0
- */
-
-function rewardsQuery() {
-    var counter = 0;
-    unlock();
-
-    //code adapted and modified from Kevin Chang's display_tree.js
-    /**
-     * Author: Kevin Chang (start)
-     * Ver: 1.0
-     */
-    firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {
-            console.log(user);
-            db.collection("users").doc(user.uid)
-                .get()
-                .then(function (userDoc) {
-                    for (let i = 0; i < userDoc.data().rewards.length; i++) {
-                        if (userDoc.data().rewards[i] == true) {
-                            counter++;
-                        }
-                    }
-
-                    //check if user unlocked new reward items; if so display reward message
-                    if (counter > userDoc.data().rewardCount) {
-                        db.collection("users").doc(user.uid).update({
-                            rewardCount: counter
-                        });
-                        revealRewardMsg();
-                    }
-
-                    /**
-                     * Author: Kevin Chang (end)
-                     * Ver: 1.0
-                     */
-
-                    console.log("Number of rewards unlocked: " + counter);
-                    if (counter > 0) {
-                        db.collection("rewards")
-                            .limit(userDoc.data().rewardCount)
-                            .get()
-                            .then(function (snap) {
-                                snap.forEach(function (doc) {
-                                    console.log(doc.data().Name, " -> ", doc.data().Icon);
-                                    let name = doc.data().Name;
-                                    let icon = doc.data().Icon;
-
-                                    let table = document.getElementById("tableForIcons");
-                                    let row = table.insertRow(0);
-                                    let cell1 = row.insertCell(0);
-                                    let cell2 = row.insertCell(1);
-                                    let cell3 = row.insertCell(2);
-
-                                    cell1.innerHTML = icon;
-                                    cell2.innerHTML = name;
-                                    cell3.innerHTML = "Equip";
-                                    cell3.setAttribute('id', 'equip');
-                                    cell3.setAttribute('class', icon);
-
-                                })
-                            })
-                    } else {
-                        revealNoRewardMsg();
-                    }
-                });
-        }
-    });
-}
-rewardsQuery();
-
 //Function to unlock rewards based on carbon footprint score
 /**
  * Creator of this JS file, modifications made by:
@@ -90,7 +16,7 @@ function unlock() {
                 .get()
                 .then(function (doc) {
                     var score = doc.data().scoreCurrent;
-                    console.log("current carbon score: " + score);
+                    console.log(score);
 
                     if (score == 0 || score <= 30) {
                         db.collection("users").doc(user.uid).update({
@@ -185,56 +111,4 @@ function unlock() {
         }
     });
 }
-
-//Function to control reward message for when the user unlocks a new reward
-/**
- * Author: Brendan Lin
- * Ver: 1.0
- */
-
-function rewardMsg() {
-    $(document).ready(function () {
-        $("#rewardMsg").css("visibility", "hidden");
-        $("#rewardMsg").css("display", "none");
-        $("#rewardMsg").fadeOut();
-
-    });
-}
-rewardMsg();
-
-//reveal the reward message when new rewards are unlocked
-function revealRewardMsg() {
-    $(document).ready(function () {
-        $("#rewardMsg").css("visibility", "visible");
-        $("#rewardMsg").css("display", "block");
-        $("#rewardMsg").fadeIn(5000).fadeOut(5000);
-    });
-}
-
-//Function to control the message when there are no rewards unlocked
-/**
- * Author: Brendan Lin
- * Ver: 1.0
- */
-
-function noRewardMsg() {
-    $(document).ready(function () {
-        $("#noReward").css("visibility", "hidden");
-        $("#noReward").css("display", "none");
-    });
-}
-
-noRewardMsg();
-
-//Function to reveal noRewardMsg when there are no rewards to display
-/**
- * Author: Brendan Lin
- * Ver: 1.0
- */
-
-function revealNoRewardMsg() {
-    $(document).ready(function () {
-        $("#noReward").css("visibility", "visible");
-        $("#noReward").css("display", "block");
-    });
-}
+unlock();
