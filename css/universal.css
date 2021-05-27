@@ -11,6 +11,9 @@ a {
 
 .navbar.fixed-top {
     position: relative;
+    border-bottom: 0.05em solid black;
+    border-width: thin;
+    border-style: ridge;
 }
 
 nav, footer {
@@ -18,7 +21,7 @@ nav, footer {
 }
 
 footer {
-    border-top: 0.1px solid black;
+    border-top: 0.05em solid black;
     margin-bottom: -0.1em;
 }
 
@@ -95,6 +98,10 @@ i {
     width: 92.5%;
     margin-left: 6%;
     margin-bottom: 3%;
+}
+
+.collapse {
+    border-style: none
 }
 
 .card, .list-group, .list-group-item {
