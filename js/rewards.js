@@ -59,7 +59,7 @@ function rewardsQuery() {
                                     cell2.innerHTML = name;
                                     cell3.innerHTML = "Equip";
                                     cell3.setAttribute('id', 'equip');
-                                    cell3.setAttribute('class', icon);
+                                    cell3.setAttribute('name', icon);
 
                                 })
                             })

@@ -26,11 +26,17 @@ function equip() {
                     })
                 }
 
-                let nameOfClass = $("#equip").attr("class");
+                let nameOfClass = $("#equip").attr("name");
+                let isPushed = true;
 
-                console.log(nameOfClass);
+                let obj = {
+                    "name": nameOfClass,
+                    "isPushed": isPushed,
+                }
 
-                localStorage.setItem('iconData', JSON.stringify(nameOfClass));
+                console.log(obj);
+
+                localStorage.setItem('iconData', JSON.stringify(obj));
             
             })
         }

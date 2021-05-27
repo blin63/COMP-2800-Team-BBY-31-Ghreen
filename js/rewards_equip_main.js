@@ -20,7 +20,7 @@ function equipTree() {
                 console.log(doc.data().specialRewardEquip);
                 if (doc.data().specialRewardEquip) {
                     //document.getElementById("tree").innerHTML = '<img src="/images/logo_final.png" />';
-                    $("#tree-container").prepend('<img src="/images/logo_final.png" id="specialReward"/>');
+                    $("#tree-container").append('<img src="/images/logo_final.png" id="specialReward"/>');
                     document.getElementById('specialReward').style.width = 50;
                     document.getElementById('specialReward').style.height = 50;
                     document.getElementById('specialReward').style.position = "absolute";
@@ -29,11 +29,12 @@ function equipTree() {
                 }
                 
                 let icon = JSON.parse(localStorage.getItem('iconData'));
-                console.log(icon);
-                let newIcon = '<div id="specialReward">' + icon + '</div>';
-                console.log(newIcon);
-                $("#tree-container").prepend(newIcon);
-                
+                console.log(icon);               
+                if (icon.name && icon.name != "specialTD" && icon.isPushed) {
+                    let newIcon = '<span id="specialReward">' + icon.name + '</span>';
+                    console.log(newIcon);
+                    $("#tree-container").append(newIcon);
+                }
             })
         }
     })
