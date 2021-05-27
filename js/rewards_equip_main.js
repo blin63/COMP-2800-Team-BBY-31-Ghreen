@@ -27,15 +27,15 @@ function equipTree() {
                     document.getElementById('specialReward').style.left = rngWidth();
                     document.getElementById('specialReward').style.top = rngHeight();
                 }
-                else {
-                    let icon = JSON.parse(localStorage.getItem('iconData'));
-                    console.log(icon);
-                    $("#tree").prepend(icon);
-                }
+                
+                let icon = JSON.parse(localStorage.getItem('iconData'));
+                console.log(icon);
+                let newIcon = '<div id="specialReward">' + icon + '</div>';
+                console.log(newIcon);
+                $("#tree").prepend(newIcon);
+                
             })
         }
     })
 }
 equipTree();
-
-rngHeight();

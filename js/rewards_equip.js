@@ -10,7 +10,7 @@ function equip() {
         if (user) {
             
             let element = document.getElementById("equip");
-            element.addEventListener("click", function() {
+            document.getElementById("equip").addEventListener("click", function() {
                 let icon = element.className;
 
                 console.log(icon);
@@ -24,9 +24,14 @@ function equip() {
                             specialRewardEquip: true
                         })
                     })
-                } else {
-                    localStorage.setItem('iconData',JSON.stringify(icon));
                 }
+
+                let nameOfClass = $("#equip").attr("class");
+
+                console.log(nameOfClass);
+
+                localStorage.setItem('iconData', JSON.stringify(nameOfClass));
+            
             })
         }
     })
