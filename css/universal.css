@@ -1,6 +1,8 @@
 body {
     margin: 0;
     background-color: #E7FFE2;
+/*     background-image: url(/images/ghreen-gradient.png);
+ */
 }
 
 a {
@@ -9,10 +11,18 @@ a {
 
 .navbar.fixed-top {
     position: relative;
+    border-bottom: 0.05em solid black;
+    border-width: thin;
+    border-style: ridge;
 }
 
 nav, footer {
-    background-color: #A3FA91;
+    background-color: #E7FFE2;
+}
+
+footer {
+    border-top: 0.05em solid black;
+    margin-bottom: -0.1em;
 }
 
 .logo {
@@ -90,12 +100,22 @@ i {
     margin-bottom: 3%;
 }
 
+<<<<<<< HEAD
 .card, .list-group, .list-group-item {
     background-color: #93f87e;
+=======
+.collapse {
+    border-style: none
+}
+
+.card, .list-group, .list-group-item {
+    background-color: #E7FFE2;
+>>>>>>> baseline_questionnaire
 }
 
 .gridList {
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: 100%;
     grid-template-rows: 2% 2% 2%;
 }
@@ -103,12 +123,21 @@ i {
 .iconLabel {
     grid-column: 1 / span 1;
     position: relative;
+=======
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+}
+
+.iconLabel {
+    grid-column: 2 / span 1;
+>>>>>>> baseline_questionnaire
 }
 
 #cog, #editIcon, #circle {
     grid-column: 1 / span 1;
     margin-top: 2.5%;
     position: relative;
+<<<<<<< HEAD
     right: 35%;
     bottom: 700%;
 }
@@ -123,24 +152,39 @@ i {
 
 #circle {
     grid-row: 3 / span 1;
+=======
+    left: 30%;
+>>>>>>> baseline_questionnaire
 }
 
 #settings {
     position: relative;
+<<<<<<< HEAD
     right: 20%;
     grid-row: 1 / span 1;
+=======
+    right: 40%;
+>>>>>>> baseline_questionnaire
 }
 
 #edit {
     position: relative;
+<<<<<<< HEAD
     right: 10%;
     grid-row: 2 / span 1;
+=======
+    right: 20%;
+>>>>>>> baseline_questionnaire
 }
 
 #about {
     position: relative;
+<<<<<<< HEAD
     right: 19%;
     grid-row: 3 / span 1;
+=======
+    right: 38%;
+>>>>>>> baseline_questionnaire
 }
 
 /* Bottom Nav Bar Labels */
@@ -176,6 +220,13 @@ a {
     margin: 0 auto;
 }
 
+<<<<<<< HEAD
+=======
+#personalizeContainer .fa-check-circle {
+    margin-right: 0.4em;
+}
+
+>>>>>>> baseline_questionnaire
 #rewardContainer {
     grid-column: 4 / span 1;
     width: 25%;
@@ -187,4 +238,8 @@ a {
     grid-template-columns: 25% 25% 25% 25%;
     text-align: center;
     margin-top: 2px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> baseline_questionnaire

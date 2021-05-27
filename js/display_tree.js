@@ -397,8 +397,6 @@ tree0 = `<svg width="80" height="76" viewBox="0 0 80 76" fill="none" xmlns="http
 </svg>`
 
 
-
-
 /* Extract data start
  * This block of code was adapted from Carly's code found here: 
  * source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 
@@ -413,52 +411,100 @@ function makeTree() {
                     var diff;
                     console.log(score);
 
-                    if (score == 0 || score <= 20 ) {
-                        $("#tree").append(tree11);
+                    if (score <= 30 ) {
+                        $(".tree").append(tree11);
+                        $(".tree").addClass("tree11");
+                        $("#next").html(`Congratulations! You've grown the largest tree! Click <span id="end">here.</span>`);
+                        document.getElementById("end").addEventListener('click', function () {
+                            document.location.href = 'game_complete.html'
+                        })
                     }
 
-                    if (score > 20 && score <= 30) {
-                        $("#tree").append(tree10);
+                    if (score > 30 && score <= 40) {
+                        $(".tree").append(tree10);
+                        $(".tree").addClass("tree10");
+                        diff = score - 30;
+                        $("#next-tree").append(diff);
+
                     }
                     
-                    if (score > 30 && score <= 45) {
-                        $("#tree").append(tree9);
+                    if (score > 40 && score <= 50) {
+                        $(".tree").append(tree9);
+                        $(".tree").addClass("tree9");
+                        diff = score - 40;
+                        $("#next-tree").append(diff);
                     }
 
-                    if (score > 45 && score <= 60) {
-                        $("#tree").append(tree8);
+                    if (score > 50 && score <= 60) {
+                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
+                        $(".tree").append(tree8);
+                        $(".tree").addClass("tree8");
+                        diff = score - 50;
+                        $("#next-tree").append(diff);
                     }
 
-                    if (score > 60 && score <= 75) {
-                        $("#tree").append(tree7);
+                    if (score > 60 && score <= 70) {
+                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
+                        $(".tree").append(tree7);
+                        $(".tree").addClass("tree7");
+                        diff = score - 60;
+                        $("#next-tree").append(diff);
                     }
 
-                    if (score > 75 && score < 85) {
-                        $("#tree").append(tree6);
+                    if (score > 70 && score <= 80) {
+                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
+                        $(".tree").append(tree6);
+                        $(".tree").addClass("tree6");
+                        diff = score - 70;
+                        $("#next-tree").append(diff);
                     }
 
-                    if (score > 85 && score <= 95) {
-                        $("#tree").append(tree5);
+                    if (score > 80 && score <= 90) {
+                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
+                        $(".tree").append(tree5);
+                        $(".tree").addClass("tree5");
+                        diff = score - 80;
+                        $("#next-tree").append(diff);
                     }
 
-                    if (score > 95 && score <= 105) {
-                        $("#tree").append(tree4);
+                    if (score > 90 && score <= 100) {
+                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
+                        $(".tree").append(tree4);
+                        $(".tree").addClass("tree4");
+                        diff = score - 90;
+                        $("#next-tree").append(diff);
                     }
 
-                    if (score > 105 && score <= 115) {
-                        $("#tree").append(tree3);
+                    if (score > 100 && score <= 110) {
+                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
+                        $(".tree").append(tree3);
+                        $(".tree").addClass("tree3");
+                        diff = score - 100;
+                        $("#next-tree").append(diff);
                     }
 
-                    if (score > 115 && score <= 125) {
-                        $("#tree").append(tree2);
+                    if (score > 110 && score <= 120) {
+                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
+                        $(".tree").append(tree2);
+                        $(".tree").addClass("tree2");
+                        diff = score - 110;
+                        $("#next-tree").append(diff);
                     }
 
-                    if (score > 125 && score <= 135) {
-                        $("#tree").append(tree1);
+                    if (score > 120 && score <= 130) {
+                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
+                        $(".tree").append(tree1);
+                        $(".tree").addClass("tree1");
+                        diff = score - 120;
+                        $("#next-tree").append(diff);
                     }
 
-                    if (score > 135) {
-                        $("#tree").append(tree0);
+                    if (score > 130) {
+                        $("#tree-container").prepend('<p id="scroll">Scroll down to view your tree.<p>');
+                        $(".tree").append(tree0);
+                        $(".tree").addClass("tree0");
+                        diff = score - 130;
+                        $("#next-tree").append(diff);
                     }
                 })
         }
@@ -467,4 +513,6 @@ function makeTree() {
 makeTree();
 
 /* Extract data end 
- * source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 */
+* source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 
+*/
+

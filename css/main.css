@@ -2,9 +2,15 @@
 #container {
     display: grid;
     grid-template-columns: 100%;
+<<<<<<< HEAD
     grid-template-rows: 16% 37% 3% 40%;
     height: 95vh;
     margin-bottom: 21vh;
+=======
+    grid-template-rows: 14% 37% 10% 40%;
+    height: 95vh;
+    margin-bottom: 23vh;
+>>>>>>> baseline_questionnaire
     grid-gap: 1em;
 }
 
@@ -36,10 +42,21 @@
 
 #tweet-container div {
     display: inline-block;
+<<<<<<< HEAD
     margin-bottom: 0.5em;
     margin: 0 0.2em;
 }
 
+=======
+    margin-bottom: 0.5vh;
+    margin: 0 0.2em;
+}
+
+#tweet-container p {
+    margin-top: -0.2em;
+}
+
+>>>>>>> baseline_questionnaire
 #tree-container {
     grid-column: 1 / 1;
     grid-row: 4 / 5;
@@ -50,7 +67,11 @@
 
 .tree {
     position: absolute;
+<<<<<<< HEAD
     bottom: -5.2em;
+=======
+    bottom: -3.9em;
+>>>>>>> baseline_questionnaire
     left: 0;
     right: 0;
 }

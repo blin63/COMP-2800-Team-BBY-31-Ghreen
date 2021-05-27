@@ -113,14 +113,15 @@
         </div>
 
         <div id="tweet-container">
+            <p>Share your experience with others!</p>
 
             <!-- Twitter tweet button start
             I found this from the Twitter Developer Platform
             source: https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview -->
-            <div>
-                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=I%20Love%20Ghreen!"
-                data-size="large">
-                Tweet</a>
+            <div id="tweet-post">
+                <a class="twitter-share-button" 
+                href="https://twitter.com/intent/tweet?text=Check%20out%20this%20cool%20app%20called%20Ghreen!"
+                data-size="large">Tweet</a>
             </div>
             <!-- Twitter tweet button end
             source: https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview -->
@@ -198,11 +199,10 @@
 
     <!-- Ghreen specific firebase scripts -->
     <script src="/js/firebase_api_ghreen.js"> </script>
-    <script src="/js/identify_user.js"> </script>
     <script src="/js/read_score.js"> </script>
+    <script src="/js/identify_user.js"> </script>
     <script src="/js/redirect.js"> </script>
     <script src="/js/display_tree.js"> </script>
-    <script src="/js/firebase_logout.js"></script>
     <script src="/js/tweet.js"> </script>
 
 

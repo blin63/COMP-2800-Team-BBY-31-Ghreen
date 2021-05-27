@@ -1,0 +1,67 @@
+
+.fa-info-circle {
+    width: 10%;
+}
+
+h1 {
+    margin-bottom: 1.2em;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    padding: 3%;
+}
+
+#content {
+    padding: 1em;
+    margin-bottom: 3em;
+    margin-top: 7.4em;
+}
+
+.member {
+    float: left;
+    width: 20%;
+    margin: 2% 2%;
+}
+
+#devs {
+    text-align: center;
+}
+
+#devs img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+#devs h2 {
+    line-height: 1.4em;
+    margin: 1.2em 0em;
+    font-size: 1.3em;
+    font-style: italic;
+}
+
+#members-container {
+    margin-left: 3%;
+}
+
+#who p {
+    margin-bottom: 0em;
+}
+
+@media screen and (max-width: 600px) {
+    .member {
+        display: block;
+        width: 100%;
+    }
+
+    #members-container {
+        margin-left: -3%;
+    }
+}
