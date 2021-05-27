@@ -2,7 +2,7 @@
 #container {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 16% 38% 4% 40%;
+    grid-template-rows: 14% 37% 10% 40%;
     height: 95vh;
     margin-bottom: 23vh;
     grid-gap: 1em;
@@ -40,6 +40,10 @@
     margin: 0 0.2em;
 }
 
+#tweet-container p {
+    margin-top: -0.2em;
+}
+
 #tree-container {
     grid-column: 1 / 1;
     grid-row: 4 / 5;
@@ -50,7 +54,7 @@
 
 .tree {
     position: absolute;
-    bottom: -5.2em;
+    bottom: -3.9em;
     left: 0;
     right: 0;
 }

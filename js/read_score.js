@@ -12,33 +12,30 @@ function readCarbonFootprintData() {
                     score = doc.data().scoreCurrent;
 
                     /* this makes sure that the current change is always correct */
-                    db.collection("users").doc(user.uid).update({
-                        scoreChange: 100 * (doc.data().scoreCurrent - doc.data().scoreOld) / (doc.data().scoreOld)
-                    })
+                        $("#user-score").text(score);
+                        var change = 100 * (doc.data().scoreCurrent - doc.data().scoreOld) / (doc.data().scoreOld);
+                        console.log("Change: " + change);
 
-                    var change = doc.data().scoreChange;
+                        db.collection("users").doc(user.uid).update({
+                            scoreChange: change
+                        })
 
+                        if (change < 0) {
+                            $("#change").text(change.toFixed(1) + "%");
+                            $("#change").addClass("negative");
+                            $("#direction").append('<i class="fas fa-arrow-circle-down"></i>')
+                        }
 
-                    $("#user-score").text(score);
-                    console.log("Change: " + change);
+                        if (change == 0) {
+                            $("#change").text(change.toFixed(1) + "%");
+                            $("#change").addClass("negative");
+                        }
 
-                    if (change < 0) {
-                        $("#change").text(change.toFixed(1) + "%");
-                        $("#change").addClass("negative");
-                        $("#direction").append('<i class="fas fa-arrow-circle-down"></i>')
-                    }
-
-                    if (change == 0) {
-                        $("#change").text(change.toFixed(1) + "%");
-                        $("#change").addClass("negative");
-                    }
-
-                    if (change > 0) {
-                        $("#change").text("+" + change.toFixed(1) + "%");
-                        $("#change").addClass("positive");
-                        $("#direction").append('<i class="fas fa-arrow-circle-up"></i>')
-                    }
-
+                        if (change > 0) {
+                            $("#change").text("+" + change.toFixed(1) + "%");
+                            $("#change").addClass("positive");
+                            $("#direction").append('<i class="fas fa-arrow-circle-up"></i>')
+                        }
                 })
         }
     });
