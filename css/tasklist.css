@@ -87,6 +87,7 @@ li {
 .task {
     background-color: #e5ffe0;
     margin: .5em;
+    padding: .5em;
     min-height: 40px;
     /* border-radius: 10px; */
     background: #e5ffe0;

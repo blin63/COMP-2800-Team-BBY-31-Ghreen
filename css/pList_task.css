@@ -42,20 +42,30 @@ body {
     margin-left: 2em;
     margin-right: 2em;
     font-weight: bold;
+    /* color: #2E856E; */
     color: #2E856E;
+    font-size: 1.2em;
 }
 
 .icons {
     display: flex;
     justify-content: space-evenly;
-    line-height: 2em;
+    line-height: 1.5em;
 }
 
 .iconLabel {
     margin-top: .5em;
-    font-size: .8em;
-    font-style: italic;
+    font-size: 1em;
     color: #006A4E;
+    font-weight: bold;
+}
+
+#complete {
+    color: #17ad03;
+}
+
+#cancel {
+    color:#af4c4c;
 }
 
 .iconLabel:active {
@@ -86,6 +96,8 @@ body {
     margin: 1em;
     padding: 1em;
     text-align: left;
+    font-weight: bold;
+
     /* border-radius: 10px; */
 }
 
@@ -105,6 +117,7 @@ body {
 
 .furtherInfo {
     background-color: #BAE7EC;
+    font-weight: bold;
 
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -150,12 +163,16 @@ a {
 } */
 
 #add_icon {
-    height: 3.5%;
+    height: 5.5%;
 
 }
 
 #add_to_list {
+    margin: .5em;
     font-weight: bold;
+    font-size: 1.5em;
+    text-shadow: 1.5px 1px rgb(235, 233, 233);
+    color:#149e02;
 }
 
 .alert_fail {
