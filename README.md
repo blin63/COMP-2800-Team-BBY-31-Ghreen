@@ -4,7 +4,7 @@ Source: https://github.com/Kevinc-96/Phresh/blob/main/README.md#general-info -->
 
 # COMP-2800-Team-BBY-31-Ghreen
 
-Team Members: Kevin Chang, Brendan Lin, Stan Liu, Carl Magno
+Team Members: Kevin Chang (A01184356), Brendan Lin (A01061903), Stan Liu (A01175175), Carl Magno (A00973296)
 
 * [General info](#general-info)
 * [Setting up](#setting-up)
