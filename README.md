@@ -15,8 +15,7 @@ Team Members: Kevin Chang (A01184356), Brendan Lin (A01061903), Stan Liu (A01175
 Ghreen is a web based, mobile application designed to help motivate people to reduce their carbon footprints.
 
 ## Contents
-Listed below is the structure of the project. This project folder contains a css, images, js, json, and miscellaneous folders.
-All firebase hosting related products and HTML are present on the root level of the project folder.
+Listed below is the structure of the project. This project folder contains a css, images, js, json, .vscode, .firebase, icons, images, and miscellaneous folders. All firebase hosting related products and HTML are present on the root level of the project folder.
 Content of our main project folder:
 
 ```
@@ -24,7 +23,37 @@ Content of our main project folder:
 ├── .gitignore                  # Git ignore file
 ├── index.html                  # the landing HTML file, the first file user's will see when entering our app
 ├── main.html                   # the main page of our app
-└── README.md
+├── README.md
+├── .firebaserc
+├── 404.html
+├── about.html
+├── category.html
+├── details.html
+├── edit_answers.html
+├── firebase.json
+├── firestore.indexes.json
+├── firestore.rules
+├── game_complete.html
+├── package-lock.json
+├──personalizedTasks_detail.html
+├──privacy_policy.html
+├── rewards.html
+├── storage.rules
+├── survey_page_0.html
+├── survey_page_1.html
+├── survey_page_2.html
+├── survey_page_3.html
+├── survey_page_4.html
+├── survey_page_5.html
+├── survey_page_6.html
+├── survey_page_7.html
+├── survey_page_8.html
+├── survey_page_9.html
+├── survey_page_10.html
+├── survey_page_complete.html
+├── tasklist.html
+├── tos.html
+└── your_settings.html 
 
 It has the following subfolders and files:
 ├── .vscode                     # Folder for settings.json file
@@ -125,10 +154,12 @@ How to set up a development environment on Windows.
     
     Our Firebase Callback URL: https://ghreen-b21f7.firebaseapp.com/__/auth/handler
 
-5. Testing Plan
+6. Testing Plan
 
     Here is our testing plan, this is what we have found so far with our app. If you can find anything new, feel free to add it to the list:
     * Testing Plan link: https://docs.google.com/spreadsheets/d/1MU-q84S6X-3DolKA8K_OLPmo3-tCGfN_fvHfD8TjHfI/edit#gid=0
     * Send us your email so we can invite you to the Testing Plan google sheet
+    * In addition, in the miscellaneous folder there is a file called "Team31_Ghreen_UnitTests.side" that contains the unit tests to be run in selenium IDE.
+    * Installation of selenium IDE extension can be found on the Google Chrome store
 
 ```
