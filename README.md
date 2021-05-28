@@ -63,6 +63,8 @@ It has the following subfolders and files:
 
     /logo_final.png             # the Ghreen app logo
 ├── js                          # Folder for scripts
+├── css                         # Folder for css
+├── json                        # Folder for tasks.json
        
     /dailyList-choice.css       # styling for dailyList-choice.html
 ├── miscellaneous               # Folder for miscellaneous files
