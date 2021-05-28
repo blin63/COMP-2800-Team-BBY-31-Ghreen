@@ -1,6 +1,6 @@
 var database = firebase.database;
 
-firebase.auth().onAuthStateChanged(function(user) {
+firebase.auth().onAuthStateChanged(function (user) {
 
     if (user) {
 
@@ -11,11 +11,11 @@ firebase.auth().onAuthStateChanged(function(user) {
         console.log("Name: " + userName);
         console.log("Email: " + email);
         console.log(user);
-        
+
 
         // Confirm Account changes function
 
-        document.getElementById("confirmAccount").addEventListener("click", function() {
+        document.getElementById("confirmAccount").addEventListener("click", function () {
 
             let newName = document.getElementById("name").value;
             let newEmail = document.getElementById("email").value;
@@ -27,9 +27,9 @@ firebase.auth().onAuthStateChanged(function(user) {
                 console.log("Name Match");
                 user.updateProfile({
                     displayName: newName
-                }).then(function() {
+                }).then(function () {
                     console.log("Update successful.");
-                }).catch (function(error) {
+                }).catch(function (error) {
                     console.log("Update unsuccesful: " + error);
                 });
             }
@@ -37,64 +37,64 @@ firebase.auth().onAuthStateChanged(function(user) {
             if (newEmail.match(emailRegex)) {
                 console.log("Email Match");
                 user.updateEmail(newEmail)
-                .then( function() {
-                    console.log("Update successful.");
-                }).catch (function(error) {
-                    console.log("Update unsuccesful: " + error);
-                });
+                    .then(function () {
+                        console.log("Update successful.");
+                    }).catch(function (error) {
+                        console.log("Update unsuccesful: " + error);
+                    });
             }
 
 
-            
+
             return db.collection("users").doc(user.uid).update({
-                name: newName ,
-                email: newEmail ,
-            }).then (function () {
+                    name: newName,
+                    email: newEmail,
+                }).then(function () {
 
-                console.log(user);
-                // As suggested by Carly in Slack
-                db.collection("users")
-                .doc(user.uid)
-                .get()
-                .then(function(doc) {
-                    email = doc.data().email,
-                    displayName = doc.data().name
+                    console.log(user);
+                    // As suggested by Carly in Slack
+                    db.collection("users")
+                        .doc(user.uid)
+                        .get()
+                        .then(function (doc) {
+                            email = doc.data().email,
+                                displayName = doc.data().name
 
-                    console.log("After update");
-                    console.log(displayName);
-                    console.log(email);
-                    console.log(doc.data());
+                            console.log("After update");
+                            console.log(displayName);
+                            console.log(email);
+                            console.log(doc.data());
 
-                    document.getElementById("name").value = "";
-                    document.getElementById("email").value = "";
+                            document.getElementById("name").value = "";
+                            document.getElementById("email").value = "";
+                        })
+
                 })
-
-            })
-            .catch(function (error) {
-                console.log("Error updating user: " + error);
-            })
+                .catch(function (error) {
+                    console.log("Error updating user: " + error);
+                })
 
         });
 
         // Confirm Password changes function
 
-        document.getElementById("resetEmail").addEventListener("click", function() {
+        document.getElementById("resetEmail").addEventListener("click", function () {
 
-            
+
             let auth = firebase.auth();
             let emailAddress = user.email;
 
-            auth.sendPasswordResetEmail(emailAddress).then(function() {
+            auth.sendPasswordResetEmail(emailAddress).then(function () {
                 alert("Email sent. Please check your email.");
                 console.log("Email sent.");
-              }).catch(function(error) {
+            }).catch(function (error) {
                 console.log("Email not sent: " + error);
-              });
-            
-            
+            });
+
+
         });
 
     } else {
-    console.log("User not logged in.");
+        console.log("User not logged in.");
     }
 });

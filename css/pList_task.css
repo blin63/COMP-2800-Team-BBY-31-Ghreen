@@ -73,7 +73,7 @@ body {
 }
 
 #cancel {
-    color:#af4c4c;
+    color: #af4c4c;
 }
 
 .iconLabel:active {
@@ -187,7 +187,7 @@ a {
     font-weight: bold;
     font-size: 1.3em;
     text-shadow: 1.5px 1px rgb(235, 233, 233);
-    color:#149e02;
+    color: #149e02;
 }
 
 .alert_fail {

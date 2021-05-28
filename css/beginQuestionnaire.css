@@ -3,7 +3,8 @@ body {
     background-color: #E7FFE2;
 }
 
-form, button {
+form,
+button {
     width: 70%;
     text-align: center;
     margin: 0 auto;
@@ -14,7 +15,9 @@ input::placeholder {
     text-align: center;
 }
 
-input[type=text], input[type=password], input[type=email] {
+input[type=text],
+input[type=password],
+input[type=email] {
     background-color: #E7FFE2;
     border: 1px solid black;
 }

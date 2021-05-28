@@ -2,16 +2,17 @@
     margin: 0 auto;
     text-align: center;
     font-style: italic;
-  }
+}
 
 td {
     margin: 10px;
     padding: 10px;
     text-align: center;
-    
+
 }
 
-.fas, .fab {
+.fas,
+.fab {
     padding: 0px;
 }
 
@@ -22,7 +23,8 @@ td {
     right: 10%;
 }
 
-#special, .specialTD {
+#special,
+.specialTD {
     background-color: rgb(236, 209, 55);
 }
 
@@ -43,7 +45,10 @@ table {
     padding-left: 25px;
 }
 
-.table, .td, tr, td {
+.table,
+.td,
+tr,
+td {
     background-color: #8AE9C1;
 }
 
@@ -78,7 +83,9 @@ td i {
     position: absolute;
     top: 120px;
     left: 20px
-};
+}
+
+;
 
 /* Code copied and pasted from W3Schools
 https://www.w3schools.com/css/css_link.asp
@@ -86,25 +93,26 @@ https://www.w3schools.com/css/css_link.asp
 /* unvisited link */
 a:link {
     color: black;
-  }
-  
-  /* visited link */
-  a:visited {
-    color: black;
-  }
-  
-  /* mouse over link */
-  a:hover {
-    color: black;
-  }
-  
-  /* selected link */
-  a:active {
-    color: black;
-  }
+}
 
-  /* RewardMsg CSS & noReward CSS; Author: Brendan Lin; Ver: 1.0 */
-#rewardMsg, #noReward {
+/* visited link */
+a:visited {
+    color: black;
+}
+
+/* mouse over link */
+a:hover {
+    color: black;
+}
+
+/* selected link */
+a:active {
+    color: black;
+}
+
+/* RewardMsg CSS & noReward CSS; Author: Brendan Lin; Ver: 1.0 */
+#rewardMsg,
+#noReward {
     text-align: center;
     background-color: lightgray;
     outline: 1px solid black;

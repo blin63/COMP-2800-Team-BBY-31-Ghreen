@@ -6,24 +6,24 @@
 
 function equip() {
 
-    firebase.auth().onAuthStateChanged(function(user) {
+    firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-            
+
             let element = document.getElementById("equip");
-            document.getElementById("equip").addEventListener("click", function() {
+            document.getElementById("equip").addEventListener("click", function () {
                 let icon = element.className;
 
                 console.log(icon);
-                
+
                 if (icon == "specialTD") {
                     db.collection("users").doc(user.uid)
-                    .get()
-                    .then(function (doc) {
-                        db.collection("users").doc(user.uid)
-                        .update( {
-                            specialRewardEquip: true
+                        .get()
+                        .then(function (doc) {
+                            db.collection("users").doc(user.uid)
+                                .update({
+                                    specialRewardEquip: true
+                                })
                         })
-                    })
                 }
 
                 let nameOfClass = $("#equip").attr("name");
@@ -37,7 +37,7 @@ function equip() {
                 console.log(obj);
 
                 localStorage.setItem('iconData', JSON.stringify(obj));
-            
+
             })
         }
     })

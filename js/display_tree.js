@@ -411,7 +411,7 @@ function makeTree() {
                     var diff;
                     console.log(score);
 
-                    if (score <= 30 ) {
+                    if (score <= 30) {
                         $(".tree").append(tree11);
                         $(".tree").addClass("tree11");
                         $("#next").html(`Congratulations! You've grown the largest tree! Click <span id="end">here.</span>`);
@@ -427,7 +427,7 @@ function makeTree() {
                         $("#next-tree").append(diff);
 
                     }
-                    
+
                     if (score > 40 && score <= 50) {
                         $(".tree").append(tree9);
                         $(".tree").addClass("tree9");
@@ -513,6 +513,5 @@ function makeTree() {
 makeTree();
 
 /* Extract data end 
-* source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 
-*/
-
+ * source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 
+ */

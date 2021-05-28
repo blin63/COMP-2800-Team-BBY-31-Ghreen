@@ -4,19 +4,19 @@
  * @Ver: 1.0
  */
 
-$(document).ready(function() {
+$(document).ready(function () {
     let logoCounter = 0;
 
     //Hide Secret Reward
     $("#special").css("visibility", "hidden");
     $("#special").fadeOut();
-    
+
     //Hide Secret Message
     $("#secretMsg").css("visibility", "hidden");
     $("#secretMsg").css("display", "none");
     $("#secretMsg").fadeOut();
 
-    $(".logo").click(function() {
+    $(".logo").click(function () {
         logoCounter++;
 
         console.log("LogoCounter was pressed " + logoCounter + " times");

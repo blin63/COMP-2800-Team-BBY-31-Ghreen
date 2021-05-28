@@ -51,46 +51,46 @@ function checkUserTaskList() {
                     console.log("!!taskArray: " + taskArray);
                 });
 
-                setTimeout(function(){
-                    db.collection("tasks")
-                .get()
-                .then(function (snap) {
-                    snap.forEach(function (doc) {
-                        // Found Current task
-                        // console.log("!!doc.data().id: " + doc.id);
-                        // console.log("!!id: " + id);
+            setTimeout(function () {
+                db.collection("tasks")
+                    .get()
+                    .then(function (snap) {
+                        snap.forEach(function (doc) {
+                            // Found Current task
+                            // console.log("!!doc.data().id: " + doc.id);
+                            // console.log("!!id: " + id);
 
-                        if (doc.id == id) {
-                            var taskID = doc.data().id;
-                            console.log(taskID);
-                            // Found current task in user' taskLisk, popup warning
-                            console.log(taskArray);
-                            if (taskArray.includes(taskID)) {
-                                console.log("included");
-                                $(".alert_fail").fadeIn("slow");
-                                $(".addtolist_btn").hide();
-
-                            } else {
-                                // Task is addable to list
-                                console.log("not included");
-
-                                $("#add_icon").click(function () {
-                                    $(".alert_success").fadeIn("slow");
+                            if (doc.id == id) {
+                                var taskID = doc.data().id;
+                                console.log(taskID);
+                                // Found current task in user' taskLisk, popup warning
+                                console.log(taskArray);
+                                if (taskArray.includes(taskID)) {
+                                    console.log("included");
+                                    $(".alert_fail").fadeIn("slow");
                                     $(".addtolist_btn").hide();
 
-                                    taskArray.push(taskID);
-                                    db.collection("users").doc(user.uid)
-                                        .update({
-                                            "userTasks": taskArray
-                                        });
-                                    console.log("add data:", taskID);
-                                    console.log("new taskArray:", taskArray);
-                                });
+                                } else {
+                                    // Task is addable to list
+                                    console.log("not included");
+
+                                    $("#add_icon").click(function () {
+                                        $(".alert_success").fadeIn("slow");
+                                        $(".addtolist_btn").hide();
+
+                                        taskArray.push(taskID);
+                                        db.collection("users").doc(user.uid)
+                                            .update({
+                                                "userTasks": taskArray
+                                            });
+                                        console.log("add data:", taskID);
+                                        console.log("new taskArray:", taskArray);
+                                    });
+                                }
                             }
-                        }
+                        });
                     });
-                });
-                }, 500);
+            }, 500);
         }
     });
 }

@@ -124,7 +124,8 @@
     margin-top: 0.2em;
 }
 
-#direction, #change {
+#direction,
+#change {
     display: inline-block;
 }
 
@@ -134,17 +135,17 @@
 }
 
 .fa-arrow-circle-down {
-    color:chartreuse;
+    color: chartreuse;
 }
 
 .fa-arrow-circle-up {
-    color:red;
+    color: red;
 }
 
 .positive {
-    color:red;
+    color: red;
 }
 
 .negative {
-    color:chartreuse;
+    color: chartreuse;
 }

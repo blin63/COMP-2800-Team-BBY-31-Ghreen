@@ -35,21 +35,21 @@ function showCollection() {
 
                 // content
                 var content = "<div id='" + id + "'> " +
-                '<li class="task_detail" id="task_btn">' +
-                '<p class="task_title">' + task + '</p>' +
-                // '<p class="des">' + element.task + '</p>' +
-                '<div class="task_detail_box">' +
-                '<div class="leftColumn">' + 'Impact' +
-                '<p>' + impact + '</p>' +
-                '</div>' +
-                '<div class="rightColumn">' + 'Difficulty' +
-                '<p>' + diff + '</p>' +
-                '</div>' +
-                '</div>' +
-                '</li>' +
-                '</div>';
-            $("#" + category).append(content);
-            addWebcamListener(id);
+                    '<li class="task_detail" id="task_btn">' +
+                    '<p class="task_title">' + task + '</p>' +
+                    // '<p class="des">' + element.task + '</p>' +
+                    '<div class="task_detail_box">' +
+                    '<div class="leftColumn">' + 'Impact' +
+                    '<p>' + impact + '</p>' +
+                    '</div>' +
+                    '<div class="rightColumn">' + 'Difficulty' +
+                    '<p>' + diff + '</p>' +
+                    '</div>' +
+                    '</div>' +
+                    '</li>' +
+                    '</div>';
+                $("#" + category).append(content);
+                addWebcamListener(id);
             })
             console.log(objAry);
             console.log(objAry.length);

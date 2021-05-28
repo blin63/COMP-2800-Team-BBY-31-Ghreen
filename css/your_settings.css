@@ -1,5 +1,6 @@
 #options {
-    padding: 2% 12%;;
+    padding: 2% 12%;
+    ;
 }
 
 #options i {
@@ -30,18 +31,24 @@ h1 {
     position: absolute;
     top: 120px;
     left: 20px
-};
+}
 
-p, label, input {
+;
+
+p,
+label,
+input {
     margin: 3%;
 }
 
-.details h4, .password h4 {
+.details h4,
+.password h4 {
     font-style: italic;
     margin-left: 4%;
 }
 
-#confirmAccount input, #confirmPassword input {
+#confirmAccount input,
+#confirmPassword input {
     /* CSS code taken from style.css
         from templating-and-sessions
         from LearningHub */
@@ -51,21 +58,26 @@ p, label, input {
     margin-left: 100%;
 }
 
-#confirmAccount, #confirmPassword, #resetAccount, #resetPassword {
+#confirmAccount,
+#confirmPassword,
+#resetAccount,
+#resetPassword {
     background-color: #B6FFB0;
     outline: 1px solid black;
     border-radius: 5px;
     height: 30px;
-    margin-right: 12.5%;  
+    margin-right: 12.5%;
     line-height: 2px;
 }
 
-#confirmAccount, #confirmPassword {
+#confirmAccount,
+#confirmPassword {
     margin-top: 20px;
     float: left;
 }
 
-#resetAccount, #resetPassword {
+#resetAccount,
+#resetPassword {
     margin-top: 20px;
     float: right;
 }
@@ -92,38 +104,39 @@ p, label, input {
 .grid-heading {
     grid-column: 1 / span 2;
 }
+
 /* Code copied and pasted from W3Schools
 https://www.w3schools.com/css/css_link.asp
 */
 /* unvisited link */
 a:link {
     color: black;
-  }
-  
-  /* visited link */
-  a:visited {
-    color: black;
-  }
-  
-  /* mouse over link */
-  a:hover {
-    color: black;
-  }
-  
-  /* selected link */
-  a:active {
-    color: black;
-  }
+}
 
-  div input {
-      float: right;
-  }
+/* visited link */
+a:visited {
+    color: black;
+}
 
-  #centered {
-      text-align: center;
-  }
+/* mouse over link */
+a:hover {
+    color: black;
+}
 
-  .resetEmail {
+/* selected link */
+a:active {
+    color: black;
+}
+
+div input {
+    float: right;
+}
+
+#centered {
+    text-align: center;
+}
+
+.resetEmail {
     background-color: #B6FFB0;
     outline: 1px solid black;
     border-radius: 5px;
@@ -132,4 +145,4 @@ a:link {
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
-  }
+}

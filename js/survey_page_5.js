@@ -20,25 +20,25 @@ document.getElementById("confirm").addEventListener('click', function () {
                 return db.collection("users").doc(user.uid)
                     .get()
                     .then(function (doc) {
-                        var score = doc.data().Q0
-                            + doc.data().Q1
-                            + doc.data().Q2
-                            + doc.data().Q3
-                            + doc.data().Q4
-                            + doc.data().Q5
-                            + doc.data().Q6
-                            + doc.data().Q7
-                            + doc.data().Q8
-                            + doc.data().Q9;
+                        var score = doc.data().Q0 +
+                            doc.data().Q1 +
+                            doc.data().Q2 +
+                            doc.data().Q3 +
+                            doc.data().Q4 +
+                            doc.data().Q5 +
+                            doc.data().Q6 +
+                            doc.data().Q7 +
+                            doc.data().Q8 +
+                            doc.data().Q9;
                         db.collection("users").doc(user.uid).update({
-                            scoreOld: doc.data().scoreCurrent,
-                            scoreCurrent: score,
-                            scoreChange: 100 * ((doc.data().scoreCurrent - doc.data().scoreOld) / doc.data().scoreOld)
-                        }).then(function () {
-                            console.log("Old Score: " + doc.data().scoreOld
-                                + "\n" + "New Score: " + doc.data().scoreCurrent
-                                + "\n" + "Change: " + doc.data().scoreChange);
-                        })
+                                scoreOld: doc.data().scoreCurrent,
+                                scoreCurrent: score,
+                                scoreChange: 100 * ((doc.data().scoreCurrent - doc.data().scoreOld) / doc.data().scoreOld)
+                            }).then(function () {
+                                console.log("Old Score: " + doc.data().scoreOld +
+                                    "\n" + "New Score: " + doc.data().scoreCurrent +
+                                    "\n" + "Change: " + doc.data().scoreChange);
+                            })
                             .catch(function (error) {
                                 console.log("Error updating data: " + error);
                             });
@@ -54,9 +54,9 @@ document.getElementById("confirm").addEventListener('click', function () {
 
 var value = 0;
 /* getUserChoice start
-* I modified Carly's original code which was can be found here: 
-* source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 
-* */
+ * I modified Carly's original code which was can be found here: 
+ * source: https://www.notion.so/Tech-Tip-B006-How-do-I-get-the-values-of-checkboxes-and-save-to-Firestore-53516773f2e243e9a4dab0e283cf0dc7 
+ * */
 function getUserChoice() {
     console.log("getUserChoice() called");
 

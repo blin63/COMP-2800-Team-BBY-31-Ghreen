@@ -1,5 +1,6 @@
 #options {
-    padding: 2% 12%;;
+    padding: 2% 12%;
+    ;
 }
 
 #options i {
@@ -82,36 +83,38 @@ h2 {
 }
 
 #productName {
-  font-size: 55px;
+    font-size: 55px;
 }
 
 #userGreeting {
-  margin: auto;
-  text-align: center;
-  font-size: 100px;
-  font-style: italic;
-  padding: 100px;
+    margin: auto;
+    text-align: center;
+    font-size: 100px;
+    font-style: italic;
+    padding: 100px;
 }
 
 .center {
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.fa-cog, .fa-award, .fa-book-open {
-  height: 100px;
-  width: 100px;
+.fa-cog,
+.fa-award,
+.fa-book-open {
+    height: 100px;
+    width: 100px;
 }
 
 body {
-  background-color: #E7FFE2;
+    background-color: #E7FFE2;
 }
 
 td {
-  padding: 100px;
+    padding: 100px;
 }
 
-i.fas, i.far {
-  color: black;
+i.fas,
+i.far {
+    color: black;
 }
-

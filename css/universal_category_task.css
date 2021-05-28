@@ -9,7 +9,8 @@ body {
     position: sticky;
 }
 
-nav, footer {
+nav,
+footer {
     background-color: #A3FA91;
 }
 

@@ -78,7 +78,7 @@ h2 {
 }
 
 .button {
-  margin-bottom: 4%;
+    margin-bottom: 4%;
 }
 
 #question p {
@@ -107,7 +107,7 @@ input[type="checkbox"] {
     bottom: -90%;
     margin-right: 90%;
     display: inline-block;
-  }
+}
 
 label {
     color: black;
@@ -121,14 +121,14 @@ label {
     display: inline-block;
 }
 
-input[type="checkbox"]:checked + label {
-    background-color:#B6FFB0;
+input[type="checkbox"]:checked+label {
+    background-color: #B6FFB0;
     border-color: #4c4;
 }
 
 label:hover {
     background-color: #E7FFE2;
-  }
+}
 
 /* 
 * End of Mark Heath's code
@@ -136,5 +136,3 @@ label:hover {
 * @author Mark Heath
 * @see https://markheath.net/post/customize-radio-button-css 
 */
-
-

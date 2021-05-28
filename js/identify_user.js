@@ -1,6 +1,6 @@
 /* welcome start
-* This welcome block of code was adapted from Carly's code found here: 
-* source: https://www.notion.so/Demo-5-tech-gems-0201151b6cd64230adc213c617887c5f */
+ * This welcome block of code was adapted from Carly's code found here: 
+ * source: https://www.notion.so/Demo-5-tech-gems-0201151b6cd64230adc213c617887c5f */
 
 function welcome() {
     firebase.auth().onAuthStateChanged(function (user) {
@@ -17,4 +17,4 @@ function welcome() {
 welcome();
 
 /* welcome end 
-* source: https://www.notion.so/Demo-5-tech-gems-0201151b6cd64230adc213c617887c5f */
+ * source: https://www.notion.so/Demo-5-tech-gems-0201151b6cd64230adc213c617887c5f */
