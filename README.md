@@ -117,8 +117,6 @@ Technologies used for this project:
 * JavaScript, JQuery
 * Bootstrap 
 * Firebase hosting and database
-* Facebook API
-* Twitter API
 
 ## Setting up
 How to set up a development environment on Windows.
@@ -128,7 +126,6 @@ How to set up a development environment on Windows.
     * Click on the downloaded file and install the software
 
 2. Join our Firebase Project
-    * Here is our firebase project: https://console.firebase.google.com/project/ghreen-b21f7/settings/iam
     * Provide us with your email address and we will add you to our Firebase project
 
 3. Join our GitHub Repo
@@ -141,22 +138,7 @@ How to set up a development environment on Windows.
     location easy for you to find.
     * In the Command Prompt, enter "git clone https://github.com/blin63/COMP-2800-Team-BBY-31-Ghreen" to download our project files
 
-5. API Keys
-
-    Twitter API Keys:
-    * API Key: ZAGHSxAIAOEhDDP83in2LWgzF
-    * API Secret Key: Ndg5Gyy3EQkCTUK1MpPHUEU6rVwt49h2r2dluNY7xgIPvYBL5J
-    * Bearer Token: AAAAAAAAAAAAAAAAAAAAAJEXQAEAAAAAoov2sl0yQdqI%2FWn64yiX2%2FZdfvU%3DrfgfqwOkfLUsqB6GkDqXoBzlFo0MoM01q34XDyOwpPbmqVxLrJ
-    * Access Token: 1397312941154660352-p9EiOdbpBZgK1w2eSjU8nA8jh2Q7pG
-    * Access Token Secret: 8c0rsbsi0o5UOh0FI0rJa2WBjpmhREVGlxQyYp4jgjYBj
-    
-    Facebook API Keys:
-    * App ID: 182473550424093
-    * App Secret: ab8dddcd78177cb27f706f538eebf80d 
-    
-    Our Firebase Callback URL: https://ghreen-b21f7.firebaseapp.com/__/auth/handler
-
-6. Testing Plan
+5. Testing Plan
 
     Here is our testing plan, this is what we have found so far with our app. If you can find anything new, feel free to add it to the list:
     * Testing Plan link: https://docs.google.com/spreadsheets/d/1MU-q84S6X-3DolKA8K_OLPmo3-tCGfN_fvHfD8TjHfI/edit#gid=0
